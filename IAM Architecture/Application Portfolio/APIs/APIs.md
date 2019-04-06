@@ -1,10 +1,10 @@
-i### APIs
+### APIs
 
 Defining the APIs to be supported within an organization is critical to
 responsible management of information technology infrastructure. APIs
 provide a way to manage information flow and maintain security. Without
-defined APIs developers will construct communication links in the
-absence of "rules" which is a recipe for disaster. A API definition must
+defined APIs, developers will construct communication links in the
+absence of "rules" which is a recipe for disaster. An API definition must
 select a protocol, establish the policies and define the attributes to
 be communicated. Some of the more common protocols are:
 
