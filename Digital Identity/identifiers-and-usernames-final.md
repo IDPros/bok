@@ -127,15 +127,15 @@ provider services maintaining multiple usernames are options.
 The five guiding principles identity practitioners should consider are
 that usernames:
 
--   [[Are not a secret]{.underline}](#secret)
+-   [Are not a secret](#secret)
 
--   [[Must be classified as public data]{.underline}](#public)
+-   [Must be classified as public data](#public)
 
--   [[Must be memorable]{.underline}](#memorable)
+-   [Must be memorable](#memorable)
 
--   [[Must be unique]{.underline}](#unique)
+-   [Must be unique](#unique)
 
--   [[Must be recoverable]{.underline}](#recoverable)
+-   [Must be recoverable](#recoverable)
 
 Secret
 ------
@@ -366,11 +366,11 @@ username framework is part of the 'identity orchestration' task.
 
 [^2]: Carolyn Pucket, "The Story of the Social Security Number, Social
     Security Bulletin, Vol. 69, No 2, 2009,
-    [[https://www.ssa.gov/policy/docs/ssb/v69n2/v69n2p55.html]{.underline}](https://www.ssa.gov/policy/docs/ssb/v69n2/v69n2p55.html).
+    [https://www.ssa.gov/policy/docs/ssb/v69n2/v69n2p55.html](https://www.ssa.gov/policy/docs/ssb/v69n2/v69n2p55.html).
 
 [^3]: John Leyden, "Gummi bears defeat finger print sensors," The
     Register, 16 May 2002,
-    [[https://www.theregister.co.uk/2002/05/16/gummi\_bears\_defeat\_fingerprint\_sensors/]{.underline}](https://www.theregister.co.uk/2002/05/16/gummi_bears_defeat_fingerprint_sensors/).
+    [https://www.theregister.co.uk/2002/05/16/gummi\_bears\_defeat\_fingerprint\_sensors/](https://www.theregister.co.uk/2002/05/16/gummi_bears_defeat_fingerprint_sensors/).
 
 [^4]: Pucket, see *Expanding Uses of the SSN*,
-    [[https://www.ssa.gov/policy/docs/ssb/v69n2/v69n2p55.html]{.underline}](https://www.ssa.gov/policy/docs/ssb/v69n2/v69n2p55.html).
+    [https://www.ssa.gov/policy/docs/ssb/v69n2/v69n2p55.html](https://www.ssa.gov/policy/docs/ssb/v69n2/v69n2p55.html).
