@@ -1,3 +1,6 @@
+Non-Human Account Management
+===========
+
 By Graham Williamson, André Koot
 
 © 2020 IDPro, Graham Williamson, André Koot
@@ -25,6 +28,11 @@ organizations and should be included when an organization formulates
 policy for access to computer systems.
 
 <table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th></th>
@@ -109,7 +117,7 @@ control to/from devices and services that are not used interactively by
 humans. This includes access control for the bots that are increasingly
 being used for automated processes.
 
-IoT Devices 
+IoT Devices
 -----------
 
 IoT devices can be either a sensor or an actuator. In some cases,
@@ -134,7 +142,8 @@ There are three zones in a typical IoT configuration:
     credentials (passwords, certificates, etc.) will be periodically
     rotated. The selected security requirement must match the capability
     of the devices; IoT devices are often constrained by technical
-    limitations. IETF RFC 7228 nominates three classes of devices:[1]
+    limitations. IETF RFC 7228 nominates three classes of
+    devices:<a href="#fn1" id="fnref1" class="footnote-ref"><sup>1</sup></a>
 
     -   Class 1 – no capacity to support configurable authentication
 
@@ -273,7 +282,7 @@ they should not be used. Options include:
 
 -   Deployment of an API to manage and monitor service company access.
 
-Bots 
+Bots
 ----
 
 The term bot has come from the Robotic Process Automation (RPA) sector
@@ -493,7 +502,9 @@ that communicate identity data.
 
 The use of bots will also continue to accelerate; deployment of
 behavioral analytics and gateway technology should be considered. The US
-Department of Homeland Security[2] advises the following:
+Department of Homeland
+Security<a href="#fn2" id="fnref2" class="footnote-ref"><sup>2</sup></a>
+advises the following:
 
 -   Nefarious bot developers will target new IoT devices for
     vulnerabilities as they are released to the market and will compete
@@ -532,17 +543,41 @@ policy.
 
  
 
-**Author Bio**
+Author Bio
+----------
 
 > Graham Williamson,
 >
-> André Koot, Security and IAM Consultant Nixu Oyj
+> André Koot, IAM Strategist and Chief Customer Success Officer at Sonic
+> Bee
 
  
 
-[1] Bormann, C., Ersue, M., and A. Keranen, "Terminology for
-Constrained-Node Networks", RFC 7228, DOI 10.17487/RFC7228, May 2014,
-&lt;https://www.rfc-editor.org/info/rfc7228&gt;.
+Change Log
+==========
 
-[2] Botnet Roadmap Status Update, Department of Commerce and Homeland
-Security, July 2020.
+| Date       | Change                    |
+|------------|---------------------------|
+| 2021-04-19 | Author affiliation change |
+
+<div class="section footnotes" role="doc-endnotes">
+
+------------------------------------------------------------------------
+
+1.  <div id="fn1">
+
+    Bormann, C., Ersue, M., and A. Keranen, "Terminology for
+    Constrained-Node Networks", RFC 7228, DOI 10.17487/RFC7228, May
+    2014,
+    &lt;https://www.rfc-editor.org/info/rfc7228&gt;.<a href="#fnref1" class="footnote-back">↩︎</a>
+
+    </div>
+
+2.  <div id="fn2">
+
+    Botnet Roadmap Status Update, Department of Commerce and Homeland
+    Security, July 2020.<a href="#fnref2" class="footnote-back">↩︎</a>
+
+    </div>
+
+</div>
