@@ -305,7 +305,7 @@ Over time, JE Plumbing sees an opportunity to expand the company’s
 coverage area and offerings.  To accomplish this, they set up two new
 locations overseen by two new business managers (one of whom was an
 internal promotion from a finance specialist position).  They grow their
-residential plumber staff to seventy-five and hire twenty-vie commercial
+residential plumber staff to seventy-five and hire twenty-five commercial
 plumbers.   Finance and sales positions are replicated across the two
 new offices, growing that team from two to six.  A dedicated marketing
 specialist is hired to cover all three sites.
@@ -541,7 +541,7 @@ policy exceptions.
 
 Legacy permissions in more static access control settings are sometimes
 the result of a faulty automation process rather than administrator
-inaction.  These legacy permissions usually acrue because deprovisioning
+inaction.  These legacy permissions usually accrue because deprovisioning
 processes are triggered by *events* (e.g., an employee is terminated)
 rather than *states* (e.g., a user is not an active staff member).  
 Rather than monitoring for a user being hired into position A, or
