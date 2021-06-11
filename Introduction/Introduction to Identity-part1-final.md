@@ -1,8 +1,10 @@
 ---
-title: 'Introduction to Identity - Part 1: Admin-time'
+title: 'Introduction to Identity - Part 1: Admin-time (v2)'
 ---
 
 By Ian Glazer, edited by Espen Bago
+
+© 2021 IDPro, Ian Glazer, Espen Bago
 
 
 Abstract
@@ -105,7 +107,7 @@ where the HR system does not include the contractor population. Finding
 a singular source of truth for a contractor can be a real challenge in
 many enterprises. Some use their procurement system, some use bespoke
 systems, some use spreadsheets, and some even use their user account
-provisioning system.
+provisioning system. For temporary or seasonal workers, it may be most efficient to use a social media identity provider to onboard these types of short-term staff. 
 
 ### Business-to-Business (B2B): Connecting to Partners
 
@@ -578,6 +580,14 @@ the major considerations that will impact their systems and services;
 readers need to consider their own local context and adapt the rough
 definitions offered here to fit their own unique organization. A future
 article will dive into the concept of run-time technologies.
+
+Change Log
+==========
+| Date | Change |
+| ---- | ------ |
+| 11 June 2021 | Updated section "Business-to-Employee (B2E)" |
+
+
 
 [^1]: An organization does not always need to know "who" a person is
     to any level of specificity. They just need to know things like "is
