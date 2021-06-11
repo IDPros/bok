@@ -1,12 +1,12 @@
 ---
 generator: pandoc
-title: 'Introduction to Identity - Part 2: Access Management'
+title: 'Introduction to Identity - Part 2: Access Management (v2)'
 ---
 
 
 By Pamela Dingle
 
-© 2020 IDPro, Pamela Dingle
+© 2021 IDPro, Pamela Dingle, edited by Heather Flanagan
 
 Terminology
 -----------
@@ -249,7 +249,7 @@ and services on behalf of a user.
 
 Maybe access tokens don't sound like such a big deal, but when you
 consider that you can pass access tokens to APIs instead of primary
-credentials, the results are significant. You prevent API endpoints from
+credentials, the results are significant. Modern software deployment solutions now offer capabilities to safely handle secrets (e.g., an OAuth 2.0 secrets, API key) so that secrets will not be visible in code or configuration files. You prevent API endpoints from
 ever collecting or validating primary user credentials, thus removing
 multiple attack vectors around data leakage, man-in-the-middle-attacks,
 and rogue administrators harvesting credentials. Because the mechanism
@@ -386,6 +386,12 @@ groups, and the industry all understand the value of standards and other
 identity best practice patterns. Pamela spent eight years as an identity
 architect and eight years in the office of the CTO at Ping Identity and
 is a founder of Women in Identity.
+
+Change Log
+==========
+| Date | Change |
+| ---- | ------ |
+| 11 June 2021 | Updated "Mobile & API Innovation Gave Us OAuth & Delegated Authorization Framework" |
 
 
 ------------------------------------------------------------------------
