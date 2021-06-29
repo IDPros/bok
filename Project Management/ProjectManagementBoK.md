@@ -9,67 +9,7 @@ By Graham Williamson, Corey Scholefield
 repository](https://github.com/IDPros/bok) and [submit an
 issue](https://docs.github.com/en/github/managing-your-work-on-github/opening-an-issue-from-code).*
 
-Table of Contents
-=================
 
-[Introduction to Project Management for IAM Projects (v2)
-1](#introduction-to-project-management-for-iam-projects-v2)
-
-[Abstract 2](#abstract)
-
-[Importance of Project Management 2](#importance-of-project-management)
-
-[Terminology 2](#terminology)
-
-[Characteristics of a Project Manager
-3](#characteristics-of-a-project-manager)
-
-[PMI Framework 3](#pmi-framework)
-
-[Concept 4](#concept)
-
-[Planning Stage 4](#planning-stage)
-
-[Deployment Stage 5](#deployment-stage)
-
-[Classic Project Management 6](#classic)
-
-[Agile 6](#agile)
-
-[PMO Issues 7](#pmo-issues)
-
-[IAM Projects 8](#iam-projects)
-
-[Example Project 8](#example-project)
-
-[Planning 8](#planning)
-
-[Organizing 9](#organizing)
-
-[Resourcing 10](#resourcing)
-
-[Directing 11](#directing)
-
-[Classic Project Management 11](#classic-1)
-
-[Agile 11](#agile-1)
-
-[Controlling 11](#controlling)
-
-[Conclusion 12](#conclusion)
-
-[Author Bios 12](#author-bios)
-
-[Change Log 13](#change-log)
-
-[Addendum: Questions for an IAM Project Manager to ask
-14](#addendum-questions-for-an-iam-project-manager-to-ask)
-
-[Identity Management 14](#identity-management)
-
-[Access Control 14](#access-control)
-
-[Governance 14](#governance)
 
 Abstract
 ========
