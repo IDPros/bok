@@ -1,5 +1,3 @@
-# Introduction to Identity - Part 1: Admin-time (v2)
-
 By Ian Glazer, edited by Espen Bago
 
 © 2021 IDPro, Ian Glazer
@@ -8,9 +6,62 @@ By Ian Glazer, edited by Espen Bago
 repository](https://github.com/IDPros/bok) and [submit an
 issue](https://docs.github.com/en/github/managing-your-work-on-github/opening-an-issue-from-code).*
 
+Table of Contents
+=================
+
+[Abstract 1](#_Toc75940225)
+
+[Introduction: How to Approach Identity and IAM 2](#_Toc75940226)
+
+[Terminology 2](#terminology)
+
+[Constituencies - who is it that we serve?
+3](#constituencies---who-is-it-that-we-serve)
+
+[Business-to-Employee (B2E): Making Employees Productive
+3](#business-to-employee-b2e-making-employees-productive)
+
+[Business-to-Business (B2B): Connecting to Partners
+4](#business-to-business-b2b-connecting-to-partners)
+
+[Business-to-Consumer (B2C): Digitally Engage
+5](#business-to-consumer-b2c-digitally-engage)
+
+[Technologies Involved - Admin-time vs. Run-time
+5](#technologies-involved---admin-time-vs.-run-time)
+
+[Admin-time Technologies 6](#admin-time-technologies)
+
+[Sources of “Truth” 6](#sources-of-truth)
+
+[Identity Governance and Administration
+7](#identity-governance-and-administration)
+
+[Identity Analytics 11](#identity-analytics)
+
+[Privileged Account Management 11](#privileged-account-management)
+
+[Identity Proofing 12](#identity-proofing)
+
+[Conclusion 13](#conclusion)
+
+[Author Bios 13](#author-bios)
+
+[Change Log 14](#change-log)
+
+<span id="_Toc75940225" class="anchor"></span>
+
 Abstract
-==========
-This article introduces the concepts of digital identity and identity and access management (IAM). It also discusses the constituents that identity professionals serve, compares and contrasts business-to-employee (B2E) and business-to-consumer (B2C) identity use cases, and considers IAM technologies from the perspective of administrative, or admin-time, technologies. IAM technologies and use cases that focus on active, live interactions, or run-time, are mentioned for comparison.
+========
+
+This article introduces the concepts of digital identity and identity
+and access management (IAM). It also discusses the constituents that
+identity professionals serve, compares and contrasts
+business-to-employee (B2E) and business-to-consumer (B2C) identity use
+cases, and considers IAM technologies from the perspective of
+administrative, or admin-time, technologies. IAM technologies and use
+cases that focus on active, live interactions, or run-time, are
+mentioned for comparison.
 
 Introduction: How to Approach Identity and IAM
 ==============================================
@@ -38,20 +89,23 @@ the profession itself and us as practitioners.
 Terminology
 -----------
 
-Joiner/Mover/Leaver: The joiner/mover/leaver lifecycle of an employee
-identity considers three stages in the life cycle: joining the
-organization, moving within the organization, and leaving the
-organization.
+Access Certification – Certification is the ongoing review of who has
+which accesses (i.e., the business process to verify that access rights
+are correct).
 
-Sources of “Truth” - where authoritative data about individuals live.
+Entitlement Management – Cataloging and managing all the accesses an
+account may have. This is the business process to provision access.
+
+Identity Analytics and Intelligence (IdA) - Identity analytics and
+intelligence mean looking at entitlement data, looking at the assignment
+of that, and trying to figure out and define what risk looks like. IdA
+provides a risk-based approach for managing system identities and
+access, with the intention of centralizing governance, visibility, and
+reporting for access-based risk.
 
 Identity Governance and Administration - a discipline that focuses on
 identity life cycle management and access control from an administrative
 perspective.
-
-Privileged Account Management - focusing on special control for risky
-high-level access. Privileged Account Management (PAM) is a mechanism
-for getting those special accounts under control.
 
 Identity Proofing - accruing evidence to support “who this is.” Identity
 proofing is the last, but not the least, important part of this
@@ -61,10 +115,14 @@ corresponding credential. This is typically performed before an account
 is created or the credential is issued, or a special privilege is
 granted.
 
-User Provisioning and Lifecycle Management - how user records get where
-they need to be but only as long as they are needed
+Joiner/Mover/Leaver: The joiner/mover/leaver lifecycle of an employee
+identity considers three stages in the life cycle: joining the
+organization, moving within the organization, and leaving the
+organization.
 
-Entitlement Management – the business process to provision access
+Privileged Account Management - focusing on special control for risky
+high-level access. Privileged Account Management (PAM) is a mechanism
+for getting those special accounts under control.
 
 Role Management - a way to group access rules to make them more
 manageable
@@ -72,20 +130,10 @@ manageable
 Role-Based Access Control (RBAC) - the use of roles at run-time; a way
 to govern who gets access to what through the use of roles.
 
-Access Certification – the business process to verify that access rights
-are correct
+Sources of “Truth” - where authoritative data about individuals live.
 
-Entitlement Management – Cataloging and managing all the accesses an
-account may have.
-
-Access Certification - Certification is the ongoing review of who has
-which accesses
-
-Identity analytics and intelligence mean looking at entitlement data,
-looking at the assignment of that, and trying to figure out and define
-what risk looks like. IdA provides a risk-based approach for managing
-system identities and access, with the intention of centralizing
-governance, visibility, and reporting for access-based risk.
+User Provisioning and Lifecycle Management - how user records get where
+they need to be but only as long as they are needed
 
 Constituencies - who is it that we serve?
 -----------------------------------------
@@ -639,7 +687,7 @@ Author Bios
 
 Ian Glazer
 
-<img src="iglazer.jpg" style="width:1.5in;height:1.85714in" alt="A person with a beard Description automatically generated with medium confidence" />Ian
+<img src="media/image1.jpeg" style="width:1.5in;height:1.85714in" alt="A person with a beard Description automatically generated with medium confidence" />Ian
 Glazer is the Vice President for Identity Product Management at
 Salesforce. His responsibilities include leading the product management
 team, product strategy, and identity standards work. Prior to that, he
@@ -657,7 +705,7 @@ a noted blogger, speaker, and photographer of his socks.
 
 Espen Bago
 
-<img src="ebago.jpg" style="width:1.5in;height:1.5in" alt="Profile photo for Espen Bago" />Espen
+<img src="media/image2.jpeg" style="width:1.5in;height:1.5in" alt="Profile photo for Espen Bago" />Espen
 Bago realized in 2002 that as system administrator, he’d been working in
 identity already for a while and decided from there to fully explore
 what this Identity thing was all about. He’s been an independent
