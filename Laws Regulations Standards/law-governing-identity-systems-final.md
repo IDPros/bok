@@ -407,7 +407,7 @@ In fact, having predictable and enforceable rules designed to ensure
 that it functions properly and is trustworthy is key to any identity
 system. Unique system rules (e.g., a trust framework) will ideally
 provide such a structure to govern the operation of an identity system,
-much like the Visa or MasterCard rules that govern credit card systems.
+much like the Visa or MasterCard rules (including the payment card industry data security standard or PCI-DCSS) that govern credit card systems.
 Such rules include the technical specifications and operational rules
 and requirements necessary to make the system functional and trustworthy
 and the legal rules that define the rights and legal obligations of the
