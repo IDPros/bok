@@ -217,6 +217,8 @@ AD infrastructure or an LDAP directory. A cloud environment will often
 require a SAML operation or an IDaaS offering, whereas a RACF directory
 should be supported via a connector from the IAM infrastructure.
 
+Additionally, corporate security policy may create requirements that require certain technical decisions.  For instance, a requirement to maintain full control and authority over the data and infrastructure may require hosting the entire identity management stack on premises.
+
 Architectural Approach
 ======================
 
