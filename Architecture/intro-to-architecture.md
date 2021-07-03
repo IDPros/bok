@@ -365,6 +365,8 @@ height="225"}
 
 Figure 7 - Cloud-based architecture model
 
+The IAM professional will find use-cases where IDaaS solutions offer rapid deployment and appealing software update methods, when compared as an alternative to on-premises solutions. However, hybrid scenarios may require both types of deployments to work together.
+
 The architecture patterns supported by an organization directly affect
 the cost of maintaining their Information and Communications Technology
 (ICT) operations. Each additional pattern increases the overall cost.
