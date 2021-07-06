@@ -380,7 +380,7 @@ of an account. However, due to numerous data breaches, this information
 is insufficiently secret and should not be depended upon as a recovery
 mechanism for accounts with any significant value. 
 
-Even in the absense of data breaches, such information is also available to family members which can cause problems when the family is stressed or disolves.
+Even in the absense of data breaches, information used for KBA may often be available to family members or other parties close to the user, reducing their efficacy.
 
 Similarly, security
 questions often have predictable or easily identifiable answers.
