@@ -1,11 +1,11 @@
 ---
 generator: pandoc
-title: Introduction to Privacy and Compliance for Consumers
+title: Introduction to Privacy and Compliance for Consumers (v2)
 ---
 
-By Clare Nelson
+By Clare Nelson, edited by Heather Flanagan
 
-© 2020 IDPro, Clare Nelson
+© 2021 IDPro, Clare Nelson
 
 ***Disclaimer***
 
@@ -558,6 +558,8 @@ Figure 5 - How to Start Managing a Data Privacy Program, an Example
 Why Consumer Services Need Different Privacy and Compliance Strategies
 ----------------------------------------------------------------------
 
+### CIAM and Workforce IAM
+
 Privacy and compliance strategies for workforce IAM have some overlap
 with CIAM, but CIAM differs in some key regards. For this reason, simply
 applying workforce privacy and compliance to CIAM projects may not be
@@ -599,6 +601,9 @@ compliance strategies for workforce versus CIAM projects:
     personal data to evaluate certain things about an individual); plus,
     machine learning is often applied to consumer data for different
     purposes for the workforce versus consumers.
+    
+### CIAM and Social Identity
+CIAM often relies on integration with social media identity providers. There are several benefits to this direction, including reducing end-user friction during sign-up and self-service registration, generating fewer usernames and passwords for the end-user to memorize, and simplified business processes that allow for outsourcing user account recovery processes. This integration is not without drawbacks, however, as integration with social media identity providers may enable cross-site tracking of users without their permission.
 
 Security is Critical
 --------------------
@@ -769,6 +774,12 @@ She is a co-founder of C1ph3r\_Qu33ns, an organization dedicated to
 cultivating and supporting the careers of women in cybersecurity. Clare
 is a second-generation yogi and technologist, and has a degree in
 mathematics from Tufts University.
+
+Change Log
+==========
+| Date | Change |
+| ---- | ------ |
+| 9 June 2021 | Added section on CIAM and Social Identity; added section title for CIAM and Workforce IAM; added Heather Flanagan as editor |
 
 ::: {.footnotes}
 
