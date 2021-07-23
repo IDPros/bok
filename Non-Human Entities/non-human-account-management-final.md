@@ -244,6 +244,7 @@ Examples include:
     purposes
 
 -   An account used for replication of data between directory instances.
+-   The account used by a program to call another program offering a network API
 
 The term ‘batch account’ is sometimes used for a service account. These
 often refer to one or more utility operations that run periodically
@@ -262,7 +263,9 @@ authorizations to other environments). Including service accounts in the
 corporate data loss protection tools, such as authentication monitoring
 for anomalies, can guard against such vulnerabilities. A better practice
 is to migrate static service accounts to APIs that typically impose a
-strict security and monitoring regime.
+strict security and monitoring regime. 
+
+However, there are concerns on the client side. Many modern applications use network based programming interfaces (API’s) where one program, running on a device or computer makes a call to another computer which is offering an API.  Frequently the caller needs to present credentials to the API.  These credentials can be so called API keys and API secrets, or can take other forms.  How should the caller secure these credentials?  The naive implementation on the callers side often stores the credentials in a configuration file, or even in the code.  If these sources are leaked or distributed there is often little the API provider can to to prevent unauthorized access.  Thus, one of the modern development methods is to “inject” the production credentials during the deployment step.  That way it is possible keep the production credentials from leaking from the source code level.  Of course, the credentials have to stored elsewhere; this is typically in a highly protected “vault”.  
 
 Note: the term ‘service account’ (a non-person account) is sometimes
 used incorrectly to describe an account that is accessed periodically by
