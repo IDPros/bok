@@ -253,6 +253,8 @@ require certain technical decisions. For instance, a requirement to
 maintain full control and authority over the data and infrastructure may
 require hosting the entire identity management stack on premises.
 
+Additionally, corporate security policy may create requirements that require certain technical decisions.  For instance, a requirement to maintain full control and authority over the data and infrastructure may require hosting the entire identity management stack on premises.
+
 Architectural Approach
 ======================
 
