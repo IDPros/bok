@@ -1,13 +1,11 @@
-Introduction to Access Control
-===========
-
 By André Koot, Sonic Bee
 
-© 2020 IDPro, André Koot
+© 2021 IDPro, André Koot
 
-# Introduction
+Introduction
+============
 
-Access Control, as a concept, has a long history. But in order to
+Access control, as a concept, has a long history. But in order to
 investigate the current challenges and solutions, let’s start by
 evaluating a very old, traditional model of classified government
 documents.
@@ -63,7 +61,7 @@ of information—e.g., data leakage—is also quite physical in this
 example: the folder is removed. It may be found lying around, with or
 without the red lint.
 
-In this scenario, Access Control is quite simple: you can literally
+In this scenario, access control is quite simple: you can literally
 observe access infractions. Access is granted by physically handing over
 the folder to a person with the corresponding clearance level, indicated
 by a personal badge, and may be enforced further by restricting access
@@ -80,7 +78,7 @@ We can see the following topics:
 4.  Authentication: this verification is part of both Identity
     Management and Access Management
 
-5.  Access granted: this is Access Control
+5.  Access granted: this is access control
 
 Since the advent of the computer, there has been a need to control
 access to systems, documents, and other protected resources. In the
@@ -100,15 +98,15 @@ processed makes it evident that the paper world metaphor is not
 sustainable in the digital world.
 
 It was soon realized that the concept of trust levels—e.g., managing the
-clearance level of an individual document reader—is hard to implement.
-Because so many actors are playing along and there is no longer a
-physical security control in place (you cannot see the red lint).
+clearance level of an individual document reader—is hard to implement
+because so many actors are playing along, and there is no longer a
+physical security control in place (you cannot see the red line).
 Instead, there can even be multiple copies of a folder or file in
 multiple locations, and theft no longer means that the data is gone, but
 data will probably be copied without the consent of the owner. What was
 physically easy to implement is not easy to implement in the digital
-world. But the lessons learned in Identification, Authentication,
-Authorization, Access Control, Logging, and Auditing, have been kept.
+world. But the lessons learned in identification, authentication,
+authorization, access control, logging, and auditing, have been kept.
 
 Access to information, data, services, and systems, as well as access to
 physical locations, is governed by security policies. These security
@@ -131,12 +129,11 @@ information because:
 -   The data is about this person (e.g., a medical record of a patient)
 
 There can be many more criteria to identify the owner, but this is part
-of Data Governance and out of scope for this article. In the case of
+of data governance and out of scope for this article. In the case of
 medical files, the object, the patient, has several inherent rights to
 the data, making this person partly accountable for the access decision.
 The concept of shared responsibility for access control will be
-explained in a separate article about Access Governance in the IDPro
-BoK.
+explained in a future article about access governance in the IDPro BoK.
 
 Terminology
 -----------
@@ -146,10 +143,12 @@ Terminology
 
 <!-- -->
 
--   Authentication – The ability to prove that a user or application is
-    trustworthy and has the authority to access a protected resource by
-    validating credentials of an access requester (a user, a process, a
-    system, or a thing).
+-   Authentication – Authentication is the process of proving that the
+    user with a digital identity who is requesting access is the
+    rightful owner of that identity. Depending on the use-case, an
+    ‘identity’ may represent a human or a non-human entity; may be
+    either individual or organizational; and may be verified in the real
+    world to a varying degree, including not at all.
 
 <!-- -->
 
@@ -201,8 +200,8 @@ Terminology
     Access Requester connect to the Access Supplier if the Policy
     Decision Point allows it.
 
--   Policy Decision Point (PDP) – The policy engine validating Access
-    requests and provided attributed against the Access Policy (as
+-   Policy Decision Point (PDP) – The policy engine validates access
+    requests and provides attributes against the Access Policy (as
     defined in the Policy Administration Point).
 
 -   Policy Administration Point (PAP) – The location where the different
@@ -261,7 +260,7 @@ Authentication
 
 Authentication is the process of proving that the user with a digital
 identity who is requesting access is the rightful owner of that
-identity. It can be as simple as using a password, or complex as
+identity. It can be as simple as using a password or complex as
 providing a digital certificate. Both the Access Supplier and the Access
 Requester must be able to manage and consume the results of the
 authentication process.
@@ -274,16 +273,16 @@ a secret code or a password. The underlying mechanism is called
 Challenge-Response. The Access Supplier challenges the Access Requester
 to prove his or her identity, and the subject will have to respond in
 the way the Access Supplier expects. The simplest way to do
-challenge-response is by asking for a password or pin-code. But also the
-CAPTCHA feature on many websites is a form of challenge-response: prove
+challenge-response is by asking for a password or pin-code. The CAPTCHA
+feature on many websites is also a form of challenge-response: prove
 that you are a human
 being.<a href="#fn4" id="fnref4" class="footnote-ref"><sup>4</sup></a>
 
 ### Knowledge – Possession - Being
 
 But other than a CAPTCHA challenge, a known secret can be shared. It may
-not be sufficient to assure the rightful access, because by sharing a
-password, or by finding a password lying around (on a post-it note for
+not be sufficient to assure the rightful access because by sharing a
+password or by finding a password lying around (on a post-it note, for
 instance), others may pretend to be the rightful owner. This weakness of
 the known-secret model means that the trust level of an access requester
 who uses just a password may not be sufficient for some applications.
@@ -296,7 +295,7 @@ insufficient to provide access to classified information.
 
 Adding more proof of identity can be done by demanding more specific and
 unique identifiers, proofs of identity. These more trusted
-authentication means cannot be easily copied, or easily shared or stolen
+authentication means cannot be easily copied or easily shared or stolen
 (it is not impossible, but the cost of copying a secure physical token
 can be too high to make it economically unsound to forfeit). In
 practice, this is done by introducing additional factors, such as
@@ -307,7 +306,7 @@ authentication has been found insufficient for getting access to a
 secured resource. In this case, the low-trust access can be enhanced by
 performing a ‘step-up’ authentication, requiring the additional factors:
 the first step during login could be using a password, and then a second
-higher-level step could involve use of a token or biometric proof.
+higher-level step could involve the use of a token or biometric proof.
 
 Authorization
 -------------
@@ -317,7 +316,7 @@ step in getting access after the phase of authentication. It is the act
 of granting access to a specific resource, such as a computer
 application or a specific function within an application.
 
-Authorization is closely related to the concept of Authority. Someone,
+Authorization is closely related to the concept of authority. Someone,
 such as an owner, is accountable and, because of the ownership, is
 mandated to authorize others to access the protected resource. This
 accountability does not imply that the other person becomes the owner,
@@ -369,7 +368,7 @@ Control.
 Accountability
 --------------
 
-Accountability is a key responsibility in Access Governance. Making sure
+Accountability is a key responsibility in access governance. Making sure
 that every access decision is accounted for by an authorized person
 implies that ownership must be addressed. The owner must be informed
 about all activities under their control in order to be successfully
@@ -381,9 +380,9 @@ authorization request (like granting or revoking authorizations or roles
 to and from people) to logging changes of authorizations within roles.
 The existence of this register is essential to be truly in control of
 access. The same is true for the identification and authentication
-process. There must be an assurance from the part of the login
-mechanism, the operating systems, and the IAM solutions applied to make
-sure that every access request is validated.
+process. There must be assurance from the part of the login mechanism,
+the operating systems, and the IAM solutions applied to make sure that
+every access request is validated.
 
 Specific Access Control Considerations
 --------------------------------------
@@ -400,14 +399,14 @@ a roadblock on the path toward effective’ control.’ User experience (UX)
 is a critical success factor in every information security project. If
 the security controls are too strict, users may be deterred, or they may
 try to circumvent the control. This avoidance on the part of the user is
-often seen consumer access: if a customer portal is not built with the
-focus on the user, then consumers tend to go elsewhere. That is a missed
-opportunity, resulting in low conversion rates. Consumer Identity and
-Access Management (CIAM) solutions are developed to prevent this
+often seen as consumer access: if a customer portal is not built with
+the focus on the user, then consumers tend to go elsewhere. That is a
+missed opportunity, resulting in low conversion rates. Consumer Identity
+and Access Management (CIAM) solutions are developed to prevent this
 behavior.
 
 The lessons learned in CIAM are also being implemented in workforce IAM:
-UX starting to make an impact. For instance, if a user accesses a
+UX is starting to make an impact. For instance, if a user accesses a
 company intranet portal from their home location regularly in a
 prescribed way, like using a VPN, the access control system could
 validate this behavior as a factor in the authentication process. It
@@ -418,15 +417,15 @@ access.
 
 ### Legal Implications
 
-Access Control has historically been looked at as a way to support
-Business Processes and is part of a larger Information Security and risk
+Access control has historically been looked at as a way to support
+business processes and is part of a larger Information Security and risk
 mitigation policy. The question of legal implications directly tied to
-Access Control practices varies from business to business, from sector
+access control practices varies from business to business, from sector
 to sector, and from jurisdiction to jurisdiction. There is no
-unambiguous answer as to the direct legal requirement for most Access
-Control practices as these policies are often woven into a larger
+unambiguous answer as to the direct legal requirement for most access
+control practices, as these policies are often woven into a larger
 program that is driven in part by any number of laws, regulations, or
-standards. Part of the role of an Access Control program or system is to
+standards. Part of the role of an access control program or system is to
 ensure that it is flexible enough to support the larger risk management
 programs of the business or organization. In this way, questions about
 legal requirements and compliance implications can be addressed
@@ -444,7 +443,7 @@ Mainstream Access Control Mechanisms
 
 Several mechanisms support the implementation of access control. This
 section covers the more common ones: Access Control Lists (ACLs),
-Role-based Access Controls (RBACs), and Attribute-based Controls
+Role-Based Access Controls (RBACs), and Attribute-Based Controls
 (ABACs).
 
 ### Access Control Lists - ACL
@@ -457,12 +456,12 @@ place to ensure the correct level of access. The access available, i.e.,
 the permissions that can be granted, are also known as entitlements
 (fine-grained permissions to access resources). One of the earliest and
 best-known implementations of entitlements is by using Access Control
-Lists (ACL’s). In an ACL, the owner of the file defines what users can
+Lists (ACLs). In an ACL, the owner of the file defines what users can
 have what type of access: read, write, update, delete, whatever the
 owner accepts as usage. This concept is easy to understand and easy to
 manage for individual objects. And if the number of objects is limited,
-controlling access via ACL’s can be enough. But when the number of users
-and the number of objects grows, ACL’s can be a restricting factor.
+controlling access via ACLs can be enough. But when the number of users
+and the number of objects grows, ACLs can be a restricting factor.
 
 Every owner of a file will need to define the ACL for the object. This
 distributed method of control implies that central control of access is
@@ -480,25 +479,23 @@ populations grow. At some point, the issue of scale meant that a new
 access management approach was needed. Role-based Access Control (RBAC)
 is an approach of granting access to resources on a group level instead
 of on an individual level. In order to realize this, an intermediate
-component needs to be in place after that of the Access Controller. A
-Role Manager or a Role Owner has to be able to map the role of a user to
+component needs to be in place after that of the access controller. A
+role manager or a role owner has to be able to map the role of a user to
 an entitlement to a secured resource. This mapping looks easy enough,
-but in practice, this means that this person needs to work with
-different other responsible persons in an organization to make sure that
-the authorizations are not conflicting with the business processes and
-organizational structures of the organization. In the Access Governance
-article, this concept and the complexity connected with the governance
-model is further explained.
+but in practice, this means that this person needs to work with other
+responsible persons in an organization to make sure that the
+authorizations do not conflict with the business processes or the
+organizational structures of the organization.
 
 In the example of an internal company website, every company employee is
 made a member of a group called ‘Company Employees.’ The resource—in
 this case, the main page of the internal website—is secured in such a
 manner that access is granted only if a user is a member of this group.
-Another example is the line manager who can make a new employee member
-of the role Account Manager and behold, the access permissions connected
-to the role Account manager, are available to the new employee. This
-non-individual oriented way of granting access makes managing access a
-lot easier.
+Another example is the line manager who can make a new employee a member
+of the role ‘Account Manager’ and behold, the access permissions
+connected to the role Account Manager are available to the new employee.
+This non-individual-oriented way of granting access makes managing
+access a lot easier.
 
 A system owner can also create ‘roles’ within an information system to
 prevent the need for managing individual entitlements. The system owner
@@ -534,7 +531,7 @@ article about RBAC in the BoK.
 Attribute-based Access Controls (ABAC) builds on the RBAC model by
 introducing additional controls based on business logic. A major failing
 of the RBAC model is its static nature. Once an entitlement has been
-granted, it generally is always available to an end-user, until it is
+granted, it generally is always available to an end-user until it is
 manually revoked. This longevity means that users wind up carrying
 access with them from Role to Role if proper cleanup actions are not
 taken. To address this, ABAC expands on the model, taking into
@@ -543,18 +540,18 @@ at the moment of determining if access should be granted. As a result,
 an access management system can make a decision based on the
 entitlements of a given user, as well as the time of day, the location
 of the user (e.g., on network or remote, geolocation based on IP
-address) the type of device (e.g., personal, organization owned, desktop
-or table), and other worker metadata. ABAC can be used both in real-time
-to control access at the time of the transaction, or passively
+address), the type of device (e.g., personal, organization owned,
+desktop or table), and other worker metadata. ABAC can be used both in
+real-time to control access at the time of the transaction, or passively
 controlling the assigned roles and entitlements based on user metadata.
 Both approaches require strong input and support from resource owners,
-Role managers, and people or organization managers to understand the
-needs of the user as well as additional support from analysts to help
+role managers, and people or organization managers to understand the
+needs of the user, as well as additional support from analysts to help
 define the business logic.
 
-For example: The Customer Relations Management process owner could
+For example, the Customer Relations Management process owner could
 define that everyone with the attribute ‘Business Role = Account
-manager’ can access the resource only if attribute ‘Allowed Time =
+Manager’ can access the resource only if attribute ‘Allowed Time =
 defined office hours’. Multiple variations of this dynamic access
 control philosophy will be described later in a future IDPro BoK
 article.
@@ -562,7 +559,7 @@ article.
 The Future Direction of Access Control
 ======================================
 
-Access Control by means of ACLs and RBACs is relatively static; the
+Access control by means of ACLs and RBACs is relatively static; the
 combination between a user and his or her authorizations are set and do
 not vary easily, and other authorizations require changes. But people
 move between jobs, change devices, change location, or get new tasks in
@@ -572,7 +569,7 @@ regulations. Relevant changes may include:
 
 -   Extended organizations, internationalization, collaboration and
     federation, flexible workforce, meaning that in daily operations,
-    people outside the scope of the traditional HR-operations may need
+    people outside the scope of the traditional HR operations may need
     to get access.
 
 -   Moving data processing to the cloud - leading to the development of
@@ -587,12 +584,12 @@ regulations. Relevant changes may include:
 -   New privacy regulations, such as the
     GDPR.<a href="#fn6" id="fnref6" class="footnote-ref"><sup>6</sup></a>
 
--   The usage of mobile apps, using modern protocols like OpenID Connect
+-   The usage of mobile apps using modern protocols like OpenID Connect
     requires a flexible access control topology.
 
 <!-- -->
 
--   Enforcing end-user consent and control - developments like
+-   We are enforcing end-user consent and control - developments like
     User-Managed Access (UMA).
     <a href="#fn7" id="fnref7" class="footnote-ref"><sup>7</sup></a>
 
@@ -600,7 +597,7 @@ regulations. Relevant changes may include:
     management architectures based on protocols like OAuth2
 
 These restrictions and changes show that a more dynamic method for
-managing access is needed. The future direction of Access Control takes
+managing access is needed. The future direction of access control takes
 this into account, and various developments can be identified.
 
 Dynamic Authentication
@@ -637,9 +634,9 @@ adjusting the authentication strength based on the actual context.
 
 A dynamic, ﬂexible method is required for access control to become
 effective and efficient in extended organizations in collaboration
-environments with a flexible workforce. Policy-based Access Control
+environments with a flexible workforce. Policy-Based Access Control
 (PBAC) is the paradigm to provide this flexibility. PBAC, also known as
-Claims-based Access Control or Content-based Access Control, takes some
+Claims-Based Access Control or Content-Based Access Control, takes some
 of the business logic introduced in the ABAC model and enhances it by
 layering additional context evaluation and dynamic step-up capabilities
 
@@ -648,12 +645,12 @@ nature of policy management and enforcement could require step-up
 authentication within a session to cater for the higher trust level
 needed if the defined risk controls require it. A policy engine will be
 responsible for checking if the user attributes and context information
-at the time that access is requested, comply with the access policies
+at the time that access is requested comply with the access policies
 defined by the owners of the security policies. Context information
 might include time of day, geographical location, or device type. The
 scalability of access is also enabled by making it possible to collect
 attributes from different trusted and pre-defined attribute providers.
-As an example: this person can access the Risk Management reports, but
+As an example, this person can access the Risk Management reports, but
 only if this person has the CRISC certificate. ISACA provides this
 certificate, so a lookup in the ISACA registry could answer the question
 regarding the CRISC certification (the mapping of the Access Requester
@@ -672,7 +669,7 @@ As a further natural development, AIAC and ReBAC have to be mentioned.
 Relation-Based Access Control (ReBAC)
 -------------------------------------
 
-A new concept in Access Control is ReBAC, Relation Based Access Control.
+A new concept in access control is ReBAC, Relation Based Access Control.
 ReBAC addresses the possibility of making access control decisions using
 the relationship between the access requester and the other identities
 who can potentially be affected by the access control decision. These
@@ -710,48 +707,49 @@ Privacy laws and regulations create a new awareness of access to
 Personally Identifiable Information. These laws and regulations have
 driven the concept of data ownership and consent by customers,
 employees, or patients. Data owners expect to be in control of their
-personal information, and in many cases, laws and regulations are
-mandating this. Several technological platforms have begun to spring up
-to fill this data ownership gap. Solutions like User-Managed Access, by
-Kantara Initiative, have made their way in the new access paradigms.
-Facilitated by the further development of protocols like OAuth,
-implementation of the concepts is made
+personal information, and in many cases, laws and regulations mandate
+this. Several technological platforms have begun to spring up to fill
+this data ownership gap. Solutions like User-Managed Access, by Kantara
+Initiative, have made their way in the new access paradigms. Facilitated
+by the further development of protocols like OAuth, implementation of
+the concepts is made
 easier.<a href="#fn10" id="fnref10" class="footnote-ref"><sup>10</sup></a>
 
 Conclusion
 ==========
 
-Mainstream Access Control mechanisms like RBAC and ACL’s have a long
-tail and will continue to have valid use cases in many organizations.
+Mainstream access control mechanisms like RBAC and ACLs have a long tail
+and will continue to have valid use cases in many organizations.
 However, as companies, governments, and organizations begin to require
 communications and collaborations outside of their traditional four
 walls, other ways of controlling access are required.
 
 Mainstream Access Control methods are not able to deliver the growing
-need for ﬂexible access control in a changing world. Modern Access
-Governance requires modern access control methods. There is a clear need
+need for ﬂexible access control in a changing world. Modern access
+governance requires modern access control methods. There is a clear need
 for Dynamic Access Control. Interestingly, the tools are becoming
 available, and implementation need not interfere with the current best
 practices, Adaptive Authentication, and PBAC can be added to an existing
 identity and access architecture. It takes some planning, based on a
-roadmap. And of course, it requires implementing elements of Access
-Governance (as explained in a separate article in the IDPro BoK).
+roadmap. And of course, it requires implementing elements of access.
 
 Author Bio
 ----------
 
-![Photograph of the author](andrekoot-biopic.jpg)André Koot is IAM
-Strategist and Chief Customer Success Officer at Sonic Bee. His IAM
-experience comes from a financial accounting and auditing background.
-This background of anti-fraud detection and prevention business
-processes led to research in the area of authorization principles.
+![Photo of the author](andrekoot-biopic.jpg)André Koot is IAM Strategist
+and Chief Customer Success Officer at Sonic Bee. His IAM experience
+comes from a financial accounting and auditing background. This
+background of anti-fraud detection and prevention business processes led
+to research in the area of authorization principles.
 
 Change Log
 ==========
 
-| Date       | Change                    |
-|------------|---------------------------|
-| 2021-04-19 | Author affiliation change |
+| Date       | Change                                |
+|------------|---------------------------------------|
+| 2020-06-17 | V1 published                          |
+| 2021-04-19 | Author affiliation change             |
+| 2021-09-30 | Updated definition for authentication |
 
 <div class="section footnotes" role="doc-endnotes">
 
@@ -816,7 +814,10 @@ Change Log
 
 7.  <div id="fn7">
 
-    https://kantarainitiative.org/confluence/display/uma/Specifications+and+Auxiliary+Documents<a href="#fnref7" class="footnote-back">↩︎</a>
+    Kantara Initiative, “Specifications and Auxiliary Documents,”
+    <https://kantarainitiative.org/confluence/display/uma/Specifications+and+Auxiliary+Documents>
+    (accessed 29 September
+    2021).<a href="#fnref7" class="footnote-back">↩︎</a>
 
     </div>
 
