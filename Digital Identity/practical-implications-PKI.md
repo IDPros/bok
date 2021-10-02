@@ -525,8 +525,7 @@ Directory Certificate Services can provide key management and
 certificate services for machines and human users in an Active Directory
 environment. The Entrust Certificate Authority provides a client-side
 tool that will manage key and certificate lifecycle for the clients with
-the tool installed. OpenSSL offers a free, open-source solution for
-These tools are designed to support a closed system.
+the tool installed. These tools are designed to support a closed system.
 
 Other providers, like KeyFactor or Venafi, can provide certificate
 lifecycle services. However, the tools are proprietary, and significant
