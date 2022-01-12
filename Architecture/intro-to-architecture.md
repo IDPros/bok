@@ -402,8 +402,7 @@ With the Hybrid IAM pattern, authenticated on-premise users will have
 access to on-premise, public cloud, or other external services that
 support common identity standards such as OpenID Connect or OAuth.
 
-img src="image7.png" style="width:3.38333in;height:1.54167in"
-alt="Hybrid Cloud diagram" /&gt;
+![Hybrid Cloud Identity Architecture diagram](image7.png)
 
 Figure 7: Hybrid Cloud Identity Architecture model
 
