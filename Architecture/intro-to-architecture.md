@@ -744,7 +744,7 @@ quality of the many initiatives driving the GM digital business.
 
 Graham Williamson
 
-![Photo of authord](mimage14.jpeg)Graham Williamson is an IAM consultant
+![Photo of author](image14.jpeg)Graham Williamson is an IAM consultant
 working with commercial and government organizations for over 20 years
 with expertise in identity management and access control, enterprise
 architecture and service-oriented architecture, electronic commerce, and
