@@ -78,7 +78,7 @@ The bibliography section is excellent and provides links to many other
 foundational documents in the contemporary identity-management space.
 Many of those references are freely available for download. This
 document intends to provide authoritative definitions of terms and
-concepts, so other documents probably use to this one as a reference
+concepts, so other documents probably use this one as a reference
 document.
 
 A reader who needs a basic introduction to the common terms included in
