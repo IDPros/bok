@@ -133,7 +133,7 @@ incorporated into company operations, access control for sensors or bots
 should be incorporated in the IAM environment. Including non-human
 entities in the architecture allows the enterprise to manage their
 access control in a manner consistent with all other accounts; IAM
-professionals should consider these entities should during the system
+professionals should consider these entities during the system
 development planning process.
 
 It is the task of an IAM practitioner to ensure that, wherever and
