@@ -1,58 +1,6 @@
-Leo Sorokin, Microsoft
+Leo Sorokin
 
-© 2020 IDPro, Leo Sorokin
-
-Table of Contents
-=================
-
-[Abstract 1](#abstract)
-
-[Introduction 1](#introduction)
-
-[Decentralized Identity Benefits 2](#decentralized-identity-benefits)
-
-[Decentralized Identity Terminology
-3](#decentralized-identity-terminology)
-
-[Decentralized Identity Scenario 5](#decentralized-identity-scenario)
-
-[Decentralized Identity Technical Implementation
-7](#decentralized-identity-technical-implementation)
-
-[Setup 8](#setup)
-
-[Verifiable Credential Issuance 8](#verifiable-credential-issuance)
-
-[Verifiable Credential Presentation
-10](#verifiable-credential-presentation)
-
-[Scenario Summary 11](#scenario-summary)
-
-[Decentralized Identity Limitations
-12](#decentralized-identity-limitations)
-
-[Final Words 13](#_Toc55037201)
-
-[Conclusion 14](#conclusion)
-
-[Author Bio 15](#author-bio)
-
-Abstract
-========
-
-As digital transformation sweeps across the globe, it has affected
-everyone – from citizens to employees, from corporations to governments.
-Digital identity is a foundational enabler for business processes in the
-digital economy. Decentralized identity is the next evolution of digital
-identity capabilities and brings with it an opportunity to streamline
-how people interact with other institutions, physical objects, and with
-one another. This paper considers the future world of decentralized
-identity and offers clarity around the benefits of decentralized
-identity, terminology, sample scenario, and a sample technical
-implementation, while also addressing some of the limitations of this
-model. This paper further grounds the reader in the current state of
-decentralized identity capabilities while outlining the evolution of
-identity practices from past to present.
+© 2022 IDPro, Leo Sorokin
 
 Introduction
 ============
@@ -73,8 +21,9 @@ and is a major philosophical as well as technical change in the way
 identity-related information is acquired and presented. The World Wide
 Web Consortium (W3C) is working on publishing standards around
 *Verifiable Credentials* and *Decentralized
-Identifiers*.[1]*,*[2]However, as with any technology standard, it must
-be broadly adopted by the community for it to be useful at scale.
+Identifiers*.<a href="#fn1" id="fnref1" class="footnote-ref"><sup>1</sup></a>,<a href="#fn2" id="fnref2" class="footnote-ref"><sup>2</sup></a>
+However, as with any technology standard, it must be broadly adopted by
+the community for it to be useful at scale.
 
 Today, a person’s digital identity (and associated personal data) is
 strewn across many online services, with access to such services being
@@ -266,12 +215,15 @@ easier to understand the actors and how they interact:
     useful because DIDs can be anchored on any number of disparate dPKI
     implementations.
 
-The figure below highlights the scenario just outlined with the major
-actors and their relationships.
+The figure below highlights some of the terminology just outlined with
+the major actors and their relationships. It also represents the sample
+scenario we will cover later in this document.
 
-<img src="media/image1.jpg" style="width:4.74725in;height:1.84615in" alt="Diagram Description automatically generated" />
+![Digram of the issuance and presentation of verifiable credentials,
+starting with the issuer and moving on to the holder and verifier. Each
+of these actors touch the dPKI.](decentralized-fig1.jpg)
 
-Figure 1 - Verifiable Credential Issuance and Presentation
+Figure - Verifiable Credential Issuance and Presentation
 
 It is essential to note that no personally identifiable information
 should be stored on the decentralized public key infrastructure.
@@ -304,44 +256,44 @@ comprehensive or exhaustive description of all that is possible with
 decentralized identities as it represents just one possible
 decentralized identity flow.
 
-Suppose Sam wants to purchase vehicle insurance from Fabrikam Insurance,
-but to get a good rate, Fabrikam Insurance requires proof that Sam is a
-graduate of Contoso University. In our decentralized identity scenario,
-the actors are as follows:
+Suppose Sam wants to purchase vehicle insurance from Example Insurance,
+but to get a good rate, Example Insurance requires proof that Sam is a
+graduate of A University. In our decentralized identity scenario, the
+actors are as follows:
 
 -   Sam as the verifiable credential <u>subject</u> and <u>holder</u>.
 
--   Contoso University as the verifiable credential <u>issuer</u>.
+-   A University as the verifiable credential <u>issuer</u>.
 
--   Fabrikam Insurance as the verifiable credential <u>verifier</u>.
+-   Example Insurance as the verifiable credential <u>verifier</u>.
 
 The following sequence of steps represents a flow where the end-goal is
-for Sam to receive a digital diploma from Contoso University and then
-present it for verification to Fabrikam Insurance in order to claim the
+for Sam to receive a digital diploma from A University and then present
+it for verification to Example Insurance in order to claim the
 automobile insurance discount:
 
-1.  Sam receives an email from Contoso University congratulating Sam on
+1.  Sam receives an email from A University congratulating Sam on
     graduating while also providing a QR code Sam can use to scan with
     Sam’s mobile phone. Sam has an app on Sam’s phone that is registered
     to handle such a request. This app represents Sam's *digital wallet*
     that will hold all the *digital cards* that were collected over
     time. Sam scans the QR code, the digital wallet app launches, and
     Sam is informed that in order to receive Sam’s digital diploma Sam
-    needs to sign-in to the Contoso University website.
+    needs to sign-in to the A University website.
 
 2.  In our case, Sam presses on the link and enters Sam’s existing
     credentials to authenticate on the University's website or if Sam
     didn't have such a credential, Sam may be asked to come in person to
     the registrar's office to do ID proofing and receive their
     credentials. Once Sam provides their existing credentials, Sam is
-    informed that Sam can go ahead and *accept* this digital card from
-    Contoso University. Once Sam accepts the card, Sam is asked to
-    secure this operation with a biometric, such as a fingerprint, face,
-    or even a PIN. After Sam performs this action, the card is now
-    securely stored in Sam's digital wallet. Sam can inspect the card,
-    view the data that the card has about Sam (which was attested to by
-    the university), such as Sam’s full name, major, graduation date,
-    and issue date. Also, Sam can view the activity that this card was
+    informed that Sam can go ahead and *accept* this digital card from A
+    University. Once Sam accepts the card, Sam is asked to secure this
+    operation with a biometric, such as a fingerprint, face, or even a
+    PIN. After Sam performs this action, the card is now securely stored
+    in Sam's digital wallet. Sam can inspect the card, view the data
+    that the card has about Sam (which was attested to by the
+    university), such as Sam’s full name, major, graduation date, and
+    issue date. Also, Sam can view the activity that this card was
     involved in, such as when it was issued, to whom it was presented,
     and how it was used - all of this can be done from the digital
     wallet app on Sam's phone. Each such activity can be considered as a
@@ -351,33 +303,32 @@ automobile insurance discount:
     digital wallet, which is always under Sam's control. More generally,
     we can also refer to this digital card as a *verifiable credential*.
 
-3.  Now, to claim Sam’s discount, Sam navigates to the Fabrikam
-    Insurance website on Sam’s mobile phone and notices the *Verify
-    Credentials* button. This is a deep link and when Sam presses it,
-    the digital wallet app opens with a permission request. The
-    permission request indicates that Fabrikam Insurance needs to
-    receive a Contoso University alumni digital card for Sam to get
-    Sam’s discount. Note that Sam doesn't have to authenticate to
-    Fabrikam Insurance with a username and password nor use a federated
-    IdP. Sam can simply present the digital diploma Sam already
-    possesses in Sam’s digital wallet. In our scenario, Sam only
-    presents Sam’s Contoso University alumni digital card to Fabrikam
-    Insurance, but Sam could also present other digital cards Sam has in
-    Sam’s digital wallet such as a digital card that proves Sam is a
-    resident of a specific territory or to prove Sam’s current address.
-    Once Sam authorizes the permission request with Sam’s biometric such
-    as a fingerprint scan, Fabrikam Insurance now receives the digital
-    card and is able to verify that it was indeed issued to Sam by
-    Contoso University, and it is indeed Sam who is presenting this
-    digital card to Fabrikam. Once Fabrikam Insurance completes the
-    verification, it can now offer a discount to Sam! Sam can now view
-    that Sam’s digital wallet app has a receipt for this card,
-    indicating that this card was presented to Fabrikam Insurance on a
-    given date and for a specified purpose with Fabrikam’s terms and
+3.  Now, to claim Sam’s discount, Sam navigates to the Example Insurance
+    website on Sam’s mobile phone and notices the *Verify Credentials*
+    button. This is a deep link and when Sam presses it, the digital
+    wallet app opens with a permission request. The permission request
+    indicates that Example Insurance needs to receive a A University
+    alumni digital card for Sam to get Sam’s discount. Note that Sam
+    doesn't have to authenticate to Example Insurance with a username
+    and password nor use a federated IdP. Sam can simply present the
+    digital diploma Sam already possesses in Sam’s digital wallet. In
+    our scenario, Sam only presents Sam’s A University alumni digital
+    card to Example Insurance, but Sam could also present other digital
+    cards Sam has in Sam’s digital wallet such as a digital card that
+    proves Sam is a resident of a specific territory or to prove Sam’s
+    current address. Once Sam authorizes the permission request with
+    Sam’s biometric such as a fingerprint scan, Example Insurance now
+    receives the digital card and is able to verify that it was indeed
+    issued to Sam by A University, and it is indeed Sam who is
+    presenting this digital card to Example. Once Example Insurance
+    completes the verification, it can now offer a discount to Sam! Sam
+    can now view that Sam’s digital wallet app has a receipt for this
+    card, indicating that this card was presented to Example Insurance
+    on a given date and for a specified purpose with Example’s terms and
     conditions. Some implementations may further enable Sam to *revoke*
-    the access Fabrikam Insurance has to view Sam’s digital card. This
+    the access Example Insurance has to view Sam’s digital card. This
     revocation action may generate another *receipt* that clearly
-    indicates the date and time Sam revoked Fabrikam's access to Sam’s
+    indicates the date and time Sam revoked Example's access to Sam’s
     digital card. Once again, Sam can accomplish all this from Sam’s
     digital wallet app on Sam’s mobile phone, and all the digital cards
     that Sam collects over time and Sam’s associated receipts are under
@@ -386,26 +337,26 @@ automobile insurance discount:
 4.  Sam can collect many such digital cards in Sam’s digital wallet and
     at some point may even need to present multiple cards, such as in
     the case if Sam wants to attend an advanced enterprise architecture
-    training academy, both proving Sam is a Contoso University alumni as
-    well as a certified enterprise architect. The academy can then
-    instantly verify both credentials presented and enable Sam to access
-    Sam’s advanced training material.
+    training academy, both proving Sam is a A University alumni as well
+    as a certified enterprise architect. The academy can then instantly
+    verify both credentials presented and enable Sam to access Sam’s
+    advanced training material.
 
 It is important to clarify that Sam sends a *verifiable presentation* to
-Fabrikam Insurance. The verifiable presentation contains a nested
-artifact which is the *verifiable credential* Sam has received from
-Contoso University. In this manner, Fabrikam Insurance that is acting as
-the verifier, can verify the following two critical elements:
+Example Insurance. The verifiable presentation contains a nested
+artifact which is the *verifiable credential* Sam has received from A
+University. In this manner, Example Insurance that is acting as the
+verifier, can verify the following two critical elements:
 
 -   Based on the digital signature of the *verifiable credential*,
-    Fabrikam Insurance verifies that the verifiable credential is
-    authentic and was indeed issued by Contoso University to Sam
+    Example Insurance verifies that the verifiable credential is
+    authentic and was indeed issued by A University to Sam
 
 -   Based on the digital signature of the *verifiable presentation*,
-    Fabrikam Insurance verifies that it is indeed Sam who is performing
+    Example Insurance verifies that it is indeed Sam who is performing
     this credential presentation
 
-After Fabrikam insurance has verified the above, it is able to
+After Example insurance has verified the above, it is able to
 confidently present Sam with Sam’s vehicle insurance discount.
 
 Decentralized Identity Technical Implementation
@@ -420,52 +371,50 @@ and will not be detailed here.
 
 ### Setup
 
-1.  Contoso University represents the issuer. Contoso generates a
-    decentralized identifier (DID) tied to a public/private key pair and
-    registers their DID on the dPKI. The private key is stored by the
-    Contoso University IT team in a Key Vault or Hardware Security
-    Module. The corresponding public key is published to a decentralized
-    ledger such as a blockchain so that anyone can find it.
+1.  A University represents the issuer. A generates a decentralized
+    identifier (DID) tied to a public/private key pair and registers
+    their DID on the dPKI. The private key is stored by the A University
+    IT team in a Key Vault or Hardware Security Module. The
+    corresponding public key is published to a decentralized ledger such
+    as a blockchain so that anyone can find it.
 
-2.  Contoso University IT publishes a DID document that associates its
-    DID to the registered public Domain Name System (DNS) domain, such
-    as contoso.edu. This represents a domain linkage verifiable
-    credential. Contoso University IT can host this file on their
-    website which both proves ownership of the domain and the specific
-    DID. The verifier (such as Fabrikam Insurance) can use this DID
-    document to confirm the DID ownership for Contoso University and
-    ensure that the verifiable credential it receives is indeed issued
-    by Contoso University and not by some other issuer claiming to be
-    Contoso University.
+2.  A University IT publishes a DID document that associates its DID to
+    the registered public Domain Name System (DNS) domain, such as
+    A.edu. This represents a domain linkage verifiable credential. A
+    University IT can host this file on their website which both proves
+    ownership of the domain and the specific DID. The verifier (such as
+    Example Insurance) can use this DID document to confirm the DID
+    ownership for A University and ensure that the verifiable credential
+    it receives is indeed issued by A University and not by some other
+    issuer claiming to be A University.
 
-3.  Contoso University IT develop a contract that describes the
-    requirements for the issuance of the verifiable credential. For
-    example, Contoso University IT can specify which attestations should
-    be self-issued directly by the user, and which other verifiable
-    credentials, if any, the individual must first provide. In our
-    scenario, the IT team has mandated that the student authenticate
-    with a federated IdP that supports the OpenID Connect protocol, so
-    that it will be able to receive a security token and extract claims
-    from it, such as first name, last name, and student number. The
-    issuer will then be able to map it to attributes it will issue in
-    the verifiable credential. Importantly, Contoso University will
-    indicate the schema(s) to which the verifiable credential will
-    conform, so that other verifiers around the world will be able to
-    consume the content of the verifiable credential those verifiers
-    receive.
+3.  A University IT develop a contract that describes the requirements
+    for the issuance of the verifiable credential. For example, A
+    University IT can specify which attestations should be self-issued
+    directly by the user, and which other verifiable credentials, if
+    any, the individual must first provide. In our scenario, the IT team
+    has mandated that the student authenticate with a federated IdP that
+    supports the OpenID Connect protocol, so that it will be able to
+    receive a security token and extract claims from it, such as first
+    name, last name, and student number. The issuer will then be able to
+    map it to attributes it will issue in the verifiable credential.
+    Importantly, A University will indicate the schema(s) to which the
+    verifiable credential will conform, so that other verifiers around
+    the world will be able to consume the content of the verifiable
+    credential those verifiers receive.
 
-4.  Finally, Contoso University IT administrators can setup and
-    customize the branding of the soon-to-be-issued verifiable
-    credential cards such as card color, logos, icons, images, and
-    helpful text. The administrators can customize the helpful text
-    strings via metadata that will appear as part of the cards based on
-    the attestations issued with the card for credential data. This will
-    help design the look and feel of verifiable credential alumni cards
-    issued by Contoso University, and ensure the issued digital cards
-    reflect the brand of the university. In the future, these graphical
-    elements should be standardized so that students enjoy a consistent
-    digital card visual rendering experience regardless of which vendor
-    develops the user agent or digital agent the student chooses to use.
+4.  Finally, A University IT administrators can setup and customize the
+    branding of the soon-to-be-issued verifiable credential cards such
+    as card color, logos, icons, images, and helpful text. The
+    administrators can customize the helpful text strings via metadata
+    that will appear as part of the cards based on the attestations
+    issued with the card for credential data. This will help design the
+    look and feel of verifiable credential alumni cards issued by A
+    University, and ensure the issued digital cards reflect the brand of
+    the university. In the future, these graphical elements should be
+    standardized so that students enjoy a consistent digital card visual
+    rendering experience regardless of which vendor develops the user
+    agent or digital agent the student chooses to use.
 
 ### 
 
@@ -476,45 +425,45 @@ and will not be detailed here.
     Sam’s user agent to retrieve the requirements for credential
     issuance as dictated by the issuer and to display the appropriate UX
     to the user via the user agent. As such, the QR code is displayed on
-    the Contoso University website and scanning the QR code opens Sam's
+    the A University website and scanning the QR code opens Sam's
     digital wallet mobile app and triggers an issuance request retrieval
-    operation from the user agent to Contoso University. Once the user
-    agent receives the issuance request from Contoso University, it
-    begins the flow to issue the credential. The issuance request is
-    digitally signed by Contoso University and the user agent can verify
-    the authenticity of such a request. The issuance request includes a
-    reference to the contract that describes how the user agent should
-    render the UX and what information Sam needs to provide in order to
-    be given a verifiable alumni credential.
+    operation from the user agent to A University. Once the user agent
+    receives the issuance request from A University, it begins the flow
+    to issue the credential. The issuance request is digitally signed by
+    A University and the user agent can verify the authenticity of such
+    a request. The issuance request includes a reference to the contract
+    that describes how the user agent should render the UX and what
+    information Sam needs to provide in order to be given a verifiable
+    alumni credential.
 
 2.  After the user agent verifies that the request is genuine, it
-    renders the UX to Sam. Because of the specific requirement that
-    Contoso has for issuing digital alumni cards in our scenario, Sam
-    needs to sign in with Sam’s existing Contoso University account,
-    which, in turn, will issue a security token to the user agent with
-    claims such as Sam's first name and last name, degree, and
-    graduation date. (Note that during setup above, the issuer can be
-    configured to accept security tokens from any trusted and compliant
-    OpenID Connect identity provider and the user agent will use this
-    identity provider during the issuance process.) Therefore, when the
-    individual presses ‘Login to Contoso University’ on the user agent,
-    the user agent can redirect the individual to authenticate with the
-    IdP, and it is there the individual can perform standard
-    authentication tasks such as entering their username and password,
-    performing Multi Factor Authentication (MFA), accepting terms of
-    service, or even paying for their credential. All this activity
-    occurs on the client side via the user agent (e.g., a mobile app).
-    When the user agent finally receives the security token from the
-    IdP, it can pass it along to the issuer which can then extract
-    claims from it, as mentioned above, and inject these as attributes
-    into the resulting verifiable credential, potentially enriching the
-    claims with information obtained from other sources. As well, after
-    the individual authenticates with the IdP, the user agent can
-    display additional input fields that the individual is free to
-    self-select. After the individual has provided all the required
-    information, the user agent can verify that it has all the necessary
-    issuer requirements fulfilled, and it can go ahead and ask if Sam
-    would like to accept the card.
+    renders the UX to Sam. Because of the specific requirement that A
+    has for issuing digital alumni cards in our scenario, Sam needs to
+    sign in with Sam’s existing A University account, which, in turn,
+    will issue a security token to the user agent with claims such as
+    Sam's first name and last name, degree, and graduation date. (Note
+    that during setup above, the issuer can be configured to accept
+    security tokens from any trusted and compliant OpenID Connect
+    identity provider and the user agent will use this identity provider
+    during the issuance process.) Therefore, when the individual presses
+    ‘Login to A University’ on the user agent, the user agent can
+    redirect the individual to authenticate with the IdP, and it is
+    there the individual can perform standard authentication tasks such
+    as entering their username and password, performing Multi Factor
+    Authentication (MFA), accepting terms of service, or even paying for
+    their credential. All this activity occurs on the client side via
+    the user agent (e.g., a mobile app). When the user agent finally
+    receives the security token from the IdP, it can pass it along to
+    the issuer which can then extract claims from it, as mentioned
+    above, and inject these as attributes into the resulting verifiable
+    credential, potentially enriching the claims with information
+    obtained from other sources. As well, after the individual
+    authenticates with the IdP, the user agent can display additional
+    input fields that the individual is free to self-select. After the
+    individual has provided all the required information, the user agent
+    can verify that it has all the necessary issuer requirements
+    fulfilled, and it can go ahead and ask if Sam would like to accept
+    the card.
 
 3.  In our scenario, when Sam accepts the card, Sam is asked to use a
     biometric gesture such as a fingerprint scan. This action generates
@@ -526,85 +475,84 @@ and will not be detailed here.
     Sam’s DID and issues the digital card to Sam who then receives the
     verifiable credential, which is a JSON Web Token (JWT) following the
     W3C standard for verifiable credentials. The JWT includes both the
-    DID of the subject, Sam, and the DID of the issuer, Contoso
-    University, as well as the type of the credential, and any
-    attestations such as first name, last name, major, and graduation
-    date. It also contains a way to find out the credential's revocation
-    status in case the credential is later revoked by the issuer -
-    Contoso University. This verifiable credential is digitally signed
-    by the issuer's DID.
+    DID of the subject, Sam, and the DID of the issuer, A University, as
+    well as the type of the credential, and any attestations such as
+    first name, last name, major, and graduation date. It also contains
+    a way to find out the credential's revocation status in case the
+    credential is later revoked by the issuer - A University. This
+    verifiable credential is digitally signed by the issuer's DID.
 
 5.  Once the user agent validates the verifiable credential received
-    from Contoso University, it inserts this digital card into Sam's
-    digital wallet as a card Sam can now present to other organizations
-    such as Fabrikam Insurance.
+    from A University, it inserts this digital card into Sam's digital
+    wallet as a card Sam can now present to other organizations such as
+    Example Insurance.
 
 ### Verifiable Credential Presentation
 
-1.  When Sam visits the Fabrikam Insurance website on their mobile phone
+1.  When Sam visits the Example Insurance website on their mobile phone
     to receive a discount on their vehicle insurance, Sam presses the
-    ‘Verify Credentials’ button on the Fabrikam website (which is a deep
-    link) or simply scans a QR code generated by Fabrikam via their
+    ‘Verify Credentials’ button on the Example website (which is a deep
+    link) or simply scans a QR code generated by Example via their
     mobile phone. This generates a presentation/verification request for
-    Sam to verify Sam’s Contoso University alumni status. The request
-    describes the type of card(s) that Sam should present to Fabrikam
-    Insurance, such as Sam’s digital alumni card from Contoso
-    University, and this request is digitally signed by the verifier's
-    DID, which in our case, is Fabrikam Insurance. The presentation
-    request can also include Fabrikam's terms of service.
+    Sam to verify Sam’s A University alumni status. The request
+    describes the type of card(s) that Sam should present to Example
+    Insurance, such as Sam’s digital alumni card from A University, and
+    this request is digitally signed by the verifier's DID, which in our
+    case, is Example Insurance. The presentation request can also
+    include Example's terms of service.
 
 2.  After the signature of the request is verified by the user agent,
-    Sam is presented with a UI on the user agent indicating that
-    Fabrikam Insurance is requesting permission to see Sam’s Contoso
-    University alumni card with a reason as to why Fabrikam needs to see
-    it (such as for Sam to be able to receive their discount).
+    Sam is presented with a UI on the user agent indicating that Example
+    Insurance is requesting permission to see Sam’s A University alumni
+    card with a reason as to why Example needs to see it (such as for
+    Sam to be able to receive their discount).
 
 3.  After Sam approves the request with a biometric gesture, such as
     with a fingerprint scan on the mobile phone, the verification
     response, which is essentially a presentation of a credential
     response (also known as a verifiable presentation), is sent to
-    Fabrikam Insurance. The response is signed by Sam's private key and
-    includes the verifiable credential issued by Contoso University to
-    Sam nested inside the JWT payload.
+    Example Insurance. The response is signed by Sam's private key and
+    includes the verifiable credential issued by A University to Sam
+    nested inside the JWT payload.
 
-4.  Fabrikam Insurance attempts to match the person performing the
+4.  Example Insurance attempts to match the person performing the
     presentation of the credential with the subject of the nested
     verifiable credential to ensure that it is indeed Sam who is
-    presenting it to Fabrikam Insurance, and not anybody else.
-    Therefore, the DID of Sam is present in both the outer JWT payload
-    since Sam is performing the presentation of the credential, as well
-    as inside the nested JWT payload as the subject of the verifiable
-    credential issued by Contoso University. Once Fabrikam Insurance
-    confirms that the DID in the presentation matches the subject of the
-    issued credential, Sam is both authenticated to the Fabrikam
-    Insurance website and authorized to claim Sam’s discount! This is
-    much better than simply possessing a username and password, since,
-    in this mechanism, Fabrikam Insurance knows that the person
-    presenting this credential is the same person to whom the card was
-    issued. With a username and password, someone else can use it to
-    impersonate you. In this architecture, however, this is
-    significantly harder to do. Someone else will need to take control
-    of Sam's private key stored on Sam’s phone's secure enclave to be
-    able to accomplish this malevolent task.
+    presenting it to Example Insurance, and not anybody else. Therefore,
+    the DID of Sam is present in both the outer JWT payload since Sam is
+    performing the presentation of the credential, as well as inside the
+    nested JWT payload as the subject of the verifiable credential
+    issued by A University. Once Example Insurance confirms that the DID
+    in the presentation matches the subject of the issued credential,
+    Sam is both authenticated to the Example Insurance website and
+    authorized to claim Sam’s discount! This is much better than simply
+    possessing a username and password, since, in this mechanism,
+    Example Insurance knows that the person presenting this credential
+    is the same person to whom the card was issued. With a username and
+    password, someone else can use it to impersonate you. In this
+    architecture, however, this is significantly harder to do. Someone
+    else will need to take control of Sam's private key stored on Sam’s
+    phone's secure enclave to be able to accomplish this malevolent
+    task.
 
-5.  At last, Fabrikam Insurance can extract the data it requires from
-    the verifiable credential such as Sam's first name, last name,
-    major, graduation date, and go ahead and present Sam with Sam’s
-    vehicle insurance discount!
+5.  At last, Example Insurance can extract the data it requires from the
+    verifiable credential such as Sam's first name, last name, major,
+    graduation date, and go ahead and present Sam with Sam’s vehicle
+    insurance discount!
 
 6.  The credential verification flow completes when Sam stores a signed
-    receipt by Fabrikam Insurance that will be associated with the card
+    receipt by Example Insurance that will be associated with the card
     in Sam’s wallet. Sam now has a single place where Sam can view all
     the websites where Sam has presented Sam’s alumni card over time. In
-    our scenario, the receipt includes information about Fabrikam
-    Insurance, the reason Fabrikam needed to receive the card,
-    Fabrikam's terms and conditions, and the date the receipt was
-    generated. This signed receipt is associated with the card in Sam's
-    digital wallet and will always be under Sam's possession.
+    our scenario, the receipt includes information about Example
+    Insurance, the reason Example needed to receive the card, Example's
+    terms and conditions, and the date the receipt was generated. This
+    signed receipt is associated with the card in Sam's digital wallet
+    and will always be under Sam's possession.
 
 7.  Some implementations may further enable Sam to go ahead and decide
-    to revoke Fabrikam's access to Sam’s Contoso University digital
-    alumni card. Fabrikam should thus implement the necessary revocation
+    to revoke Example's access to Sam’s A University digital alumni
+    card. Example should thus implement the necessary revocation
     measures to ensure it complies with Sam's request. The verifier
     should then cease to use the data from the card Sam presented to it.
     Sam can later prove that Sam issued a revocation request if such a
@@ -616,13 +564,13 @@ and will not be detailed here.
 ### Scenario Summary
 
 In our simple use-case above, the issuer of a verifiable credential was
-Contoso University, but in other contexts, the issuer can be an
-employer, a government agency, a device, a daemon process, or even the
-individual. Likewise, a verifier can also be any of the previously
-mentioned actors. The decentralized identity ecosystem is very broad and
-the standards allow for opportunities to unlock a more flexible, secure,
-and privacy-preserving way to perform digital interactions in a myriad
-of contexts.
+A University, but in other contexts, the issuer can be an employer, a
+government agency, a device, a daemon process, or even the individual.
+Likewise, a verifier can also be any of the previously mentioned actors.
+The decentralized identity ecosystem is very broad and the standards
+allow for opportunities to unlock a more flexible, secure, and
+privacy-preserving way to perform digital interactions in a myriad of
+contexts.
 
 The components presented in the flow above are based on open standards.
 The verifiable credentials issuance and presentation flows depend on the
@@ -636,15 +584,15 @@ few privileged identity providers or certification authorities.
 
 The Decentralized Identity Foundation is leading the effort on
 decentralized identity, but more work remains to fully define the
-space.[3] For example, the decentralized identity community is
-discussing how to enable better privacy preservation by empowering Sam
-to present Sam’s age in a privacy-preserving way without unnecessarily
-disclosing Sam’s exact date of birth to the verifier. Another area under
-discussion is how to empower Sam with performing self-owned key recovery
-in case Sam loses or damages Sam’s phone, so that Sam can more easily
-retrieve all Sam’s previously acquired digital cards back onto a
-different device or onto a different user agent in a more seamless
-manner.
+space.<a href="#fn3" id="fnref3" class="footnote-ref"><sup>3</sup></a>
+For example, the decentralized identity community is discussing how to
+enable better privacy preservation by empowering Sam to present Sam’s
+age in a privacy-preserving way without unnecessarily disclosing Sam’s
+exact date of birth to the verifier. Another area under discussion is
+how to empower Sam with performing self-owned key recovery in case Sam
+loses or damages Sam’s phone, so that Sam can more easily retrieve all
+Sam’s previously acquired digital cards back onto a different device or
+onto a different user agent in a more seamless manner.
 
 Decentralized Identity Limitations
 ----------------------------------
@@ -802,29 +750,55 @@ today. Decentralized identity is an exciting development in the identity
 space, and it has the potential to offer more trustworthy digital
 experiences and unlock more value for everyone.
 
+Change Log
+==========
+
+| Date       | Change                                                                                 |
+|------------|----------------------------------------------------------------------------------------|
+| 2020-10-30 | V1 published                                                                           |
+| 2022-02-28 | Editorial changes only (changed example business names to non-Microsoft specific ones) |
+
 Author Bio
 ==========
 
-<img src="media/image2.jpeg" style="width:2in;height:2.18823in" alt="Photo of Leo Sorokin, author" />
-Leo Sorokin has over 10+ years of experience in various solution
-architecture and enterprise architecture roles with large organizations
-in the financial, manufacturing, and software industries. He is
-currently a Cloud Solutions Architect at Microsoft helping the largest
-Canadian organizations adopt cloud technology. Leo has extensive
-experience with identity, service-oriented architecture, application
-integration, cloud-native application and hybrid-cloud architecture, as
-well as security software architecture. Leo is also TOGAF® 9 Certified,
-a Microsoft Certified Azure Solutions Architect and holds a Computer
+![Photo of Leo Sorokin, author](Photo-Leo-Sorokin.jpg) Leo Sorokin has
+over 10+ years of experience in various solution architecture and
+enterprise architecture roles with large organizations in the financial,
+manufacturing, and software industries. He is currently a Cloud
+Solutions Architect at Microsoft helping the largest Canadian
+organizations adopt cloud technology. Leo has extensive experience with
+identity, service-oriented architecture, application integration,
+cloud-native application and hybrid-cloud architecture, as well as
+security software architecture. Leo is also TOGAF® 9 Certified, a
+Microsoft Certified Azure Solutions Architect and holds a Computer
 Science degree from York University. Leo has also taught technology
 related courses in several educational institutions.
 
-[1] "Verifiable Credentials Data Model 1.0," W3C Recommendation, World
-Wide Web Consortium (W3C), 19 November 2019,
-https://www.w3.org/TR/vc-data-model/.
+<div class="section footnotes" role="doc-endnotes">
 
-[2] “Decentralized Identifiers (DIDs) v1.0,” W3C Working Draft, World
-Wide Web Consortium (W3C), 27 October 2020,
-https://www.w3.org/TR/did-core/.
+------------------------------------------------------------------------
 
-[3] Decentralized Identity Foundation (DIF), \[Online\]. Available:
-https://identity.foundation/.
+1.  <div id="fn1">
+
+    "Verifiable Credentials Data Model 1.0," W3C Recommendation, World
+    Wide Web Consortium (W3C), 19 November 2019,
+    https://www.w3.org/TR/vc-data-model/.<a href="#fnref1" class="footnote-back">↩︎</a>
+
+    </div>
+
+2.  <div id="fn2">
+
+    “Decentralized Identifiers (DIDs) v1.0,” W3C Working Draft, World
+    Wide Web Consortium (W3C), 27 October 2020,
+    https://www.w3.org/TR/did-core/.<a href="#fnref2" class="footnote-back">↩︎</a>
+
+    </div>
+
+3.  <div id="fn3">
+
+    Decentralized Identity Foundation (DIF), \[Online\]. Available:
+    https://identity.foundation/.<a href="#fnref3" class="footnote-back">↩︎</a>
+
+    </div>
+
+</div>
