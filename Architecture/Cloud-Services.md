@@ -179,7 +179,7 @@ sequence diagram below. See Alternative Paths for some variations.
     to use an HTTP POST to forward it to the RP. (The target RP URL is
     typically known to the IDP through initial configuration).
 
-10. The RP and ensures the signing certificate from the IDP is still
+10. The RP ensures the signing certificate from the IDP is still
     valid by checking for revocation.
 
 11. The RP validates the response and interprets its contents. The
