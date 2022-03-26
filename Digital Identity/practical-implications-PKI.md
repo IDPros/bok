@@ -73,9 +73,10 @@ Terminology
     published by a Certificate Authority
 
 -   Certificate Signing Request (CSR): When requesting a certificate,
-    the requesting entity provides a copy of the private key along with
+    the requesting entity provides a copy of the public key along with
     their name and other information in a specially formatted binary
-    object called a CSR.
+    object called a CSR. The CSR must be signed using the requesting entity's
+    private key.
 
 -   Classical Computer: A computer that uses binary encoding and Boolean
     logic to make calculations in a deterministic way. Classical
