@@ -41,7 +41,7 @@ Knowledge”.*<a href="#fn1" id="fnref1" class="footnote-ref"><sup>1</sup></a>
 </tr>
 <tr class="even">
 <td>Authentication</td>
-<td>Authentication is the process of proving that the user with a digital identity who is requesting access is the rightful owner of that identity. Depending on the use-case, an ‘identity’ may represent a human or a non-human entity; may be either individual or organizational; and may be verified in the real world to a varying degree, including not at all.</td>
+<td>Authentication is the process of proving that the user with a digital identity who is requesting access has the right crednetials required for access. Depending on the use-case, an ‘identity’ may represent a human or a non-human entity; may be either individual or organizational; and may be verified in the real world to a varying degree, including not at all.</td>
 </tr>
 <tr class="odd">
 <td>Authorization</td>
@@ -96,7 +96,7 @@ What is Authentication?
 =======================
 
 Conceptually, authentication, sometimes abbreviated as AuthN, is the
-process of ensuring ownership of an account at the time the account is
+process of ensuring the access credentials of an account are validated at the time the account is
 used to access a resource or establish a session. You complete
 authentication dozens of times a day and don’t even realize it. When you
 log in to your computer with your username and password, you just did
