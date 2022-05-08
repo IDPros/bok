@@ -1,4 +1,4 @@
-Federation in the Enterprise
+Federation Simplified
 =============================
 Patrick Lunney, Product Owner - Single Sign-On & Multi Factor
 Authentication
