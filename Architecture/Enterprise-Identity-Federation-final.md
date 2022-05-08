@@ -129,7 +129,8 @@ the SP’s URL, for example, ‘https://myhrapp.com/enterprise’. This is
 known as an SP-initiated request. Other times, the IdP will initiate the
 request. For example, ‘https://authn.enterprise.com/idp/SAML20=myhrapp’.
 In both cases, the user will be logging into the same app tenant for the
-enterprise. Some applications only support IdP-initiated login requests.
+enterprise. Some applications only support IdP-initiated login requests. 
+Some applications only support SP-initiated requests.
 
 Here is a diagram flow of a standard SAML authentication:
 
