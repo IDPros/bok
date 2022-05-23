@@ -58,7 +58,7 @@ Terminology
 </tr>
 <tr class="odd">
 <td>OpenID Connect</td>
-<td>OpenID Connect is an authentication and authorization framework built on top of OAuth2.0, specifically the authorization_code grant type. It was created to allow not only to authorize clients to obtain information but also includes the ability for clients to obtain information about the user after the user is authenticated.</td>
+<td>OpenID Connectis a simple identity layer on top of the OAuth 2.0 protocol. It enables Clients to verify the identity of the End-User based on the authentication performed by an Authorization Server, as well as to obtain basic profile information about the End-User in an interoperable and REST-like manner.</td>
 </tr>
 <tr class="even">
 <td>Security Assertion Markup Language (SAML)</td>
