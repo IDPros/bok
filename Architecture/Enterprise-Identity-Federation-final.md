@@ -1,18 +1,15 @@
-Federation in the Enterprise
-=============================
 Patrick Lunney, Product Owner - Single Sign-On & Multi Factor
 Authentication
 
 Capital One
 
-© 2021 IDPro, Patrick Lunney
+© 2022 IDPro, Patrick Lunney
 
-*To comment on this article, please visit our [GitHub
-repository](https://github.com/IDPros/bok) and [submit an
-issue](https://docs.github.com/en/github/managing-your-work-on-github/opening-an-issue-from-code).*
+*To comment on this article, please visit our [<u>GitHub
+repository</u>](https://github.com/IDPros/bok) and [<u>submit an
+issue</u>](https://docs.github.com/en/github/managing-your-work-on-github/opening-an-issue-from-code).*
 
 # Introduction
-
 
 This article describes identity federation in the context of single
 sign-on in enterprises and outlines some use cases for enterprise
@@ -22,14 +19,9 @@ enterprise, self-service with controls in place for governance, or
 manual integrations. Each integration model has its strengths and
 weaknesses, which will be discussed in turn below.
 
-Terminology
------------
+## Terminology
 
 <table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
 <tbody>
 <tr class="odd">
 <td>Term</td>
@@ -38,7 +30,7 @@ Terminology
 <tr class="even">
 <td>Identity Federation</td>
 <td><p>An identity federation is a group of computing or network providers that agree to operate using standard protocols and trust agreements. In a <strong>Single Sign-On (SSO)</strong> scenario, identity federation occurs when an <strong>Identity Provider (IdP)</strong> and <strong>Service Provider (SP)</strong> agree to communicate via a specific, standard protocol. The enterprise user will log into the application using their credentials from the enterprise rather than creating new, specific credentials within the application. By using one set of credentials, users need to manage only one credential, credential issues (such as password resets) can be managed in one location, and applications can rely on the appropriate enterprise systems (such as the HR system) to be the source of truth for a user’s status and affiliation.</p>
-<p>Identity federations can take several forms. In academia, <strong>multilateral federations</strong>, where a trusted third party manages the metadata of multiple IdPs and SPs, are fairly common.<a href="#fn1" id="fnref1" class="footnote-ref"><sup>1</sup></a> This article focuses, however, on the enterprise use case where <strong>bilateral federation</strong> arrangements, where the agreements are one-to-one between an IdP and an SP, are the most common form of identity federation in use today.</p></td>
+<p>Identity federations can take several forms. In academia, <strong>multilateral federations</strong>, where a trusted third party manages the metadata of multiple IdPs and SPs, are fairly common.[1] This article focuses, however, on the enterprise use case where <strong>bilateral federation</strong> arrangements, where the agreements are one-to-one between an IdP and an SP, are the most common form of identity federation in use today.</p></td>
 </tr>
 <tr class="odd">
 <td>Bilateral Federation</td>
@@ -46,7 +38,7 @@ Terminology
 </tr>
 <tr class="even">
 <td>Identity Provider (IdP)</td>
-<td>An Identity Provider (IdP) performs a service that sends information about a user to an application. This information is typically held in a user store, so an identity provider will often take that information and transform it to be able to be passed to the service providers, AKA apps. The OASIS organization, which is responsible for the SAML specifications, defines an IdP as “A kind of SP that creates, maintains, and manages identity information for principals and provides principal authentication to other SPs within a federation, such as with web browser profiles.” <a href="#fn2" id="fnref2" class="footnote-ref"><sup>2</sup></a></td>
+<td>An Identity Provider (IdP) performs a service that sends information about a user to an application. This information is typically held in a user store, so an identity provider will often take that information and transform it to be able to be passed to the service providers, AKA apps. The OASIS organization, which is responsible for the SAML specifications, defines an IdP as “A kind of SP that creates, maintains, and manages identity information for principals and provides principal authentication to other SPs within a federation, such as with web browser profiles.” [2]</td>
 </tr>
 <tr class="odd">
 <td>Multilateral Federation</td>
@@ -54,15 +46,15 @@ Terminology
 </tr>
 <tr class="even">
 <td>OAuth 2.0</td>
-<td>OAuth 2.0 is an open-source protocol that allows Resource Owners such as applications to share data with clients by facilitating communication with an Authorization Server.<a href="#fn3" id="fnref3" class="footnote-ref"><sup>3</sup></a> That data takes the form of credentials given to applications to obtain information/data from other applications. The Authorization Server is usually the Identity Provider (IdP). The Authorization Server (AS) may provide authorization directly or indirectly. For example, the AS may supply attributes or profile data of the Resource Owner or provide access to data that can later be used for authorization purposes, such as entitlements from an Identity Management or Governance Solution.</td>
+<td>OAuth 2.0 is an open-source protocol that allows Resource Owners such as applications to share data with clients by facilitating communication with an Authorization Server.[3] That data takes the form of credentials given to applications to obtain information/data from other applications. The Authorization Server is usually the Identity Provider (IdP). The Authorization Server (AS) may provide authorization directly or indirectly. For example, the AS may supply attributes or profile data of the Resource Owner or provide access to data that can later be used for authorization purposes, such as entitlements from an Identity Management or Governance Solution.</td>
 </tr>
 <tr class="odd">
 <td>OpenID Connect</td>
-<td>OpenID Connect is an authentication and authorization framework built on top of OAuth2.0, specifically the authorization_code grant type. It was created to allow not only to authorize clients to obtain information but also includes the ability for clients to obtain information about the user after the user is authenticated.</td>
+<td>OpenID Connect is a simple identity layer on top of the OAuth 2.0 protocol. It enables Clients to verify the identity of the End-User based on the authentication performed by an Authorization Server, as well as to obtain basic profile information about the End-User in an interoperable and REST-like manner.</td>
 </tr>
 <tr class="even">
 <td>Security Assertion Markup Language (SAML)</td>
-<td>SAML is an XML-based communication protocol between SPs and IdPs.<a href="#fn4" id="fnref4" class="footnote-ref"><sup>4</sup></a> Usually, the enterprise hosts the IdP, whereas applications (including cloud services) are the SPs.</td>
+<td>SAML is an XML-based communication protocol between SPs and IdPs.[4] Usually, the enterprise hosts the IdP, whereas applications (including cloud services) are the SPs.</td>
 </tr>
 <tr class="odd">
 <td>Service Provider (SP)</td>
@@ -70,22 +62,22 @@ Terminology
 </tr>
 <tr class="even">
 <td>Single Sign-On</td>
-<td>Single Sign-On is a centralized portal that enables SPs to verify the identities of <strong>End Users</strong> by facilitating communication with IdPs. SSO acts as a bridge to decouple SPs and IdPs. This can happen via numerous protocols such as agent-based integrations, direct LDAP integration, SAML, and OpenID Connect, to name a few.</td>
+<td>Single Sign-On is a service that enables SPs to verify the identities of <strong>End Users</strong> by facilitating communication with IdPs. SSO acts as a bridge to decouple SPs and IdPs. This can happen via numerous protocols such as agent-based integrations, direct LDAP integration, SAML, and OpenID Connect, to name a few.</td>
 </tr>
 </tbody>
 </table>
 
-Exploring Identity Federation in the Enterprise
------------------------------------------------
+## 
+
+## Exploring Identity Federation in the Enterprise
 
 There are several common scenarios where an identity practitioner is
 likely to encounter identity federation in an enterprise context. This
 section explores the most common protocols, OpenID Connect, and SAML.
 
-Use Case 1: SAML
-----------------
+## Use Case 1: SAML
 
-![Screenshot of a common Single Sign-On interface.](Figure1.jpg)
+![Screenshot of a common Single Sign-On interface.](Figure1.png)
 
 *Figure 1 - Example of a Single Sign-On User Interface*
 
@@ -120,8 +112,7 @@ example, in Appendix Item 2, you can see a user's username and email
 address were passed to this SP.
 
 For more information on the details of SAML assertions and components,
-see the SAML specification and associated supporting
-documents.<a href="#fn5" id="fnref5" class="footnote-ref"><sup>5</sup></a>
+see the SAML specification and associated supporting documents.\[5\]
 
 One last piece of information regarding enterprise SAML federations:
 there are two different types of URLs for applications. Sometimes it is
@@ -130,11 +121,12 @@ known as an SP-initiated request. Other times, the IdP will initiate the
 request. For example, ‘https://authn.enterprise.com/idp/SAML20=myhrapp’.
 In both cases, the user will be logging into the same app tenant for the
 enterprise. Some applications only support IdP-initiated login requests.
+Some applications only support SP-initiated requests.
 
 Here is a diagram flow of a standard SAML authentication:
 
 ![Sequence Diagram for a SAML authentication flow, including the IdP,
-user Agent, and Service Provider. ](Figure2.jpg)
+user Agent, and Service Provider. ](Figure2.png)
 
 *Figure 2 - SAML Authentication Flow*
 
@@ -148,23 +140,23 @@ takes place. Based on the information provided by the IdP, the
 application will allow or deny the user access to certain parts of the
 application.
 
-Use Case 2: OpenID Connect
---------------------------
+## 
 
-Another common type of identity federation is internal to the
-enterprise. Previously, enterprises would use "agents," which they would
-install on web servers hosting applications. The agents would
-communicate with something called a policy server to determine what a
-user could do, if anything at all. That agent/policy server technology
-is old and not used as much in enterprises anymore.
+## Use Case 2: OpenID Connect
+
+Another common type of identity federation is internal to the enterprise
+and increasingly found in SaaS offerings. Previously, enterprises would
+use "agents," which they would install on web servers hosting
+applications. The agents would communicate with something called a
+policy server to determine what a user could do, if anything at all.
+That agent/policy server technology is old and not used as much in
+enterprises anymore.
 
 Instead, a popular protocol that is increasingly being used is OpenID
 Connect. OpenID Connect is newer than SAML and based on the OAuth2.0
 protocol; most in-house enterprise apps are based on APIs and
-microservices, which is why OIDC is
-favored.<a href="#fn6" id="fnref6" class="footnote-ref"><sup>6</sup></a>
-It should be noted that some SaaS applications do support OpenID
-Connect.
+microservices, which is why OIDC is favored.\[6\] It should be noted
+that some SaaS applications do support OpenID Connect.
 
 OpenID Connect uses the authorization\_code grant type of OAuth2.0. It
 is important to note that OpenID Connect is meant to share user
@@ -176,14 +168,13 @@ and *authorization* and are outside the scope of this document.
 ### Authorization\_Code Flow
 
 The authorization\_code grant type is explained in the OAuth2.0
-spec.<a href="#fn7" id="fnref7" class="footnote-ref"><sup>7</sup></a>
-OpenID Connect 1.0 is based on this flow. An important consideration to
-note involves the scopes in OpenID Connect: they must contain openid
-(and most often include profile). Here is a diagram of that
-authorization\_code
-flow:<a href="#fn8" id="fnref8" class="footnote-ref"><sup>8</sup></a>
+spec.\[7\] OpenID Connect 1.0 is based on this flow. An important
+consideration to note involves the scopes in OpenID Connect: they must
+contain openid (and most often include profile). Here is a diagram of
+that authorization\_code flow:\[8\]
 
-![A diagram of the OAuth 2.0 authorization\_grant flow](Figure3.jpg)
+![A diagram of the OAuth 2.0 authorization\_grant
+flow](Figure3.png)
 
 *Figure 3 - OAuth 2.0 authorization\_grant Flow*
 
@@ -202,30 +193,24 @@ the user.
 
 To see the API calls, please see Appendix Item 3.
 
-Challenges in Enterprise Federations
-====================================
+# Challenges in Enterprise Federations
 
-When to Use SAML versus OpenID Connect
---------------------------------------
+## When to Use SAML versus OpenID Connect
 
 The short answer to this question is: it depends. Sometimes there are
 limitations as to what SPs can do, as well as IdPs. There are pros and
 cons to both integrations, so it really is just a matter of choice (or
-limitation) between the IdPs and
-SPs.<a href="#fn9" id="fnref9" class="footnote-ref"><sup>9</sup></a>
+limitation) between the IdPs and SPs.\[9\]
 
 The IDPro Body of Knowledge article “[<u>Introduction to Identity - Part
 2: Access Management</u>](https://bok.idpro.org/article/id/45/)” by
 Pamela Dingle offers an interesting view of the evolution of
-authentication and access control
-tools.<a href="#fn10" id="fnref10" class="footnote-ref"><sup>10</sup></a>
-In particular, the section ‘Mobile & API Innovation Gave Us OAuth &
-Delegated Authorization Frameworks’ offers some interesting insights
-into the evolution that led to the development of OAuth despite the
-existence of SAML.
+authentication and access control tools.\[10\] In particular, the
+section ‘Mobile & API Innovation Gave Us OAuth & Delegated Authorization
+Frameworks’ offers some interesting insights into the evolution that led
+to the development of OAuth despite the existence of SAML.
 
-Attributes - Data and Formatting
---------------------------------
+## Attributes - Data and Formatting
 
 Applications require different names for attributes. Sometimes an
 attribute must be called firstname, where other applications may need
@@ -238,13 +223,11 @@ the enterprise forces the application to adopt its formatting of the
 attribute. Other times, the application forces the IdP to change the
 attributes. There is also something called attribute mapping which can
 take place. Most SAML and OpenID Connect plugins allow this to take
-place in attribute mapping files, like
-Shibboleth.<a href="#fn11" id="fnref11" class="footnote-ref"><sup>11</sup></a>
-The IdP will send attributes, and upon receiving them, the SP can
-transform them into the correct format.
+place in attribute mapping files, like Shibboleth.\[11\] The IdP will
+send attributes, and upon receiving them, the SP can transform them into
+the correct format.
 
-Assertion Sizing
-----------------
+## Assertion Sizing
 
 Quite a bit of information can be passed to SPs, and the assertion can
 become so large that it will break the SP. This is somewhat common when
@@ -261,19 +244,16 @@ problem can be alleviated via identity governance processes that limit
 the number of Active Directory groups and removes memberships no longer
 required.
 
-Cross-Origin Resource Sharing (CORS)
-------------------------------------
+## Cross-Origin Resource Sharing (CORS)
 
 Cross-Origin Resource Sharing, commonly known as CORS, causes issues in
 many enterprises. CORS is a standard that allows a server to relax the
-same-origin
-policy.<a href="#fn12" id="fnref12" class="footnote-ref"><sup>12</sup></a>
-Usually, an API call from one application cannot be returned to a
-separate application. For example, if I make a request to
-application1.com/api, I would expect the request to come back to me and
-not be sent to application2.com/api. These are two different domains and
-application1.com could potentially be sending malicious data to
-application2.com.
+same-origin policy.\[12\] Usually, an API call from one application
+cannot be returned to a separate application. For example, if I make a
+request to application1.com/api, I would expect the request to come back
+to me and not be sent to application2.com/api. These are two different
+domains and application1.com could potentially be sending malicious data
+to application2.com.
 
 CORS is used to explicitly allow some cross-origin requests while
 rejecting others. For example, if a site offers an embeddable service,
@@ -288,13 +268,11 @@ Setting up such a CORS configuration is a challenge. It is also
 potentially not secure. What most IdPs can do is relax their policies to
 allow sharing between top-level domains, for example, \*.enterprise.com
 or \*.partner.com. This way, there will be no restrictions on the origin
-of
-requests.<a href="#fn13" id="fnref13" class="footnote-ref"><sup>13</sup></a>
+of requests.\[13\]
 
- 
+#   
 
-Conclusion
-==========
+# Conclusion
 
 This document is a high-level review of application federations in the
 enterprise. The most common protocols used are SAML and OpenID Connect.
@@ -302,7 +280,7 @@ Both are widely used today in the enterprise world as well as the
 consumer world as well. When you see this screen:
 
 ![Screenshot of a common login screen using social
-networks](Figure4.jpg)
+networks](Figure4.png)
 
 *Figure 4 - Sample Social Login Screen*
 
@@ -323,10 +301,9 @@ such as adding multifactor authentication into the flow.
 
  
 
- 
+#   
 
-Author Bio
-==========
+# Author Bio
 
 My name is Patrick Lunney. I have managed/owned identity providers in
 two fortune 50 companies over the past eight years. In that time, I've
@@ -339,216 +316,219 @@ exceptions. I have held this role since July of 2019.
 
  
 
-Appendix:
-=========
+# Change Log
 
-Item 1: SAML Request
---------------------
+|  |
+| ---------- | ----------------------------------------------------------------------------------------- |
+| Date       | Change                                                                                    |
+| 2022-06-03 | V2 published; Changed title, updated OIDC definition, added detail re: SP-initiated flows |
+| 2021-04-19 | V1 published                                                                              |
 
-&lt;md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+# Appendix:
+
+## Item 1: SAML Request
+
+\<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
 ID="mzWO1kVu-dAmFIdmN.08s9bOaCH" cacheDuration="PT1440M"
-entityID="IdProvider"&gt;
+entityID="IdProvider"\>
 
-> &lt;md:IdPSSODescriptor
+> \<md:IdPSSODescriptor
 > protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol"
-> WantAuthnRequestsSigned="false"&gt;
->
-> &lt;md:KeyDescriptor use="signing"&gt;
->
-> &lt;ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig\#"&gt;
->
-> &lt;ds:X509Data&gt;
->
-> &lt;ds:X509Certificate&gt;
->
-> &lt;/ds:X509Certificate&gt;
->
-> &lt;/ds:X509Data&gt;
->
-> &lt;/ds:KeyInfo&gt;
->
-> &lt;/md:KeyDescriptor&gt;
->
-> &lt;md:NameIDFormat&gt;urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified&lt;/md:NameIDFormat&gt;
->
-> &lt;md:SingleSignOnService
+> WantAuthnRequestsSigned="false"\>
+> 
+> \<md:KeyDescriptor use="signing"\>
+> 
+> \<ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig\#"\>
+> 
+> \<ds:X509Data\>
+> 
+> \<ds:X509Certificate\>
+> 
+> \</ds:X509Certificate\>
+> 
+> \</ds:X509Data\>
+> 
+> \</ds:KeyInfo\>
+> 
+> \</md:KeyDescriptor\>
+> 
+> \<md:NameIDFormat\>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified\</md:NameIDFormat\>
+> 
+> \<md:SingleSignOnService
 > Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
-> Location="https://authn.enterprise.com/idp/SSO.saml2"/&gt;
->
-> &lt;md:SingleSignOnService
+> Location="https://authn.enterprise.com/idp/SSO.saml2"/\>
+> 
+> \<md:SingleSignOnService
 > Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
-> Location="https://authn.enterprise.com/idp/SSO.saml2"/&gt;
->
-> &lt;saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
+> Location="https://authn.enterprise.com/idp/SSO.saml2"/\>
+> 
+> \<saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
 > Name="firstname"
-> NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified"/&gt;
->
-> &lt;saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
+> NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified"/\>
+> 
+> \<saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
 > Name="groups"
-> NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified"/&gt;
->
-> &lt;saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
+> NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified"/\>
+> 
+> \<saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
 > Name="lastname"
-> NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified"/&gt;
->
-> &lt;saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
+> NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified"/\>
+> 
+> \<saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
 > Name="userid"
-> NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified"/&gt;
->
-> &lt;saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
+> NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified"/\>
+> 
+> \<saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
 > Name="email"
-> NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified"/&gt;
->
-> &lt;/md:IdPSSODescriptor&gt;
->
-> &lt;md:ContactPerson contactType="administrative"/&gt;
+> NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified"/\>
+> 
+> \</md:IdPSSODescriptor\>
+> 
+> \<md:ContactPerson contactType="administrative"/\>
 
-&lt;/md:EntityDescriptor&gt;
+\</md:EntityDescriptor\>
 
-Item 2: SAML Response
----------------------
+## Item 2: SAML Response
 
-&lt;samlp:Response Destination="https://serviceprovider.com/acs"
+\<samlp:Response Destination="https://serviceprovider.com/acs"
 
 ID="HpiyLr\_zVMK.jxdUHXxRvjJ8Fwy"
 IssueInstant="2020-11-24T01:53:06.809Z" Version="2.0"
 
-xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"&gt;
+xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"\>
 
-&lt;saml:Issuer
-xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"&gt;IDprovider&lt;/saml:Issuer&gt;
+\<saml:Issuer
+xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"\>IDprovider\</saml:Issuer\>
 
-&lt;ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig\#"&gt;
+\<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig\#"\>
 
-&lt;ds:SignedInfo&gt;
+\<ds:SignedInfo\>
 
-&lt;ds:CanonicalizationMethod
-Algorithm="http://www.w3.org/2001/10/xml-exc-c14n\#"/&gt;
+\<ds:CanonicalizationMethod
+Algorithm="http://www.w3.org/2001/10/xml-exc-c14n\#"/\>
 
-&lt;ds:SignatureMethod
-Algorithm="http://www.w3.org/2001/04/xmldsig-more\#rsa-sha256"/&gt;
+\<ds:SignatureMethod
+Algorithm="http://www.w3.org/2001/04/xmldsig-more\#rsa-sha256"/\>
 
-&lt;ds:Reference URI="\#HpiyLr\_zVMK.jxdUHXxRvjJ8Fwy"&gt;
+\<ds:Reference URI="\#HpiyLr\_zVMK.jxdUHXxRvjJ8Fwy"\>
 
-&lt;ds:Transforms&gt;
+\<ds:Transforms\>
 
-&lt;ds:Transform
-Algorithm="http://www.w3.org/2000/09/xmldsig\#enveloped-signature"/&gt;
+\<ds:Transform
+Algorithm="http://www.w3.org/2000/09/xmldsig\#enveloped-signature"/\>
 
-&lt;ds:Transform
-Algorithm="http://www.w3.org/2001/10/xml-exc-c14n\#"/&gt;
+\<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n\#"/\>
 
-&lt;/ds:Transforms&gt;
+\</ds:Transforms\>
 
-&lt;ds:DigestMethod
-Algorithm="http://www.w3.org/2001/04/xmlenc\#sha256"/&gt;
+\<ds:DigestMethod
+Algorithm="http://www.w3.org/2001/04/xmlenc\#sha256"/\>
 
-&lt;ds:DigestValue&gt;PwJICHFA1QIlML2p5MyJaRib5TDY4TWj5J7IEAjn1Yo=&lt;/ds:DigestValue&gt;
+\<ds:DigestValue\>PwJICHFA1QIlML2p5MyJaRib5TDY4TWj5J7IEAjn1Yo=\</ds:DigestValue\>
 
-&lt;/ds:Reference&gt;
+\</ds:Reference\>
 
-&lt;/ds:SignedInfo&gt;
+\</ds:SignedInfo\>
 
-&lt;ds:SignatureValue&gt; *Signature*
+\<ds:SignatureValue\> *Signature*
 
-&lt;/ds:SignatureValue&gt;
+\</ds:SignatureValue\>
 
-&lt;ds:KeyInfo&gt;
+\<ds:KeyInfo\>
 
-&lt;ds:X509Data&gt;
+\<ds:X509Data\>
 
-&lt;ds:X509Certificate&gt;
+\<ds:X509Certificate\>
 
-&lt;/ds:X509Certificate&gt;
+\</ds:X509Certificate\>
 
-&lt;/ds:X509Data&gt;
+\</ds:X509Data\>
 
-&lt;ds:KeyValue&gt;
+\<ds:KeyValue\>
 
-&lt;ds:RSAKeyValue&gt;
+\<ds:RSAKeyValue\>
 
-> &lt;ds:Modulus&gt;
->
-> &lt;/ds:Modulus&gt;
+> \<ds:Modulus\>
+> 
+> \</ds:Modulus\>
 
-&lt;ds:Exponent&gt;AQAB&lt;/ds:Exponent&gt;
+\<ds:Exponent\>AQAB\</ds:Exponent\>
 
-&lt;/ds:RSAKeyValue&gt;
+\</ds:RSAKeyValue\>
 
-&lt;/ds:KeyValue&gt;
+\</ds:KeyValue\>
 
-&lt;/ds:KeyInfo&gt;
+\</ds:KeyInfo\>
 
-&lt;/ds:Signature&gt;
+\</ds:Signature\>
 
-&lt;samlp:Status&gt;&lt;samlp:StatusCode
-Value="urn:oasis:names:tc:SAML:2.0:status:Success"/&gt;
+\<samlp:Status\>\<samlp:StatusCode
+Value="urn:oasis:names:tc:SAML:2.0:status:Success"/\>
 
-&lt;/samlp:Status&gt;
+\</samlp:Status\>
 
-&lt;saml:Assertion ID="bJUFiJZEXV0rDgdTh9HnF2CbrIq"
+\<saml:Assertion ID="bJUFiJZEXV0rDgdTh9HnF2CbrIq"
 IssueInstant="2020-11-24T01:53:07.104Z"
 
-Version="2.0" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"&gt;
+Version="2.0" xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"\>
 
-&lt;saml:Issuer&gt;IDprovider&lt;/saml:Issuer&gt;
+\<saml:Issuer\>IDprovider\</saml:Issuer\>
 
-&lt;saml:Subject&gt;
+\<saml:Subject\>
 
-&lt;saml:NameID
-Format="urn:oasis:names:tc:SAML:2.0:nameid-format:entity"&gt;ztl593&lt;/saml:NameID&gt;
+\<saml:NameID
+Format="urn:oasis:names:tc:SAML:2.0:nameid-format:entity"\>ztl593\</saml:NameID\>
 
-&lt;saml:SubjectConfirmation
-Method="urn:oasis:names:tc:SAML:2.0:cm:bearer"&gt;&lt;saml:SubjectConfirmationData
+\<saml:SubjectConfirmation
+Method="urn:oasis:names:tc:SAML:2.0:cm:bearer"\>\<saml:SubjectConfirmationData
 NotOnOrAfter="2020-11-24T01:58:07.104Z"
 
-Recipient="https://serviceprovider.com/acs"/&gt;&lt;/saml:SubjectConfirmation&gt;
+Recipient="https://serviceprovider.com/acs"/\>\</saml:SubjectConfirmation\>
 
-&lt;/saml:Subject&gt;
+\</saml:Subject\>
 
-&lt;saml:Conditions NotBefore="2020-11-24T01:48:07.104Z"
-NotOnOrAfter="2020-11-24T01:58:07.104Z"&gt;
+\<saml:Conditions NotBefore="2020-11-24T01:48:07.104Z"
+NotOnOrAfter="2020-11-24T01:58:07.104Z"\>
 
-&lt;saml:AudienceRestriction&gt;
+\<saml:AudienceRestriction\>
 
-&lt;saml:Audience&gt;http://www.serviceprovider.com/&lt;/saml:Audience&gt;
+\<saml:Audience\>http://www.serviceprovider.com/\</saml:Audience\>
 
-&lt;/saml:AudienceRestriction&gt;
+\</saml:AudienceRestriction\>
 
-&lt;/saml:Conditions&gt;
+\</saml:Conditions\>
 
-&lt;saml:AuthnStatement AuthnInstant="2020-11-24T01:53:07.103Z"
+\<saml:AuthnStatement AuthnInstant="2020-11-24T01:53:07.103Z"
 
-SessionIndex="bJUFiJZEXV0rDgdTh9HnF2CbrIq"&gt;
+SessionIndex="bJUFiJZEXV0rDgdTh9HnF2CbrIq"\>
 
-&lt;saml:AuthnContext&gt;
+\<saml:AuthnContext\>
 
-&lt;saml:AuthnContextClassRef&gt;urn:oasis:names:tc:SAML:2.0:ac:classes:Telephony&lt;/saml:AuthnContextClassRef&gt;
+\<saml:AuthnContextClassRef\>urn:oasis:names:tc:SAML:2.0:ac:classes:Telephony\</saml:AuthnContextClassRef\>
 
-&lt;/saml:AuthnContext&gt;
+\</saml:AuthnContext\>
 
-&lt;/saml:AuthnStatement&gt;
+\</saml:AuthnStatement\>
 
-&lt;saml:AttributeStatement&gt;
+\<saml:AttributeStatement\>
 
-&lt;saml:Attribute Name="mail"
-NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"&gt;
+\<saml:Attribute Name="mail"
+NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic"\>
 
-&lt;saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema"
+\<saml:AttributeValue xmlns:xs="http://www.w3.org/2001/XMLSchema"
 
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:type="xs:string"&gt;Patrick.Lunney@idprovider.com&lt;/saml:AttributeValue&gt;
+xsi:type="xs:string"\>Patrick.Lunney@idprovider.com\</saml:AttributeValue\>
 
-&lt;/saml:Attribute&gt;
+\</saml:Attribute\>
 
-&lt;/saml:AttributeStatement&gt;
+\</saml:AttributeStatement\>
 
-&lt;/saml:Assertion&gt;
+\</saml:Assertion\>
 
-&lt;/samlp:Response&gt;
+\</samlp:Response\>
 
-Item 3: OpenID Connect
-----------------------
+## Item 3: OpenID Connect
 
 To begin the process the user agent will first make a GET request
 against the authorization server, passing along information about the
@@ -556,11 +536,11 @@ application the user wishes to go to.
 
 curl --request GET \\
 
---header ‘content-type: application/x-www-form-urlencoded' \\
+\--header ‘content-type: application/x-www-form-urlencoded' \\
 
---url
-“${sso\_prefix}/authorization?response\_type=code&redirect\_uri=${redirect\_uri}&scope="openid
-profile”&client\_id=${client\_id}
+\--url
+“${sso\_prefix}/authorization?response\_type=code\&redirect\_uri=${redirect\_uri}\&scope="openid
+profile”\&client\_id=${client\_id}
 
 What will return from this request is the login page (assuming there is
 no session), and a user will enter their credentials so the
@@ -573,20 +553,20 @@ To exchange the authorization\_code for the access token:
 
 curl --request POST \\
 
---url “https://${sso\_prefix}/token” \\
+\--url “https://${sso\_prefix}/token” \\
 
---header 'content-type: application/x-www-form-urlencoded' \\
+\--header 'content-type: application/x-www-form-urlencoded' \\
 
---header 'Authorization: Basic
+\--header 'Authorization: Basic
 base64(urlencode("${client\_id}:${client\_secret}))' \\
 
---data “code=${code}” \\
+\--data “code=${code}” \\
 
---data “grant\_type=authorization\_code” \\
+\--data “grant\_type=authorization\_code” \\
 
---data “redirect\_uri=${redirect\_uri}” \\
+\--data “redirect\_uri=${redirect\_uri}” \\
 
---data 'scope=openid profile'
+\--data 'scope=openid profile'
 
 After this exchange, the application can then make a backend API call to
 the authorization server to obtain additional information about the user
@@ -594,11 +574,11 @@ for further authorization.
 
 curl --request GET \\
 
---header ‘content-type: application/x-www-form-urlencoded' \\
+\--header ‘content-type: application/x-www-form-urlencoded' \\
 
---header 'Authorization: Bearer ${token}
+\--header 'Authorization: Bearer ${token}
 
---url “${sso\_prefix}/userinfo
+\--url “${sso\_prefix}/userinfo
 
 This will give applications information like this:
 
@@ -616,112 +596,53 @@ This will give applications information like this:
 
 }
 
-<div class="section footnotes" role="doc-endnotes">
-
-------------------------------------------------------------------------
-
-1.  <div id="fn1">
-
-    “Multilateral federation,” InCommon Federation wiki, last updated 17
+1.  “Multilateral federation,” InCommon Federation wiki, last updated 17
     February 2020,
-    [<u>https://spaces.at.internet2.edu/display/federation/Multilateral+federation</u>](https://spaces.at.internet2.edu/display/federation/Multilateral+federation).<a href="#fnref1" class="footnote-back">↩︎</a>
+    [<u>https://spaces.at.internet2.edu/display/federation/Multilateral+federation</u>](https://spaces.at.internet2.edu/display/federation/Multilateral+federation).
 
-    </div>
-
-2.  <div id="fn2">
-
-    Hodges, Jeff, Rob Philpott, Eve Maler, eds. “Glossary for the OASIS
+2.  Hodges, Jeff, Rob Philpott, Eve Maler, eds. “Glossary for the OASIS
     Security Assertion Markup Language (SAML) V2.0,” OASIS Standard, 15
     March 2005,
-    [<u>https://docs.oasis-open.org/security/saml/v2.0/saml-glossary-2.0-os.pdf</u>](https://docs.oasis-open.org/security/saml/v2.0/saml-glossary-2.0-os.pdf).<a href="#fnref2" class="footnote-back">↩︎</a>
+    [<u>https://docs.oasis-open.org/security/saml/v2.0/saml-glossary-2.0-os.pdf</u>](https://docs.oasis-open.org/security/saml/v2.0/saml-glossary-2.0-os.pdf).
 
-    </div>
-
-3.  <div id="fn3">
-
-    Hardt, D., Ed., "The OAuth 2.0 Authorization Framework", RFC 6749,
+3.  Hardt, D., Ed., "The OAuth 2.0 Authorization Framework", RFC 6749,
     DOI 10.17487/RFC6749, October 2012,
-    &lt;https://www.rfc-editor.org/info/rfc6749&gt;.<a href="#fnref3" class="footnote-back">↩︎</a>
+    \<https://www.rfc-editor.org/info/rfc6749\>.
 
-    </div>
-
-4.  <div id="fn4">
-
-    Ragouzis, Nick, John Hughes, Rob Philpott, Eve Maler, Paul Madsen,
+4.  Ragouzis, Nick, John Hughes, Rob Philpott, Eve Maler, Paul Madsen,
     Tom Scavo, eds. “Security Assertion Markup Language (SAML) V2.0
     Technical Overview,” OASIS Committee Draft, 25 March 2008,
-    [<u>https://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0.pdf</u>](https://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0.pdf).<a href="#fnref4" class="footnote-back">↩︎</a>
+    [<u>https://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0.pdf</u>](https://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0.pdf).
 
-    </div>
+5.  OASIS Standards landing page,
+    [<u>https://www.oasis-open.org/standards/</u>](https://www.oasis-open.org/standards/).
 
-5.  <div id="fn5">
-
-    OASIS Standards landing page,
-    [<u>https://www.oasis-open.org/standards/</u>](https://www.oasis-open.org/standards/).<a href="#fnref5" class="footnote-back">↩︎</a>
-
-    </div>
-
-6.  <div id="fn6">
-
-    Hardt, D., Ed., "The OAuth 2.0 Authorization Framework", RFC 6749,
+6.  Hardt, D., Ed., "The OAuth 2.0 Authorization Framework", RFC 6749,
     DOI 10.17487/RFC6749, October 2012,
-    &lt;[<u>https://www.rfc-editor.org/info/rfc6749</u>](https://www.rfc-editor.org/info/rfc6749)&gt;.<a href="#fnref6" class="footnote-back">↩︎</a>
+    \<[<u>https://www.rfc-editor.org/info/rfc6749</u>](https://www.rfc-editor.org/info/rfc6749)\>.
 
-    </div>
+7.  Ibid, see Section 4.1.
 
-7.  <div id="fn7">
-
-    Ibid, see Section 4.1.<a href="#fnref7" class="footnote-back">↩︎</a>
-
-    </div>
-
-8.  <div id="fn8">
-
-    Hardt, D., Ed., "The OAuth 2.0 Authorization Framework", RFC 6749,
+8.  Hardt, D., Ed., "The OAuth 2.0 Authorization Framework", RFC 6749,
     Section 4.1, DOI 10.17487/RFC6749, October 2012,
-    &lt;<https://www.rfc-editor.org/info/rfc6749>&gt;.<a href="#fnref8" class="footnote-back">↩︎</a>
+    \<[<u>https://www.rfc-editor.org/info/rfc6749</u>](https://www.rfc-editor.org/info/rfc6749)\>.
 
-    </div>
-
-9.  <div id="fn9">
-
-    For further discussion on the pros and cons between SAML and OAuth,
+9.  For further discussion on the pros and cons between SAML and OAuth,
     see
     [<u>https://www.okta.com/identity-101/whats-the-difference-between-OAuth-openid-connect-and-saml/</u>](https://www.okta.com/identity-101/whats-the-difference-between-OAuth-openid-connect-and-saml/)
     or
-    [<u>https://auth0.com/intro-to-iam/saml-vs-openid-connect-oidc/</u>](https://auth0.com/intro-to-iam/saml-vs-openid-connect-oidc/)<a href="#fnref9" class="footnote-back">↩︎</a>
+    [<u>https://auth0.com/intro-to-iam/saml-vs-openid-connect-oidc/</u>](https://auth0.com/intro-to-iam/saml-vs-openid-connect-oidc/)
 
-    </div>
-
-10. <div id="fn10">
-
-    Dingle, Pamela, “Introduction to Identity – Part 2: Access
+10. Dingle, Pamela, “Introduction to Identity – Part 2: Access
     Management,” IDPro Body of Knowledge, 17 June 2020,
-    [<u>https://bok.idpro.org/article/id/45/</u>](https://bok.idpro.org/article/id/45/).<a href="#fnref10" class="footnote-back">↩︎</a>
+    [<u>https://bok.idpro.org/article/id/45/</u>](https://bok.idpro.org/article/id/45/).
 
-    </div>
+11. Shibboleth Consortium,
+    [<u>https://www.shibboleth.net/</u>](https://www.shibboleth.net/).
 
-11. <div id="fn11">
+12. “Same-origin Policy,” MDM Web Docs,
+    [<u>https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin\_policy</u>](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy).
 
-    Shibboleth Consortium,
-    [<u>https://www.shibboleth.net/</u>](https://www.shibboleth.net/).<a href="#fnref11" class="footnote-back">↩︎</a>
-
-    </div>
-
-12. <div id="fn12">
-
-    “Same-origin Policy,” MDM Web Docs,
-    [<u>https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin\_policy</u>](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy).<a href="#fnref12" class="footnote-back">↩︎</a>
-
-    </div>
-
-13. <div id="fn13">
-
-    For additional information, see
+13. For additional information, see
     [<u>https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS</u>](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
-    and
-    <u>https://web.dev/cross-origin-resource-sharing/</u>.<a href="#fnref13" class="footnote-back">↩︎</a>
-
-    </div>
-
-</div>
+    and <u>https://web.dev/cross-origin-resource-sharing/</u>.
