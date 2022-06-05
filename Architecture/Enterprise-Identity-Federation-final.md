@@ -320,9 +320,9 @@ exceptions. I have held this role since July of 2019.
 
 # Change Log
 
-|  |
-| ---------- | ----------------------------------------------------------------------------------------- |
-| Date       | Change                                                                                    |
+
+| Date       | Change                                                   |
+| ---------- | -------------------------------------------------------- |
 | 2022-06-03 | V2 published; Changed title, updated OIDC definition, added detail re: SP-initiated flows |
 | 2021-04-19 | V1 published                                                                              |
 

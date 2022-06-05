@@ -65,7 +65,7 @@ follows. AR is a mechanism or collection of mechanisms that are used to
 maintain continuity of access to a user’s services. AR operates by
 providing an *alternative authentication mechanism* to *reestablish
 authentication credentials*, such as through re-identification of the
-user*.* A key property of any AR mechanism is that it must meet or
+user. A key property of any AR mechanism is that it must meet or
 exceed the security of the nominal authentication mechanism for the
 account that it serves to recover. If this property is not met, users
 may choose to execute the AR mechanism rather than remember their
@@ -95,7 +95,7 @@ In the stock example above, the system design focused on high access
 continuity exclusively to the detriment of security - the account is
 easy to access by malicious actors who could execute transactions - and
 privacy - the account owner is fully identified by the stock service, as
-is the nature for most financial systems. ![](AR-Figure1.png)
+is the nature for most financial systems. ![](AR-Figure1.jpg)
 
 In contrast, my current bank focuses on access continuity and security -
 it is hard to gain access to my account online due to strong
@@ -170,8 +170,6 @@ remote mechanisms, which could include remote identity proofing, using a
 trusted intermediary (e.g., supervisor) to vouch for the employee, and
 intermediate the process of AR, using a quorum of trusted intermediaries
 to vouch for the employee, etc.
-
-## 
 
 ## Education AR
 
@@ -617,11 +615,10 @@ and a founding member of IDPro. He can be reached at
 
 # Change Log
 
-|  |
-| ---------- | --------------------------------------------------- |
-| Date       | Change                                              |
+| Date       | Change      |
+| --- | ---------- | 
 | 2022-06-03 | V2 published; clarifications added to AR mechanisms |
-| 2021-04-19 | V1 published                                        |
+| 2021-04-19 | V1 published  |
 
 1.  Flanagan (Editor), H., (2021) “Terminology in the IDPro Body of
     Knowledge”, *IDPro Body of Knowledge* 1(7). doi:
