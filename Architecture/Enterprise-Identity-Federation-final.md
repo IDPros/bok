@@ -1,3 +1,5 @@
+# Federation Simplified (v2)
+
 Patrick Lunney, Product Owner - Single Sign-On & Multi Factor
 Authentication
 
@@ -67,7 +69,7 @@ weaknesses, which will be discussed in turn below.
 </tbody>
 </table>
 
-##
+## 
 
 ## Exploring Identity Federation in the Enterprise
 
@@ -140,7 +142,7 @@ takes place. Based on the information provided by the IdP, the
 application will allow or deny the user access to certain parts of the
 application.
 
-##
+## 
 
 ## Use Case 2: OpenID Connect
 
@@ -335,55 +337,55 @@ entityID="IdProvider"\>
 > \<md:IdPSSODescriptor
 > protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol"
 > WantAuthnRequestsSigned="false"\>
->
+> 
 > \<md:KeyDescriptor use="signing"\>
->
+> 
 > \<ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig\#"\>
->
+> 
 > \<ds:X509Data\>
->
+> 
 > \<ds:X509Certificate\>
->
+> 
 > \</ds:X509Certificate\>
->
+> 
 > \</ds:X509Data\>
->
+> 
 > \</ds:KeyInfo\>
->
+> 
 > \</md:KeyDescriptor\>
->
+> 
 > \<md:NameIDFormat\>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified\</md:NameIDFormat\>
->
+> 
 > \<md:SingleSignOnService
 > Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
 > Location="https://authn.enterprise.com/idp/SSO.saml2"/\>
->
+> 
 > \<md:SingleSignOnService
 > Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
 > Location="https://authn.enterprise.com/idp/SSO.saml2"/\>
->
+> 
 > \<saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
 > Name="firstname"
 > NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified"/\>
->
+> 
 > \<saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
 > Name="groups"
 > NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified"/\>
->
+> 
 > \<saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
 > Name="lastname"
 > NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified"/\>
->
+> 
 > \<saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
 > Name="userid"
 > NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified"/\>
->
+> 
 > \<saml:Attribute xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
 > Name="email"
 > NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified"/\>
->
+> 
 > \</md:IdPSSODescriptor\>
->
+> 
 > \<md:ContactPerson contactType="administrative"/\>
 
 \</md:EntityDescriptor\>
@@ -449,7 +451,7 @@ Algorithm="http://www.w3.org/2001/04/xmlenc\#sha256"/\>
 \<ds:RSAKeyValue\>
 
 > \<ds:Modulus\>
->
+> 
 > \</ds:Modulus\>
 
 \<ds:Exponent\>AQAB\</ds:Exponent\>

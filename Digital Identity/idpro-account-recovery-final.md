@@ -1,4 +1,6 @@
-Dean H. Saxe, Sr. Security Engineer, Amazon Web Services
+# Account Recovery (v2)
+
+By Dean H. Saxe, Sr. Security Engineer, Amazon Web Services
 
 © 2021, 2022 IDPro, Dean Saxe
 
