@@ -249,7 +249,7 @@ Heather Flanagan, editor - @ 2022 IDPro
 </tr>
 <tr class="odd">
 <td>Certificate Signing Request (CSR)</td>
-<td>When requesting a certificate, the requesting entity provides a copy of the private key along with their name and other information in a specially formatted binary object called a CSR.</td>
+<td>When requesting a certificate, the requesting entity provides a copy of the public key along with their name and other information in a specially formatted binary object called a CSR.</td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
 </tr>
 <tr class="even">
