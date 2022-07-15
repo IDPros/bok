@@ -136,7 +136,7 @@ The structure of this identity system legal environment
 
 is summarized on the diagram below.
 
-<img src="media/image1.jpeg" style="width:6.5in;height:4.29653in" alt="Three levels of rules governing identity systems: General Law, Generic Identity System Law, and Invidual Identity System Rules " />
+<img src="laws-governing-idsystems-image001.jpg" style="width:6.5in;height:4.29653in" alt="Three levels of rules governing identity systems: General Law, Generic Identity System Law, and Invidual Identity System Rules " />
 
 This structure of the identity system legal environment is very similar
 to that which governs a credit card system (such as Amex<sup>®</sup>,
