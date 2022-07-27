@@ -73,7 +73,7 @@ Terminology
     published by a Certificate Authority
 
 -   Certificate Signing Request (CSR): When requesting a certificate,
-    the requesting entity provides a copy of the private key along with
+    the requesting entity provides a copy of the public key along with
     their name and other information in a specially formatted binary
     object called a CSR.
 
