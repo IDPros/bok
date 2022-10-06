@@ -74,7 +74,7 @@ Knowledge”.*<a href="#fn1" id="fnref1" class="footnote-ref"><sup>1</sup></a>
 </tr>
 <tr class="even">
 <td>Sources of “Truth”</td>
-<td>where authoritative data about individuals live.</td>
+<td>Where authoritative data about individuals live.</td>
 </tr>
 </tbody>
 </table>
