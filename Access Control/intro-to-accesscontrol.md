@@ -188,7 +188,8 @@ Terminology
 
 -   Access Supplier – The component granting access to data, systems,
     services after the access policy requirements (set in the Policy
-    Administration Point) have been met by the Access Requester.
+    Administration Point, see [<u>BoK PBAC article</u>](https://bok.idpro.org/article/id/61/) 
+    have been met by the Access Requester.<a href="#fn11" id="fnref11" class="footnote-ref"><sup>2</sup></a>
 
 -   Policy Engine - It is a security component that validates whether an
     actor is allowed to access a protected resource, following the
@@ -342,7 +343,7 @@ the SoD rule. If one of the many components is lacking the SoD control,
 then the organization is not in control.
 
 This decentralized implementation of security policies makes it
-challenging to implement centrally managed organization-wide controls.
+challenging to implement centrally-managed organization-wide controls.
 It is likely that not all controls are similar and that the security
 policy and conformity must be verified for every system or platform
 access request.
@@ -844,6 +845,14 @@ Change Log
     <https://en.wikipedia.org/w/index.php?title=OAuth&oldid=951287251>
     (accessed June 8,
     2020).<a href="#fnref10" class="footnote-back">↩︎</a>
+
+    </div>
+    
+11. <div id="fn11">
+
+    McKee, Mary, “Introduction to Policy-Based Access Controls (v2),” IDPro Body of Knowledge,
+    31 March 2020,
+    [<u>https://bok.idpro.org/article/id/61/</u>](https://bok.idpro.org/article/id/61/).<a href="#fnref2" class="footnote-back">↩︎</a>
 
     </div>
 
