@@ -189,7 +189,7 @@ Terminology
 -   Access Supplier – The component granting access to data, systems,
     services after the access policy requirements (set in the Policy
     Administration Point, see [<u>BoK PBAC article</u>](https://bok.idpro.org/article/id/61/) 
-    have been met by the Access Requester.<a href="#fn11" id="fnref11" class="footnote-ref"><sup>2</sup></a>
+    have been met by the Access Requester.<a href="#fn11" id="fnref11" class="footnote-ref"><sup>11</sup></a>
 
 -   Policy Engine - It is a security component that validates whether an
     actor is allowed to access a protected resource, following the
