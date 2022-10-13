@@ -113,9 +113,7 @@ physical locations, is governed by security policies. These security
 policies must be formalized and need to be enforced by the owner of the
 resource. In doing so, the owner will try to manage the risk involved in
 access, such as the risk of abuse of information, data leakage, theft,
-fraud, and other security threats. In order to be in control, the owner
-needs to have the assurance of the level of security capable of being
-achieved by the security controls that have been put in place.
+fraud, and other security threats. In order to be in control, In order to be in control, the owner must have the assurance that the controls put in place achieve the required level of security.
 
 Apart from the concepts of access control, ownership in itself is a
 complex topic. Looking at the concept of data ownership, many criteria
@@ -156,7 +154,7 @@ Terminology
     identity is validated to the trust level required according to a
     security policy for a resource being accessed using more than one
     factor (something you know (e.g., password), something you have
-    (e.g., smartphone), something you are (e.g., fingerprint).
+    (e.g., smartphone), something you are (e.g., fingerprint)).
 
 <!-- -->
 
@@ -175,7 +173,7 @@ Terminology
     the owner of the resource and by other stakeholders, such as a
     business process owner or risk manager.
 
--   Access Control – Controlling who can have access to data, systems,
+-   Access Control – A system to control who can have access to data, systems,
     services, resources, locations. The ‘Who’ can be a user, a device or
     thing, a service.
 
@@ -183,7 +181,7 @@ Terminology
     based on the correct decision criteria and parameters.
 
 -   Access Policy – Definition of the rules to allow or disallow access
-    to secured objects.
+    to secured protected resources.
 
 -   Access Requester – The person, process, system, or thing that seeks
     to access a protected resource.
@@ -205,12 +203,14 @@ Terminology
     defined in the Policy Administration Point).
 
 -   Policy Administration Point (PAP) – The location where the different
-    types of owners define the access policy.
+    types of owners define the Access Policy.
 
 -   Policy Information Point – The authority that refers to the
     (external) trusted providers of attributes that will be used in the
-    Access Decision. An example is the myacclaim.com service that
-    administers Open Badges of certifications, such as CISSP and MSCP.
+    Access Decision. An example is the myacclaim.com service which
+    administers Open Badges of certifications, such as Certified 
+    Information Systems Security Professional (CISSP) and Microsoft 
+    Certified Professional (MSCP).
 
 Acronyms
 --------
@@ -247,6 +247,8 @@ Acronyms
 -   SCIM – System for Cross-domain Identity Management
 
 -   SoD – Segregation of Duties
+
+-   UX - User Experience
 
 AAA: Authentication, Authorization, Accountability
 ==================================================
@@ -294,12 +296,12 @@ be enough to give access to public information, but it will probably be
 insufficient to provide access to classified information.
 
 Adding more proof of identity can be done by demanding more specific and
-unique identifiers, proofs of identity. These more trusted
+unique identifiers, more proofs of identity. These more trusted
 authentication means cannot be easily copied or easily shared or stolen
 (it is not impossible, but the cost of copying a secure physical token
 can be too high to make it economically unsound to forfeit). In
 practice, this is done by introducing additional factors, such as
-tokens, certificates, biometric proof. Requesting these additional
+tokens, certificates, biometric proof, etc. Requesting these additional
 proofs of identity can be requested either at the start of a session at
 the first authentication or during a session after a previous low-trust
 authentication has been found insufficient for getting access to a
