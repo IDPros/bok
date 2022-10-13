@@ -397,11 +397,11 @@ what is (and isn’t) required.
 ### The Human Factor
 
 The user who needs to cope with the security controls can themselves be
-a roadblock on the path toward effective’ control.’ User experience (UX)
+a roadblock on the path toward effective ’control'. User experience (UX)
 is a critical success factor in every information security project. If
 the security controls are too strict, users may be deterred, or they may
 try to circumvent the control. This avoidance on the part of the user is
-often seen as consumer access: if a customer portal is not built with
+often seen in consumer access: if a customer portal is not built with
 the focus on the user, then consumers tend to go elsewhere. That is a
 missed opportunity, resulting in low conversion rates. Consumer Identity
 and Access Management (CIAM) solutions are developed to prevent this
@@ -420,8 +420,8 @@ access.
 ### Legal Implications
 
 Access control has historically been looked at as a way to support
-business processes and is part of a larger Information Security and risk
-mitigation policy. The question of legal implications directly tied to
+business processes and is part of a larger Information Security and 
+risk-mitigation policy. The question of legal implications directly tied to
 access control practices varies from business to business, from sector
 to sector, and from jurisdiction to jurisdiction. There is no
 unambiguous answer as to the direct legal requirement for most access
