@@ -213,6 +213,10 @@ Terminology
     Information Systems Security Professional (CISSP) and Microsoft 
     Certified Professional (MSCP).
 
+-   Step-Up Authentication - A second authentication request, after a 
+    session is already established, if a higher level of trust is needed 
+    per the defined risk controls.
+
 Acronyms
 --------
 
@@ -225,6 +229,8 @@ Acronyms
 -   CBAC – Context-Based Access Control or Claims-Based Access
 
 -   CIAM – Consumer Identity and Access Management
+
+-   CRISC - Certified in Risk and Information Systems Control
 
 -   CRM – Customer Relationship Management
 
@@ -243,7 +249,7 @@ Acronyms
 -   RBAC – Role-Based Access Control or (less frequently) Rule-Based
     Access Control
 
--   ReBAC – Relation Based Access Control
+-   ReBAC – Relationship-Based Access Control
 
 -   SCIM – System for Cross-domain Identity Management
 
@@ -459,18 +465,17 @@ place to ensure the correct level of access. The access available, i.e.,
 the permissions that can be granted, are also known as entitlements
 (fine-grained permissions to access resources). One of the earliest and
 best-known implementations of entitlements is by using Access Control
-Lists (ACLs). In an ACL, the owner of the file defines what users can
+Lists (ACLs). In an ACL, the owner of the resource defines what users can
 have what type of access: read, write, update, delete, whatever the
 owner accepts as usage. This concept is easy to understand and easy to
-manage for individual objects. And if the number of objects is limited,
-controlling access via ACLs can be enough. But when the number of users
-and the number of objects grows, ACLs can be a restricting factor.
-
-Every owner of a file will need to define the ACL for the object. This
-distributed method of control implies that central control of access is
-non-existent. But, from an auditing perspective: it’s relatively simple
-to find out who has access to a protected resource since that is
-registered in the ACL of the resource.
+manage for individual objects (resources). And if the number of objects is
+limited, controlling access via ACLs can be enough. But when the number 
+of users and the number of objects grows, ACLs can be a restricting factor: 
+Every owner of an object will need to define -and maintain- the ACL for 
+that object. This distributed method of control implies that central 
+control of access is non-existent. But, from an auditing perspective: 
+it’s relatively simple to find out who has access to a protected resource 
+since that is registered in the ACL of the resource.
 
 The concept of ACLs will be explained in a future article in the BoK.
 
@@ -515,7 +520,7 @@ roles. Connecting organizational roles to application roles creates a
 very efficient way of granting and revoking authorizations. But it is
 also very easy to complicate authorization management by nesting groups:
 for instance, employees working on the service desk can be made members
-of the group’ ServiceDesk.’ This group then could be made a member of
+of the group 'ServiceDesk'. This group then could be made a member of
 the group Windows Administrators. By doing this, it will soon become
 hard to find out who has the authorizations of a Windows administrator.
 That would be not just the group of people who are members of the
@@ -544,9 +549,12 @@ an access management system can make a decision based on the
 entitlements of a given user, as well as the time of day, the location
 of the user (e.g., on network or remote, geolocation based on IP
 address), the type of device (e.g., personal, organization owned,
-desktop or table), and other worker metadata. ABAC can be used both in
-real-time to control access at the time of the transaction, or passively
-controlling the assigned roles and entitlements based on user metadata.
+desktop or table), and other worker metadata. In other words, ABAC 
+uses multiple dimensions while RBAC is limited to the ‘role’ dimension. 
+
+ABAC can be used both in real-time to control access at the time of the 
+transaction, or passively controlling the assigned roles and entitlements 
+based on user metadata.
 Both approaches require strong input and support from resource owners,
 role managers, and people or organization managers to understand the
 needs of the user, as well as additional support from analysts to help
@@ -571,33 +579,34 @@ change because of a change in context or a change in applicable laws and
 regulations. Relevant changes may include:
 
 -   Extended organizations, internationalization, collaboration and
-    federation, flexible workforce, meaning that in daily operations,
-    people outside the scope of the traditional HR operations may need
-    to get access.
+    federation, flexible workforce, are examples of daily operations which
+    may result in people outside the scope of the traditional HR operations 
+    needing access.
 
 -   Moving data processing to the cloud - leading to the development of
     new protocols, such as SCIM (System for Cross-domain Identity
-    Management (the first time the acronym was used, it called Simple
+    Management (the first time the acronym was used, it was called Simple
     Cloud Identity Management, I suppose this was deemed too simple or
     restricting
-    ).<a href="#fn5" id="fnref5" class="footnote-ref"><sup>5</sup></a>
+    )).<a href="#fn5" id="fnref5" class="footnote-ref"><sup>5</sup></a>
 
 <!-- -->
 
 -   New privacy regulations, such as the
-    GDPR.<a href="#fn6" id="fnref6" class="footnote-ref"><sup>6</sup></a>
+    General Data Protection Regulation (GDPR)
+    .<a href="#fn6" id="fnref6" class="footnote-ref"><sup>6</sup></a>
 
 -   The usage of mobile apps using modern protocols like OpenID Connect
     requires a flexible access control topology.
 
 <!-- -->
 
--   We are enforcing end-user consent and control - developments like
+-   Enforcement of end-user consent and control - developments like
     User-Managed Access (UMA).
     <a href="#fn7" id="fnref7" class="footnote-ref"><sup>7</sup></a>
 
--   move to API-based access to micro-services - leading to new access
-    management architectures based on protocols like OAuth2
+-   Movement to API-based access to micro-services - leading to new access
+    management architectures based on protocols like OAuth2.
 
 These restrictions and changes show that a more dynamic method for
 managing access is needed. The future direction of access control takes
@@ -608,8 +617,8 @@ Dynamic Authentication
 
 Access control is not a static event. When a user starts a session
 accessing services requiring a low-risk level, then identification with
-a username and password combination may be sufficient. When later on in
-the session, another trust level is required. For instance, when
+a username and password combination may be sufficient. When, later on in
+the session, another trust level is required, for instance when
 performing a transaction, additional identification, like a token, might
 be needed.
 
@@ -620,7 +629,7 @@ in the identity:
 
 -   User switches context (such as location). This switch could
     effectively place the user in another trust zone, and the session
-    should be re-evaluated
+    should be re-evaluated.
 
 -   A user opens an email attachment, which by itself requires a higher
     trust level. This action should enforce additional authentication,
@@ -641,7 +650,7 @@ environments with a flexible workforce. Policy-Based Access Control
 (PBAC) is the paradigm to provide this flexibility. PBAC, also known as
 Claims-Based Access Control or Content-Based Access Control, takes some
 of the business logic introduced in the ABAC model and enhances it by
-layering additional context evaluation and dynamic step-up capabilities
+layering additional context evaluation and dynamic step-up capabilities.
 
 The context of an access requester can change dynamically. The dynamic
 nature of policy management and enforcement could require step-up
@@ -650,15 +659,17 @@ needed if the defined risk controls require it. A policy engine will be
 responsible for checking if the user attributes and context information
 at the time that access is requested comply with the access policies
 defined by the owners of the security policies. Context information
-might include time of day, geographical location, or device type. The
+might include time of day, geographical location, or device type and 
+security posture (e.g. version of the device OS, patch level, etc.). The
 scalability of access is also enabled by making it possible to collect
 attributes from different trusted and pre-defined attribute providers.
 As an example, this person can access the Risk Management reports, but
-only if this person has the CRISC certificate. ISACA provides this
-certificate, so a lookup in the ISACA registry could answer the question
-regarding the CRISC certification (the mapping of the Access Requester
-to the ISACA member is out of scope for this
-discussion).<a href="#fn8" id="fnref8" class="footnote-ref"><sup>8</sup></a>
+only if this person has the Certified in Risk and Information Systems 
+Control (CRISC) certificate. ISACA provides this certificate, so a 
+lookup in the ISACA registry could answer the question regarding the 
+CRISC certification (the mapping of the Access Requester to the ISACA 
+member is out of scope for this discussion)
+.<a href="#fn8" id="fnref8" class="footnote-ref"><sup>8</sup></a>
 
 The central component in this architecture is Policy Decision Point,
 which evaluates access policies and returns a response to the access
@@ -669,10 +680,10 @@ the access request ﬂow.
 
 As a further natural development, AIAC and ReBAC have to be mentioned.
 
-Relation-Based Access Control (ReBAC)
+Relationship-Based Access Control (ReBAC)
 -------------------------------------
 
-A new concept in access control is ReBAC, Relation Based Access Control.
+A new concept in access control is ReBAC, Relationship-Based Access Control.
 ReBAC addresses the possibility of making access control decisions using
 the relationship between the access requester and the other identities
 who can potentially be affected by the access control decision. These
@@ -700,14 +711,14 @@ manager solution will alert on access requests that exceed normal risk
 levels. AI will also monitor access control requests alerting on
 out-of-normal activity. As such, it can be an addition to current RBAC
 and ABAC implementations. This concept is not yet mainstream, and we can
-hardly predict the direction, but AI and machine learning may add some
+hardly predict the direction, but AI and Machine Learning (ML) may add some
 value.
 
 User Control and Consent
 ------------------------
 
 Privacy laws and regulations create a new awareness of access to
-Personally Identifiable Information. These laws and regulations have
+Personally Identifiable Information (PII). These laws and regulations have
 driven the concept of data ownership and consent by customers,
 employees, or patients. Data owners expect to be in control of their
 personal information, and in many cases, laws and regulations mandate
@@ -732,9 +743,10 @@ need for ﬂexible access control in a changing world. Modern access
 governance requires modern access control methods. There is a clear need
 for Dynamic Access Control. Interestingly, the tools are becoming
 available, and implementation need not interfere with the current best
-practices, Adaptive Authentication, and PBAC can be added to an existing
-identity and access architecture. It takes some planning, based on a
-roadmap. And of course, it requires implementing elements of access.
+practices. Capabilities such as Adaptive Authentication and PBAC can be 
+added to an existing identity and access architecture. It takes some 
+planning, based on a roadmap. And of course, it requires implementing 
+elements of access.
 
 Author Bio
 ----------
