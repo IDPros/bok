@@ -74,7 +74,7 @@ Use Case
 Summary
 -------
 
-The web user works through a user agent to access resources at an RP.
+The web user works through a user agent to access resources at a RP.
 The access request results in a redirection of the user to an IDP as
 part of an authentication action. This result of the authentication is
 an authentication assertion that is consumed by the RP and used to
@@ -110,7 +110,7 @@ Architecture.”<a href="#fn7" id="fnref7" class="footnote-ref"><sup>7</sup></a>
 
 -   Relying Party (RP)
 
--   Trust Anchor
+-   Trust Root
 
 Please note that the SAML documents refer to the relying party as the
 service provider.
@@ -206,6 +206,8 @@ also an IDP-initiated alternative.
 
 The messages may be encrypted. For instance, in step 8, the IDP may
 encrypt, and in step 10, the RP would need to decrypt the response.
+
+Not recomended: some implementations have ignored request signing and signature verification possibly due to historical performance issues. 
 
 Exception Paths
 ---------------
@@ -347,3 +349,5 @@ References
     </div>
 
 </div>
+
+    
