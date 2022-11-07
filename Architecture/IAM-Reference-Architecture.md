@@ -16,7 +16,7 @@ useful. Too general, and the model becomes untethered to reality and
 definitely not useful. Too specific, and the model will only work in
 some cases.
 
-This IAM Reference Architecture leans more towards technical
+This Identity and Access Management (IAM) Reference Architecture leans more towards technical
 implementation and touches on some of the process, legal, and capability
 dimensions. This breadth of coverage is intended to give the reader a
 set of concepts that can be applied when thinking about IAM.
@@ -60,8 +60,8 @@ The model can be used to support varying levels of system complexity.
 For example:
 
 -   in a Distributed System environment, where the architecture may have
-    a web-hosted application (the RP) that relies on a cloud identity
-    service (the Identity Provider). The RP, in this case, could be a
+    a web-hosted application the Relying Party (RP) that depends on a cloud identity
+    service. the Identity Provider (IDP)). The RP, in this case, could be a
     customer-facing application or a workforce-facing application;
 
 -   in a Single System model, where a computer’s file system (the RP)
@@ -277,7 +277,7 @@ more tacit.
 
 When the IDM and RP are both built into a single system framework that
 allows for mutual trust may be completely opaque to the system operator,
-although the system developer is likely quite aware of it.
+although the system developer may be aware of the framework or at least its implications since he or she will need to implement mechanisms that support the trust.
 
 Trust Root
 ----------
@@ -332,7 +332,7 @@ Governance
 
 The act of provisioning may include certain logic, best modeled as
 governance. In some cases, the IGA system takes on all the provisioning
-duties.
+duties. See also [Access Governance](#access-governance).
 
 Credential Services & Enrollment
 --------------------------------
@@ -355,10 +355,10 @@ credentials.
 Credential Services
 -------------------
 
-Credential services include the creation and binding of passwords,
-cryptographic keys, and other authenticators. It is also concerned with
-ongoing maintenance such as password reset and key rotation. It also is
-in charge of revoking credentials as needed.
+Credential services include the creation passwords,cryptographic keys, and other authenticators. 
+It associates or "binds" these to an identity record. 
+
+It is also concerned with ongoing maintenance such as password reset and key rotation and revocation of credentials as needed.
 
 Identity Register
 -----------------
@@ -428,7 +428,7 @@ receives an assessment from the IDP regarding the level of certainty
 that the user is authentic. Often the assessment (and more information
 about the user) is delivered to the RP via a security token, which is
 protected by cryptography. There are several varieties of security
-tokens.
+tokens. The diagram uses bidirectional arrows to show that use cases exist that require ongoing exchange of information as describe in [Sessions](#sessions).
 
 ![Authentication and Sessions: The Identity Register supports
 authentication scenarios. The IDP may monitor or participate if the full
