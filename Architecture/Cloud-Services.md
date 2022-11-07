@@ -16,7 +16,8 @@ Architecture.”<a href="#fn1" id="fnref1" class="footnote-ref"><sup>1</sup></a>
 This particular article describes a common use case of a service (the
 relying party) that uses the authentication capability of an identity
 provider (IDP) via the Security Assertion Markup Language (SAML)
-standard. This article focuses on a specific method of web-based single
+standard. By this method the RP delegates the authentication function to the IDP.
+This article focuses on a specific method of web-based single
 sign-on.
 
 This popular use case relies on trust between the IDP and the relying
@@ -77,7 +78,7 @@ The web user works through a user agent to access resources at an RP.
 The access request results in a redirection of the user to an IDP as
 part of an authentication action. This result of the authentication is
 an authentication assertion that is consumed by the RP and used to
-establish a security context for the web user.
+establish a security context for the web user. In effect the RP has delegated the authentication to the IDP.
 
 Architecture Types
 ------------------
