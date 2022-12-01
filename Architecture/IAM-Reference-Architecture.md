@@ -1,25 +1,31 @@
-By George B. Dobbs
+<div id="header">
 
-© 2021 IDPro, George B. Dobbs
+By George B. Dobbs
+------------------
+
+</div>
+
+© 2022 IDPro, George B. Dobbs
 
 *To comment on this article, please visit our [GitHub
 repository](https://github.com/IDPros/bok) and [submit an
-issue](https://docs.github.com/en/github/managing-your-work-on-github/opening-an-issue-from-code).*
+issue](https://docs.github.com/en/github/managing-your-work-on-github/opening-an-issue-from-code)
+.*
 
 Introduction
 ============
 
-It has been said that all models are wrong, but some are
-useful.<a href="#fn1" id="fnref1" class="footnote-ref"><sup>1</sup></a>
-This model attempts to find a level of generality that is broadly
-useful. Too general, and the model becomes untethered to reality and
-definitely not useful. Too specific, and the model will only work in
-some cases.
+It has been said that all models are wrong, but some are useful.
+<a href="#fn1" id="fnref1" class="footnoteRef"><sup>1</sup></a> This
+model attempts to find a level of generality that is broadly useful. Too
+general, and the model becomes untethered to reality and definitely not
+useful. Too specific, and the model will only work in some cases.
 
-This Identity and Access Management (IAM) Reference Architecture leans more towards technical
-implementation and touches on some of the process, legal, and capability
-dimensions. This breadth of coverage is intended to give the reader a
-set of concepts that can be applied when thinking about IAM.
+This Identity and Access Management (IAM) Reference Architecture leans
+more towards technical implementation and touches on some of the
+process, legal, and capability dimensions. This breadth of coverage is
+intended to give the reader a set of concepts that can be applied when
+thinking about IAM.
 
 The principle behind this model assumes that the management of
 identities and access can (mostly) be separated from their use. This
@@ -35,34 +41,36 @@ used across all IAM architectures.
 
 While the model incorporates guidance from various standards and best
 practice documents, the primary structure for the model started with the
-ISO/IEC
-framing.<a href="#fn2" id="fnref2" class="footnote-ref"><sup>2</sup></a>
-The Unified Modeling Language (UML) detail was removed for simplicity,
-and the IAM model has been extended so that authorization, governance,
-and risk-control can be included.
+ISO/IEC framing.
+<a href="#fn2" id="fnref2" class="footnoteRef"><sup>2</sup></a> The
+Unified Modeling Language (UML) detail was removed for simplicity, and
+the IAM model has been extended so that authorization, governance, and
+risk-control can be included.
 
 Some of the ISO/IEC names have been changed to reflect more common
 usage. In some cases, the ISO names have been used in a more expansive
 way than their original definition.
 
 In an attempt to adopt the most useful terminology, the model has been
-reviewed in conjunction with the
-FICAM,<a href="#fn3" id="fnref3" class="footnote-ref"><sup>3</sup></a>
-Internet2,<a href="#fn4" id="fnref4" class="footnote-ref"><sup>4</sup></a>
-NIST SP-800-63
-definitions,<a href="#fn5" id="fnref5" class="footnote-ref"><sup>5</sup></a>
-NIST Zero Trust
-frameworks,<a href="#fn6" id="fnref6" class="footnote-ref"><sup>6</sup></a>
-and with the Identity Stack as presented at Identiverse
-2019.<a href="#fn7" id="fnref7" class="footnote-ref"><sup>7</sup></a>
+reviewed in conjunction with the FICAM,
+<a href="#fn3" id="fnref3" class="footnoteRef"><sup>3</sup></a>
+Internet2,
+<a href="#fn4" id="fnref4" class="footnoteRef"><sup>4</sup></a> NIST
+SP-800-63 definitions,
+<a href="#fn5" id="fnref5" class="footnoteRef"><sup>5</sup></a> NIST
+Zero Trust frameworks,
+<a href="#fn6" id="fnref6" class="footnoteRef"><sup>6</sup></a> and with
+the Identity Stack as presented at Identiverse 2019.
+<a href="#fn7" id="fnref7" class="footnoteRef"><sup>7</sup></a>
 
 The model can be used to support varying levels of system complexity.
 For example:
 
 -   in a Distributed System environment, where the architecture may have
-    a web-hosted application the Relying Party (RP) that depends on a cloud identity
-    service. the Identity Provider (IDP)). The RP, in this case, could be a
-    customer-facing application or a workforce-facing application;
+    a web-hosted application the Relying Party (RP) that depends on a
+    cloud identity service, the Identity Provider (IDP). The RP, in this
+    case, could be a customer-facing application or a workforce-facing
+    application;
 
 -   in a Single System model, where a computer’s file system (the RP)
     provides access control based on the user information acquired at
@@ -72,7 +80,7 @@ For example:
 Terminology
 ===========
 
-The terms are defined below. Those with a ✓ mark are the abstract
+The terms are defined below. Those with a mark are the abstract
 components that comprise the model.
 
 Two of the terms, IDM and Access Management, are used for a conceptual
@@ -93,11 +101,11 @@ grouping of components. This is to aid understanding.
 <td>Various methods to limit access to data, systems, services, resources, locations by a user, a device or thing, or a service.</td>
 </tr>
 <tr class="odd">
-<td>✓Access Governance (also known as Identity Governance and Administration (IGA))</td>
+<td>Access Governance (also known as Identity Governance and Administration (IGA))</td>
 <td>Access Governance provides oversight and control over access rights implemented in multiple local or shared authorization systems. These rights may be controlled in a variety of ways, starting with the existence and validity of the digital identity. Other controls include various mechanisms such as policies, the mapping of roles, permissions, and identities. The abbreviation used is for Identity Governance and Administration and is commonly used in the commercial sector. This roughly corresponds to the Access Certification section of the first-class component Governance Systems in the FICAM model. IGA is not specifically addressed in the ISO/IEC model.</td>
 </tr>
 <tr class="even">
-<td>✓Access Management</td>
+<td>Access Management</td>
 <td>The process and techniques used to control access to resources. This capability works together with identity management and the Relying Party to achieve this goal. The model shows access management as a conceptual grouping consisting of the Access Governance function and the shared authorization component. However, access management impacts local authorization as well (through the governance function).</td>
 </tr>
 <tr class="odd">
@@ -109,15 +117,15 @@ grouping of components. This is to aid understanding.
 <td>A category describing the strength of the identity proofing process and/or the authentication process. See NIST SP.800-63-3 for further information.</td>
 </tr>
 <tr class="odd">
-<td>✓Attribute Provider</td>
+<td>Attribute Provider</td>
 <td>Sometimes the authority for attributes is distinguished from the authority for identities. In this case, the term Attribute Provider is sometimes used. It is a subset or type of an Identity Information Authority.</td>
 </tr>
 <tr class="even">
-<td>✓Audit Repository</td>
+<td>Audit Repository</td>
 <td>A component that stores records about all sorts of events that may be useful later to determine if operations are according to policy, support forensic investigations, and allow for pattern analysis. Typically, this is highly controlled to prevent tampering. Audit Repository is the ISO name for this concept and is localized to the IDM. In this model, the term is generalized to indicate a service that supports event records from any part of the ecosystem.</td>
 </tr>
 <tr class="odd">
-<td>✓Authentication (AuthN)</td>
+<td>AuthN)</td>
 <td>The act of determining that to a level of assurance, the principal/subject is authentic.</td>
 </tr>
 <tr class="even">
@@ -130,13 +138,13 @@ grouping of components. This is to aid understanding.
 </tr>
 <tr class="even">
 <td><blockquote>
-<p>✓Shared AuthZ</p>
+<p>Shared AuthZ</p>
 </blockquote></td>
 <td>Shared authorization is provided by a facility outside of the RP. It is shown here as part of the access management grouping.</td>
 </tr>
 <tr class="odd">
 <td><blockquote>
-<p>✓Local AuthZ</p>
+<p>Local AuthZ</p>
 </blockquote></td>
 <td>Local authorization is handled by the RP.</td>
 </tr>
@@ -145,7 +153,7 @@ grouping of components. This is to aid understanding.
 <td>A credential allows for authentication of an entity by binding an identity to an authenticator.</td>
 </tr>
 <tr class="odd">
-<td>✓Credential Service Provider (CSP)</td>
+<td>Credential Service Provider (CSP)</td>
 <td>Following the guidance included in NIST 800-63-3, we include both the enrollment function and credential services together under the name Credential Services Provider.</td>
 </tr>
 <tr class="even">
@@ -165,11 +173,11 @@ grouping of components. This is to aid understanding.
 <td>The artifact that allows access to a resource by a principal. This artifact is also known as a privilege, access right, permission, or an authorization. An entitlement can be implemented in a variety of ways.</td>
 </tr>
 <tr class="even">
-<td>✓Identity Information Authority (IIA)</td>
+<td>Identity Information Authority (IIA)</td>
 <td>This represents one or more data sources used by the IDM as the basis for the master set of principal/subject identity records. Each IIA may supply a subset of records and a subset of attributes. Sometimes the IIA is distinguished from the Identity Information Provider or IIP. We use IIA to include the service that actually provides the information as well as the root authority. This corresponds to Identity Information Source in ISO/IEC 24760-2 and Identity Sources in Internet2.</td>
 </tr>
 <tr class="odd">
-<td>✓Identity Management (IDM)</td>
+<td>Identity Management (IDM)</td>
 <td>A set of policies, procedures, technology, and other resources for maintaining identity information. The IDM contains information about principals/subjects, including credentials. It also includes other data such as metadata to enable interoperability with other components. The IDM is shown with a dotted line to indicate that it is a conceptual grouping of components, not a full-fledged system in itself.</td>
 </tr>
 <tr class="even">
@@ -177,19 +185,19 @@ grouping of components. This is to aid understanding.
 <td>Identity Provider or IDP is a common term. We treat this as a subset of Identity Management. It consists of the service interfaces: AuthN/Assertion, Service Provisioning Agent, Session Management, Discovery Services, and Metadata Management.</td>
 </tr>
 <tr class="odd">
-<td>✓Identity Register</td>
+<td>Identity Register</td>
 <td>This is the datastore that contains the enrolled entities and their attributes, including credentials. See the IDM section for elaboration. The terms Directory, Identity Repository, and Attribute Store are sometimes used as synonyms.</td>
 </tr>
 <tr class="even">
-<td>✓Metadata Management</td>
+<td>Metadata Management</td>
 <td>The processes and techniques that allow the collection, use, and eventual deletion of control data used by the IDM to recognize and trust the Relying Party. This corresponds to Relying Party data in the Internet2 model.</td>
 </tr>
 <tr class="odd">
-<td>✓Relying Party (RP)</td>
+<td>Relying Party (RP)</td>
 <td>A component, system, or application that uses the IDP to identify its users. The RP has its own resources and logic. Note that the term ‘relying service’ is used in the ISO/IEC standards to encompass all types of components that use identity services, including systems, sub-systems, and applications, independent of the domain or operator. We will use the more common Relying Party (or RP). An RP roughly corresponds to the Agency Endpoint in the FICAM model or to Identity Consumers in the Internet2 model.</td>
 </tr>
 <tr class="even">
-<td>✓Risk Context (RCTX)</td>
+<td>Risk Context (RCTX)</td>
 <td>Risk Context consists of additional facts that can be brought to bear to improve the overall security of the ecosystem. Internal or external events and facts can be applied to enable, limit, or terminate access. This is similar to the section Monitors and Sensors under FICAM’s Governance Systems and to many of the inputs of the Policy Decision Point in the NIST Special Publication 800-207, a paper on Zero Trust.</td>
 </tr>
 <tr class="odd">
@@ -197,7 +205,7 @@ grouping of components. This is to aid understanding.
 <td>A period of time after an authentication event when an RP grants access to resources for the principal/subject. The duration of the session and the mechanism for enforcement vary by implementation.</td>
 </tr>
 <tr class="even">
-<td>✓Session Management</td>
+<td>Session Management</td>
 <td>A coordinating function provided by an IDP to control sessions of subscribing RPs.</td>
 </tr>
 <tr class="odd">
@@ -205,7 +213,7 @@ grouping of components. This is to aid understanding.
 <td>This component represents the legal, organizational, and technical apparatus that enables trust between the IDM and the RPs.</td>
 </tr>
 <tr class="even">
-<td>✓Trust Root</td>
+<td>Trust Root</td>
 <td>A technical structure that provides the IDP and RP the ability to recognize each other with a high degree of certainty. This is similar to the concept of Trust Anchor (NIST SP.800-63-3), but we allow for a structure that relies on a mutually agreed-upon third party. A trust root derives from the operation of a Trust Framework.</td>
 </tr>
 </tbody>
@@ -220,7 +228,7 @@ Parties (RPs) to use that data to control access to resources. The
 following diagram shows the core components of an identity management
 system (IDM) that supports multiple RPs.
 
-![](IAM-Ref-Arch-1.jpg)
+<img src="image1.png" width="492" height="445" />
 
 *Figure 1: Basic Component Dependencies the IDM supports multiple
 relying parties. The core components of the IDM are shown. The dotted
@@ -258,17 +266,17 @@ bilateral agreements. In simple cases, this may be a contract between
 two parties. In other cases, there may be a multilateral agreement. We
 will use the term federation loosely to cover both cases. These
 frameworks are described further in Laws Governing Identity Systems
-(v2).<a href="#fn8" id="fnref8" class="footnote-ref"><sup>8</sup></a>
+(v2). <a href="#fn8" id="fnref8" class="footnoteRef"><sup>8</sup></a>
 
 These agreements, rules, and policies govern how the federation members
-operate and
-interact.<a href="#fn9" id="fnref9" class="footnote-ref"><sup>9</sup></a>
-The parties of a federation establish mutual agreement upon an
-acceptable identity to be used between the parties in a federated
-relationship (for instance, the level of assurance used) in order to
-operate well. In addition, the definition and values of attributes of
-federated identities should be agreed upon. The parties should agree on
-the security/access policies of federated users between the parties in a
+operate and interact.
+<a href="#fn9" id="fnref9" class="footnoteRef"><sup>9</sup></a> The
+parties of a federation establish mutual agreement upon an acceptable
+identity to be used between the parties in a federated relationship (for
+instance, the level of assurance used) in order to operate well. In
+addition, the definition and values of attributes of federated
+identities should be agreed upon. The parties should agree on the
+security/access policies of federated users between the parties in a
 federated relationship. For instance, whether there are duties to notify
 others in the event of security failures.
 
@@ -277,7 +285,9 @@ more tacit.
 
 When the IDM and RP are both built into a single system framework that
 allows for mutual trust may be completely opaque to the system operator,
-although the system developer may be aware of the framework or at least its implications since he or she will need to implement mechanisms that support the trust.
+although the system developer may be aware of the framework or at least
+its implications since he or she will need to implement mechanisms that
+support the trust.
 
 Trust Root
 ----------
@@ -307,9 +317,7 @@ to support authorization decisions. This is sometimes known as
 refer to the sum of the initial provisioning activities in both the
 identity and access aspects.
 
-![Provisioning: The Identity register receives updates from one or more
-external sources and administrative actions, passing the information on
-as needed.](IAM-Ref-Arch-2.jpg)
+<img src="image2.png" width="601" height="560" alt="Provisioning: The Identity register receives updates from one or more external sources and administrative actions, passing the information on as needed." />
 
 *Figure 2: Provisioning: The Identity register receives updates from one
 or more external sources and administrative actions, passing the
@@ -332,7 +340,7 @@ Governance
 
 The act of provisioning may include certain logic, best modeled as
 governance. In some cases, the IGA system takes on all the provisioning
-duties. See also [Access Governance](#access-governance).
+duties (see also the section on Access Governance below).
 
 Credential Services & Enrollment
 --------------------------------
@@ -355,10 +363,10 @@ credentials.
 Credential Services
 -------------------
 
-Credential services include the creation passwords,cryptographic keys, and other authenticators. 
-It associates or "binds" these to an identity record. 
-
-It is also concerned with ongoing maintenance such as password reset and key rotation and revocation of credentials as needed.
+Credential services include the creation of passwords, cryptographic
+keys, and other authenticators. It associates or "binds" these to an
+identity record. It is also concerned with ongoing maintenance such as
+password reset and key rotation and revocation of credentials as needed.
 
 Identity Register
 -----------------
@@ -428,11 +436,11 @@ receives an assessment from the IDP regarding the level of certainty
 that the user is authentic. Often the assessment (and more information
 about the user) is delivered to the RP via a security token, which is
 protected by cryptography. There are several varieties of security
-tokens. The diagram uses bidirectional arrows to show that use cases exist that require ongoing exchange of information as describe in [Sessions](#sessions).
+tokens. The diagram uses bidirectional arrows to show that use cases
+exist that require ongoing exchange of information as describe in the
+section in this document called “Sessions.”
 
-![Authentication and Sessions: The Identity Register supports
-authentication scenarios. The IDP may monitor or participate if the full
-session lifecycle with the Relying services.](IAM-Ref-Arch-3.jpg)
+<img src="image3.png" width="601" height="445" alt="Authentication and Sessions: The Identity Register supports authentication scenarios. The IDP may monitor or participate if the full session lifecycle with the Relying services." />
 
 *Figure 3: Authentication and Sessions: The Identity Register supports
 authentication scenarios. The IDP may monitor or participate in the full
@@ -483,9 +491,7 @@ Both approaches typically use subject attributes to help determine
 access, although some systems rely on direct enumerations mapping users
 to resources known as access control lists.
 
-![Authorization models: Some RPs perform authorization tasks internally.
-Sometimes authorization is a shared resource for many
-RPs.](IAM-Ref-Arch-4.jpg)
+<img src="image4.png" width="601" height="557" alt="Authorization models: Some RPs perform authorization tasks internally. Sometimes authorization is a shared resource for many RPs." />
 
 *Figure 4: Authorization models: Some RPs perform authorization tasks
 internally. Sometimes authorization is a shared resource for many RPs.*
@@ -554,9 +560,7 @@ scenarios, such as when business-to-business delegated administrative
 rights are required or to in business-to-customer scenarios where
 authorized third parties such as attorneys are required.
 
-![Access Governance provides oversight and control over access rights
-implemented in many Local authorization systems and, sometimes, in
-Shared authorization systems.](IAM-Ref-Arch-5.jpg)
+<img src="image5.png" width="601" height="557" alt="Access Governance provides oversight and control over access rights implemented in many Local authorization systems and, sometimes, in Shared authorization systems." />
 
 *Figure 5: Access Governance provides oversight and control over access
 rights implemented in many Local authorization systems and, sometimes,
@@ -598,9 +602,7 @@ or assertions/evidence from third parties.
 The linkage from the Audit Repository illustrates that the Risk Context
 may consume the local historical data about events.
 
-![Risk Context: It is possible to use risk information in authentication
-decisions. For instance, if a stolen password is found on the dark web,
-don’t allow login.](IAM-Ref-Arch-6.jpg)
+<img src="image6.png" width="601" height="558" alt="Risk Context: It is possible to use risk information in authentication decisions. For instance, if a stolen password is found on the dark web, don’t allow login." />
 
 *Figure 6: Risk Context: It is possible to use risk information in
 authentication decisions. For instance, if a stolen password is found on
@@ -620,7 +622,7 @@ In some severe scenarios, attaching the events to the session management
 function may be desirable so that current sessions can be reviewed and
 terminated if needed. The OpenID Shared Signals and Events working group
 is developing standard ways to deliver these signals.
-<a href="#fn10" id="fnref10" class="footnote-ref"><sup>10</sup></a>
+<a href="#fn10" id="fnref10" class="footnoteRef"><sup>10</sup></a>
 
 As shown in the diagram, shared authorization systems may consume risk
 data as well. For example, an authorization might be denied if the
@@ -673,7 +675,7 @@ Metadata and Discovery
 Metadata refers to control data that allows the IDM and the Relying
 Parties to interoperate.
 
-![](IAM-Ref-Arch-7.jpg)
+<img src="image7.png" width="532" height="445" />
 
 *Figure 7: Metadata and discovery these two functions are involved with
 mutual recognition of the IDM and Relying Service.*
@@ -696,11 +698,11 @@ with a common certificate authority may be used.
 
 Discovery refers to protocols that facilitate automation. For instance,
 OpenID Connect defines a method for RPs to locate an end-point where a
-user’s identity can be
-verified.<a href="#fn11" id="fnref11" class="footnote-ref"><sup>11</sup></a>
-The concept is more supported by other methods such as
-SAML.<a href="#fn12" id="fnref12" class="footnote-ref"><sup>12</sup></a>
-A Discovery service can advise where specific data can be accessed and
+user’s identity can be verified.
+<a href="#fn11" id="fnref11" class="footnoteRef"><sup>11</sup></a> The
+concept is more supported by other methods such as SAML.
+<a href="#fn12" id="fnref12" class="footnoteRef"><sup>12</sup></a> A
+Discovery service can advise where specific data can be accessed and
 which end-points are maintained to allow an RP to use the identity
 service.
 
@@ -730,10 +732,20 @@ drafts; Jon Lehtinen and Steve Hutchinson for some of the definitions
 from their unpublished Introduction to Identity Part 3 document; and
 Bertrand Carlier for his thorough and thoughtful review.
 
+<span id="bookmark=id.1x0gk37" class="anchor"> </span>
+
+Change Log
+==========
+
+| Date       | Change                                                                                                              |
+|------------|---------------------------------------------------------------------------------------------------------------------|
+| 2021-09-30 | V1 published                                                                                                        |
+| 2022-12-15 | V2 published; minor editorial changes; some clarification in the text re: Credential Services and in Authentication |
+
 References
 ==========
 
-<div class="section footnotes" role="doc-endnotes">
+<div class="footnotes">
 
 ------------------------------------------------------------------------
 
@@ -741,9 +753,8 @@ References
 
     Wikipedia contributors, "All models are wrong," *Wikipedia, The Free
     Encyclopedia,*
-    <https://en.wikipedia.org/w/index.php?title=All_models_are_wrong&oldid=1032701969>
-    (accessed 23 August
-    2021).<a href="#fnref1" class="footnote-back">↩︎</a>
+    <https://en.wikipedia.org/w/index.php?title=All_models_are_wrong&oldid=1111346950>
+    (accessed November 28, 2022). [↩](#fnref1)
 
     </div>
 
@@ -755,8 +766,7 @@ References
     24760-2, 2015 “Information technology — Security techniques — A
     framework for identity management — Part 2: Reference architecture
     and requirements,” <https://www.iso.org/standard/57915.html>
-    (accessed 28 September
-    2021).<a href="#fnref2" class="footnote-back">↩︎</a>
+    (accessed 28 November 2022). [↩](#fnref2)
 
     </div>
 
@@ -765,8 +775,8 @@ References
     “FICAM Playbooks – FICAM Architecture – System Component Examples,”
     Identity Assurance and Trusted Access Division in the GSA Office of
     Government-wide Policy,
-    <https://playbooks.idmanagement.gov/arch/components/> (accessed 23
-    August 2021).<a href="#fnref3" class="footnote-back">↩︎</a>
+    <https://playbooks.idmanagement.gov/arch/components/> (accessed 28
+    November 2022). [↩](#fnref3)
 
     </div>
 
@@ -774,8 +784,7 @@ References
 
     Hazelton, Keith “The TAP Reference Architecture (RA)”
     <https://spaces.at.internet2.edu/pages/viewpage.action?pageId=98306902>
-    (accessed 30 August
-    2021).<a href="#fnref4" class="footnote-back">↩︎</a>
+    (accessed 28 November 2022). [↩](#fnref4)
 
     </div>
 
@@ -784,8 +793,7 @@ References
     Grassi, Paul A., Michael E. Garcia, James L. Fenton, “NIST Special
     Publication 800-63-3 – Digital Identity Guidelines,” National
     Institute of Standards and Technology, U.S. Department of Commerce,
-    June 2017,
-    <https://doi.org/10.6028/NIST.SP.800-63-3>.<a href="#fnref5" class="footnote-back">↩︎</a>
+    June 2017, <https://doi.org/10.6028/NIST.SP.800-63-3> . [↩](#fnref5)
 
     </div>
 
@@ -794,8 +802,8 @@ References
     Rose, Scott, Oliver Borchert, Stu Mitchell, Sean Connelly, “NIST
     Special Publication 800-207 – Zero Trust Architecture,” National
     Institute of Standards and Technology, U.S. Department of Commerce,
-    August 2020,
-    <https://doi.org/10.6028/NIST.SP.800-207>.<a href="#fnref6" class="footnote-back">↩︎</a>
+    August 2020, <https://doi.org/10.6028/NIST.SP.800-207> .
+    [↩](#fnref6)
 
     </div>
 
@@ -803,15 +811,16 @@ References
 
     Hutchinson, Steve, “Introduction to Identity Part 2 - June 25,”
     Identiverse 2019, recording starting minute 27:39,
-    <https://www.youtube.com/watch?v=zxKRUXmTLJs&list=PLpKq7xRiIHaTDwAqpIU1UYpKZY03tfTMf&index=8>.<a href="#fnref7" class="footnote-back">↩︎</a>
+    <https://www.youtube.com/watch?v=zxKRUXmTLJs&list=PLpKq7xRiIHaTDwAqpIU1UYpKZY03tfTMf&index=8>
+    . [↩](#fnref7)
 
     </div>
 
 8.  <div id="fn8">
 
-    Smedinghoff T. J., (2021) “Laws Governing Identity Systems
-    (v2),” *IDPro Body of Knowledge* 1(5).
-    <https://bok.idpro.org/article/id/8/>.<a href="#fnref8" class="footnote-back">↩︎</a>
+    Smedinghoff T. J., (2021) “Laws Governing Identity Systems (v2),”
+    *IDPro Body of Knowledge* 1(5).
+    <https://bok.idpro.org/article/id/8/> . [↩](#fnref8)
 
     </div>
 
@@ -820,15 +829,14 @@ References
     Temoshak, David, Christine Abruzzi, “NISTIR 8149 - Developing Trust
     Frameworks to Support Identity Federations,” National Institute of
     Standards and Technology, U.S. Department of Commerce, January 2018,
-    <https://doi.org/10.6028/NIST.IR.8149>.<a href="#fnref9" class="footnote-back">↩︎</a>
+    <https://doi.org/10.6028/NIST.IR.8149> . [↩](#fnref9)
 
     </div>
 
 10. <div id="fn10">
 
     “Shared Signals and Events WG” <https://openid.net/wg/sse/>
-    (Accessed 30 August
-    2021)<a href="#fnref10" class="footnote-back">↩︎</a>
+    (Accessed 28 November 2022). [↩](#fnref10)
 
     </div>
 
@@ -838,8 +846,7 @@ References
     Discovery 1.0 incorporating errata set 1,” OpenID Foundation, 8
     November 2014,
     <https://openid.net/specs/openid-connect-discovery-1_0.html>
-    (accessed 23 August
-    2021).<a href="#fnref11" class="footnote-back">↩︎</a>
+    (accessed 28 November 2022). [↩](#fnref11)
 
     </div>
 
@@ -849,8 +856,7 @@ References
     Protocol and Profile,” OASIS Committee Specification 01, 27 March
     2008,
     <https://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-idp-discovery.pdf>
-    (accessed 23 August
-    2021).<a href="#fnref12" class="footnote-back">↩︎</a>
+    (accessed 28 November 2022). [↩](#fnref12)
 
     </div>
 
