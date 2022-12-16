@@ -826,7 +826,7 @@ via the IDPro GitHub repository: <https://github.com/IDPros/bok>.*
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
 </tr>
 <tr class="even">
-<td>Policy Access Point (PAP)</td>
+<td>Policy Administration Point (PAP)</td>
 <td>The location where the different types of owners define the access policy.</td>
 <td><a href="https://bok.idpro.org/article/id/42/">Introduction to Access Control</a></td>
 </tr>
