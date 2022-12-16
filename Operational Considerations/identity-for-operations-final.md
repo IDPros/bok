@@ -310,6 +310,7 @@ can be created at-will by an end-user and are susceptible to attack
 outside of the controls of your organization.
 
 Registered Communication Channel (SMS, Phone, and Email) Authentication
+-----------------------------------------------------------------------
 
 Sending a one-time passcode to your user via SMS, email, or phone call
 is another common method of authentication used to validate a CS
