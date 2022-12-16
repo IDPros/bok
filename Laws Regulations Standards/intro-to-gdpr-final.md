@@ -1,62 +1,51 @@
-# An Introduction to the GDPR (v2)
+<div id="header">
+
+</div>
 
 By Andrew Cormack, Chief Regulatory Adviser at Jisc
 
-© 2021 Andrew Cormack, IDPro
+© 2022 Andrew Cormack, IDPro
 
 *To comment on this article, please visit our [GitHub
 repository](https://github.com/IDPros/bok) and [submit an
-issue](https://docs.github.com/en/github/managing-your-work-on-github/opening-an-issue-from-code).*
-
-
-Abstract
-========
-
-The General Data Protection Regulation (GDPR) applies to any processing
-(including collection, storage, or sharing) of data relating to
-identifiable (including by serial numbers, IP addresses, etc.)
-individuals who are physically in Europe. This scope may well cover
-international or online Identity and Access Management (IAM) activities,
-as well as all IAM activities actually conducted in Europe. All such
-processing must conform to seven principles: lawfulness, fairness &
-transparency; purpose limitation; data minimisation; accuracy; storage
-limitation; integrity & confidentiality; accountability. Individuals
-have rights of information; subject access; rectification, erasure &
-restriction. Processing must be for one of six legal bases: contract,
-legal obligation, vital interests, public interests, legitimate
-interests, or consent. Each basis has its own requirements; some confer
-additional rights on individuals.
+issue](https://docs.github.com/en/github/managing-your-work-on-github/opening-an-issue-from-code)
+.*
 
 Introduction
 ============
 
-The *General Data Protection Regulation (GDPR)*,[1] which came into
-force in all EU member states on May 25, 2018, applies when processing
-‘any information relating to an identified or identifiable natural
-person’.[2] The inclusion of ‘identifiable’ makes it much broader than
-most privacy laws: IP addresses, MAC addresses of personal devices,
-account numbers, and even unique patterns or combinations of attributes
-may be sufficient to bring an activity within its scope. ‘Processing’ is
-not limited to digital formats: personal information prepared for, or
-derived from, digital processing is covered, as well as the content of
-any structured filing system. The range of activities covered is
-similarly wide: including ‘collection, recording, organisation,
-structuring, storage, adaptation or alteration, retrieval, consultation,
-use, disclosure by transmission, dissemination or otherwise making
-available, alignment or combination, restriction, erasure or
-deletion’.[3] Since the GDPR covers all individuals physically in Europe
-– there is no citizenship or similar requirement – it is very likely to
-apply to the international or online activities of organisations
-elsewhere in the world, as well as to all organisations in Europe.
+The *General Data Protection Regulation (GDPR)* ,
+<a href="#fn1" id="fnref1" class="footnoteRef"><sup>1</sup></a> which
+came into force in all EU member states on May 25, 2018, applies when
+processing ‘any information relating to an identified or identifiable
+natural person’.
+<a href="#fn2" id="fnref2" class="footnoteRef"><sup>2</sup></a> The
+inclusion of ‘identifiable’ makes it much broader than most privacy
+laws: IP addresses, MAC addresses of personal devices, account numbers,
+and even unique patterns or combinations of attributes may be sufficient
+to bring an activity within its scope. ‘Processing’ is not limited to
+digital formats: personal information prepared for, or derived from,
+digital processing is covered, as well as the content of any structured
+filing system. The range of activities covered is similarly wide:
+including ‘collection, recording, organisation, structuring, storage,
+adaptation or alteration, retrieval, consultation, use, disclosure by
+transmission, dissemination or otherwise making available, alignment or
+combination, restriction, erasure or deletion’.
+<a href="#fn3" id="fnref3" class="footnoteRef"><sup>3</sup></a> Since
+the GDPR covers all individuals physically in Europe – there is no
+citizenship or similar requirement – it is very likely to apply to the
+international or online activities of organisations elsewhere in the
+world, as well as to all organisations in Europe.
 
 IAM activities are likely to be regulated by the GDPR; however,
 effective IAM may make it easier for organisations to comply with the
 law’s requirements. The behaviour it prescribes is increasingly
 expected, not only in Europe, but in the increasing number of countries
-subscribing to the Council of Europe’s Convention 108.[4] Within Europe
-there are significant fines for contravention of the GDPR, but following
-its principles should have benefits for the reputation and efficient
-operation of organisations anywhere in the world.
+subscribing to the Council of Europe’s Convention 108.
+<a href="#fn4" id="fnref4" class="footnoteRef"><sup>4</sup></a> Within
+Europe there are significant fines for contravention of the GDPR, but
+following its principles should have benefits for the reputation and
+efficient operation of organisations anywhere in the world.
 
 This article is not a complete guide to the GDPR but covers those
 aspects most relevant to IAM. It first describes the general principles
@@ -114,7 +103,8 @@ Terminology
 -   **Data Controller.** Defined in Article 4(7) of the GDPR:
     “‘controller’ means the natural or legal person, public authority,
     agency or other body which, alone or jointly with others, determines
-    the purposes and means of the processing of personal data;”.[5] This
+    the purposes and means of the processing of personal data;”.
+    <a href="#fn5" id="fnref5" class="footnoteRef"><sup>5</sup></a> This
     article uses the term “organisation” as a synonym for “data
     controller”, since organisations involved in IAM will normally be
     data controllers.
@@ -141,13 +131,13 @@ Rules for Personal Data
 The GDPR places most of its obligations on organisations that
 “determine\[…\] the purposes and means of the processing of personal
 data” (Art 4(7)): these organisations are referred to as *Data
-Controllers*. Some organisations may process data solely on behalf of
+Controllers* . Some organisations may process data solely on behalf of
 others – not determining the purposes and means – these are known as
 *Data Processors* and have fewer obligations. Since IAM systems are
 likely to act as data controllers, their main obligations are described
 here. The fundamental obligations on all data controllers are to act in
 accordance with seven principles, and to satisfy obligations to, and
-rights of, individuals (“*data subjects*”) whose information they
+rights of, individuals (“ *data subjects* ”) whose information they
 process.
 
 Principles (Art 5)
@@ -156,7 +146,7 @@ Principles (Art 5)
 According to GDPR Article 5, the following principles apply to all
 processing of personal data:
 
--   **Lawfulness, Fairness, Transparency**: all processing must be
+-   **Lawfulness, Fairness, Transparency** : all processing must be
     covered by one of the six legal bases set out in the GDPR (see
     below) and must not breach other laws; it should not be deceptive,
     any activities that individuals might be surprised by should be
@@ -165,7 +155,7 @@ processing of personal data:
     through the rights to information and subject access described
     below.
 
--   **Purpose Limitation**: the purposes for which information is
+-   **Purpose Limitation** : the purposes for which information is
     processed must be clearly stated; existing information may only be
     used for new purposes if, either, the new purpose is compatible with
     the existing ones (roughly summarised as ‘not surprisingly
@@ -175,7 +165,7 @@ processing of personal data:
     purposes should be reviewed for compatibility with that purpose and
     with the information provided to users.
 
--   **Data Minimisation**: the data and processing must be relevant to
+-   **Data Minimisation** : the data and processing must be relevant to
     the purpose, sufficient to achieve it (“adequate”), but not
     excessive. Well-defined IAM systems should contribute to data
     minimisation: for example, federated systems can reduce disclosure
@@ -187,7 +177,7 @@ processing of personal data:
     be. This is the basis for Data Protection by Design, discussed in
     GDPR Article 25.
 
--   **Accuracy**: personal data must be accurate and up to date.
+-   **Accuracy** : personal data must be accurate and up to date.
     Although individuals have the right to correct errors in their data
     (see “right of rectification” below) organisations should not rely
     on them doing so as the sole, or even principal, way to ensure
@@ -197,7 +187,7 @@ processing of personal data:
     processes and workflows to ensure that their information is, and
     remains, accurate.
 
--   **Storage \[time\] Limitation**: personal data must not be kept for
+-   **Storage \[time\] Limitation** : personal data must not be kept for
     longer than needed for the stated purpose(s). Before collecting
     personal data, organisations should know, and declare, how long they
     will keep it for, either in relation to a fixed time period (e.g.,
@@ -208,7 +198,7 @@ processing of personal data:
     may allow personal data to be kept for longer, but subject to
     specific conditions in both European and national laws.
 
--   **Integrity and Confidentiality**: organisations must use
+-   **Integrity and Confidentiality** : organisations must use
     appropriate technical and organisational controls to protect the
     security of personal data. What is appropriate will depend on the
     sensitivity of the data and the purpose: it is likely to change both
@@ -220,7 +210,7 @@ processing of personal data:
     to prevent unauthorised access to personal data elsewhere in the
     organisation.
 
--   **Accountability**: organisations must be able to demonstrate that
+-   **Accountability** : organisations must be able to demonstrate that
     they are complying with the principles and other requirements of the
     Regulation. This will normally require both documentation showing
     that these principles and requirements were considered in the design
@@ -239,7 +229,7 @@ whose information they process; the second and third require
 organisations to have systems to handle requests from individuals who
 exercise their rights:
 
--   **Rights to Information**: to support the above Principles,
+-   **Rights to Information** : to support the above Principles,
     organisations are required to provide at least a minimum set of
     information to all those whose personal data are processed: who the
     organisation is, what data are being processed, why, for how long,
@@ -249,7 +239,7 @@ exercise their rights:
     Article 14 when an organisation obtains personal data from another
     source (including public sources).
 
--   **Subject Access Right**: individuals have a general right, under
+-   **Subject Access Right** : individuals have a general right, under
     Article 15, to ask and be told whether their data are being
     processed, what data, why, for how long, whether automated decisions
     are involved; the source of the data and any recipients; how to
@@ -257,10 +247,11 @@ exercise their rights:
     affecting the rights of others, the individual has a right to
     receive a copy of their own data. Determining what to release, and
     when, can be complex, especially when the requester’s identity may
-    be uncertain. IAM systems built around guidance from regulators[6]
-    can reduce the risk of error or fraud.
+    be uncertain. IAM systems built around guidance from regulators
+    <a href="#fn6" id="fnref6" class="footnoteRef"><sup>6</sup></a> can
+    reduce the risk of error or fraud.
 
--   **Rights of Rectification/Erasure/Restriction**: Article 16
+-   **Rights of Rectification/Erasure/Restriction** : Article 16
     (“rectification”) entitles individuals to correct inaccurate
     personal data, including to add additional information. Article 17
     (“erasure”) entitles individuals to have their personal data deleted
@@ -333,7 +324,7 @@ use but does not need. The latter should use the basis of “consent”
 described below. The European Data Protection Board’s Guidelines clarify
 that ancillary functions including service improvement, fraud prevention
 and online behavioural advertising are likely to need a different legal
-basis[7].
+basis <a href="#fn7" id="fnref7" class="footnoteRef"><sup>7</sup></a> .
 
 Where personal data are processed on this basis, the GDPR introduced a
 Right to Portability (Article 20) covering data “which \[the
@@ -341,9 +332,10 @@ individual\] has provided”. This right may therefore cover only a subset
 of the information available under the general Subject Access Right,
 though the information must be provided “in a structured, commonly used
 and machine readable format”. So far, Regulators have only provided
-high-level guidance on this right,[8] including suggesting that CSV
-might fulfil the format requirements, so further developments are
-likely.
+high-level guidance on this right,
+<a href="#fn8" id="fnref8" class="footnoteRef"><sup>8</sup></a>
+including suggesting that CSV might fulfil the format requirements, so
+further developments are likely.
 
 Necessary for Compliance with a Legal Obligation
 ------------------------------------------------
@@ -466,7 +458,8 @@ should be reserved for information that the IAM system can handle but
 does not need: circumstances that are much more likely to satisfy the
 requirements for it to be valid. Consent, according to the UK’s Data
 Protection Regulator, should be an offer to the individual to enter into
-a deeper, more trusting, relationship.[9]
+a deeper, more trusting, relationship.
+<a href="#fn9" id="fnref9" class="footnoteRef"><sup>9</sup></a>
 
 International Transfers
 -----------------------
@@ -479,7 +472,8 @@ Protection Directive, it will usually be possible to use the same legal
 basis for international IAM operations as those within Europe: regular
 transfers of personal data (for example between a customer organisation
 and a non-European IAM supplier) should normally be covered by a
-contract including one of the sets of Standard Contract Clauses;[10]
+contract including one of the sets of Standard Contract Clauses;
+<a href="#fn10" id="fnref10" class="footnoteRef"><sup>10</sup></a>
 occasional, ad hoc, low-risk transfers should be able to use the
 legitimate interests basis; consent may be used where the individual is
 free to choose whether or not their personal information are
@@ -488,9 +482,11 @@ change: for example both the original US Safe Harbor scheme and the
 Privacy Shield that replaced it have been declared invalid by the
 European Court of Justice; the latter case (“Schrems II”) also added new
 obligations for exporting organisations using the Standard Contract
-Clauses, with new versions of the Clauses currently being proposed by
-the European Commission. Organisations operating international IAM
-systems should be aware of developments.
+Clauses: new versions of the Clauses were issued by the European
+Commission in June 2021.
+<a href="#fn11" id="fnref11" class="footnoteRef"><sup>11</sup></a>
+Organisations operating international IAM systems should be aware of
+developments.
 
 Security
 ========
@@ -517,13 +513,15 @@ then a notification to affected individuals is required under Article
 The GDPR recognises in Recital 49 that the ability to detect, contain,
 and remedy security breaches is an important part of keeping data
 secure. Indeed, it has been suggested that failure to do so may itself
-be a breach of Article 33.[11] Processing of personal data such as
-access and activity logs required for those purposes is recognised as a
-legitimate interest (so permitted, subject to the balancing test). Such
-logs must, of course, be held and processed securely. IAM can play a
-significant role in mitigating security breaches, by disabling
-compromised accounts quickly and effectively; its logs may also provide
-early warning when an organisation is under attack.
+be a breach of Article 33.
+<a href="#fn12" id="fnref12" class="footnoteRef"><sup>12</sup></a>
+Processing of personal data such as access and activity logs required
+for those purposes is recognised as a legitimate interest (so permitted,
+subject to the balancing test). Such logs must, of course, be held and
+processed securely. IAM can play a significant role in mitigating
+security breaches, by disabling compromised accounts quickly and
+effectively; its logs may also provide early warning when an
+organisation is under attack.
 
 To meet the GDPR’s tight timescale for understanding and reporting
 breaches, organisations must plan, prepare, resource, and practice how
@@ -633,60 +631,125 @@ and written extensively on how digital technologies can be used to
 improve privacy and data protection and, more recently, on the
 application of the GDPR to them. His publications can be found at
 <https://orcid.org/0000-0002-8448-2881> and his blogs at
-<https://community.jisc.ac.uk/blogs/regulatory-developments>.
+<https://community.jisc.ac.uk/blogs/regulatory-developments> .
 
 Change Log
 ==========
 
-| Date       | Change                                                                                              |
-|------------|-----------------------------------------------------------------------------------------------------|
-| 2021-06-30 | Updated based on <https://github.com/IDPros/bok/issues/42>, https://github.com/IDPros/bok/issues/41 |
+| Date       | Change                                                                                               |
+|------------|------------------------------------------------------------------------------------------------------|
+| 2021-06-30 | Updated based on <https://github.com/IDPros/bok/issues/42> , https://github.com/IDPros/bok/issues/41 |
+| 2022-09-30 | Updated information on The EU Standard Contract Clauses                                              |
 
-[1] “EU General Data Protection Regulation (GDPR): Regulation (EU)
-2016/679 of the European Parliament and of the Council of 27 April 2016
-on the protection of natural persons with regard to the processing of
-personal data and on the free movement of such data, and repealing
-Directive 95/46/EC (General Data Protection Regulation),” OJ 2016 L
-119/1.
+<div class="footnotes">
 
-[2] GDPR Art.4(1)
+------------------------------------------------------------------------
 
-[3] GDPR Art.4(2)
+1.  <div id="fn1">
 
-[4] “Council of Europe Data Protection website,” Council of Europe,
-accessed October 10, 2019,
-https://www.coe.int/en/web/data-protection/home.
+    “EU General Data Protection Regulation (GDPR): Regulation (EU)
+    2016/679 of the European Parliament and of the Council of 27 April
+    2016 on the protection of natural persons with regard to the
+    processing of personal data and on the free movement of such data,
+    and repealing Directive 95/46/EC (General Data Protection
+    Regulation),” OJ 2016 L 119/1. [↩](#fnref1)
 
-[5] Note that some public authorities are excluded from GDPR, notably
-institutions of the European Union itself and law enforcement and
-national security agencies when performing those tasks. These will
-normally be subject to other legislation that applies the same
-principles: for example, Regulation 2018/1725 for EU bodies and
-Directive 2016/680 for law enforcement.
+    </div>
 
-[6] See, for example, the UK Regulator at
-https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/individual-rights/right-of-access/
+2.  <div id="fn2">
 
-[7] European Data Protection Board, “Guidelines 2/2019 on the processing
-of personal data under Article 6(1)(b) GDPR in the context of the
-provision of online services to data subjects,” Version 2.0, 8 October
-2019,
-https://edpb.europa.eu/sites/default/files/files/file1/edpb\_guidelines-art\_6-1-b-adopted\_after\_public\_consultation\_en.pdf.
+    GDPR Art.4(1) [↩](#fnref2)
 
-[8] “Guidelines on the right to "data portability",” revision
-(wp242rev.01), European Commission, last modified October 27, 2017,
-https://ec.europa.eu/newsroom/article29/item-detail.cfm?item\_id=611233.
+    </div>
 
-[9] “When is consent appropriate?” Information Commissioner’s Office,
-accessed October 10, 2019,
-https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/consent/when-is-consent-appropriate/\#when3.
+3.  <div id="fn3">
 
-[10] “Standard Contractual Clauses: Standard contractual clauses for
-data transfer between EU and non-EU countries,” European Commission,
-accessed October 10, 2019,
-https://ec.europa.eu/info/law/law-topic/data-protection/data-transfers-outside-eu/model-contracts-transfer-personal-data-third-countries\_en.
+    GDPR Art.4(2) [↩](#fnref3)
 
-[11] “Guidelines on Personal data breach notification under Regulation
-2016/679,” Article 29 Data Protection Working Party, last revised and
-adopted on February 6, 2018,
-https://ec.europa.eu/newsroom/article29/document.cfm?action=display&doc\_id=49827
+    </div>
+
+4.  <div id="fn4">
+
+    “Council of Europe Data Protection website,” Council of Europe,
+    accessed October 10, 2019,
+    https://www.coe.int/en/web/data-protection/home. [↩](#fnref4)
+
+    </div>
+
+5.  <div id="fn5">
+
+    Note that some public authorities are excluded from GDPR, notably
+    institutions of the European Union itself and law enforcement and
+    national security agencies when performing those tasks. These will
+    normally be subject to other legislation that applies the same
+    principles: for example, Regulation 2018/1725 for EU bodies and
+    Directive 2016/680 for law enforcement. [↩](#fnref5)
+
+    </div>
+
+6.  <div id="fn6">
+
+    See, for example, the UK Regulator at
+    https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/individual-rights/right-of-access/
+    [↩](#fnref6)
+
+    </div>
+
+7.  <div id="fn7">
+
+    European Data Protection Board, “Guidelines 2/2019 on the processing
+    of personal data under Article 6(1)(b) GDPR in the context of the
+    provision of online services to data subjects,” Version 2.0, 8
+    October 2019,
+    https://edpb.europa.eu/sites/default/files/files/file1/edpb\_guidelines-art\_6-1-b-adopted\_after\_public\_consultation\_en.pdf.
+    [↩](#fnref7)
+
+    </div>
+
+8.  <div id="fn8">
+
+    “Guidelines on the right to "data portability",” revision
+    (wp242rev.01), European Commission, last modified October 27, 2017,
+    https://ec.europa.eu/newsroom/article29/item-detail.cfm?item\_id=611233.
+    [↩](#fnref8)
+
+    </div>
+
+9.  <div id="fn9">
+
+    “When is consent appropriate?” Information Commissioner’s Office,
+    accessed October 10, 2019,
+    https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/consent/when-is-consent-appropriate/\#when3.
+    [↩](#fnref9)
+
+    </div>
+
+10. <div id="fn10">
+
+    “Standard Contractual Clauses: Standard contractual clauses for data
+    transfer between EU and non-EU countries,” European Commission,
+    accessed October 10, 2019,
+    https://ec.europa.eu/info/law/law-topic/data-protection/data-transfers-outside-eu/model-contracts-transfer-personal-data-third-countries\_en.
+    [↩](#fnref10)
+
+    </div>
+
+11. <div id="fn11">
+
+    European Commission, “Standard Contractual Clauses (SCC),” website,
+    <https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/standard-contractual-clauses-scc_en>
+    (accessed 27 September 2022). [↩](#fnref11)
+
+    </div>
+
+12. <div id="fn12">
+
+    “Guidelines on Personal data breach notification under Regulation
+    2016/679,” Article 29 Data Protection Working Party, last revised
+    and adopted on February 6, 2018,
+    https://ec.europa.eu/newsroom/article29/document.cfm?action=display&doc\_id=49827
+    [↩](#fnref12)
+
+    </div>
+
+</div>
