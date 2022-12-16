@@ -354,7 +354,7 @@ Both Knowledge-Based Authentication (KBA) and Security Questions are
 used as recovery mechanisms by having the user “prove” they are the
 legitimate owner by answering questions known only to the user.
 Unfortunately, both KBA, based on public information databases or recent
-user transactions, and security questions, based on preconfigured
+user transactions, previous passwords, and security questions, based on preconfigured
 questions and answers provided by the user, are relatively weak recovery
 mechanisms.
 
@@ -362,7 +362,11 @@ KBA mechanisms often utilize information such as home addresses, loan
 dates/amounts, and credit report data to weakly identify the human owner
 of an account. However, due to numerous data breaches, this information
 is insufficiently secret and should not be depended upon as a recovery
-mechanism for accounts with any significant value. Similarly, security
+mechanism for accounts with any significant value. 
+
+Even in the absense of data breaches, information used for KBA may often be available to family members or other parties close to the user, reducing their efficacy.
+
+Similarly, security
 questions often have predictable or easily identifiable answers.
 Questions such as favorite color have low entropy (according to
 [<u>this</u>](https://www.huffpost.com/entry/house-beautiful-2012-color-report_n_1840383?guccounter=1#:~:text=According%20to%20House%20Beautiful's%20Color,purple%20tied%20at%208%20percent.)
