@@ -263,7 +263,7 @@ actors are as follows:
 
 -   Sam as the verifiable credential <u>subject</u> and <u>holder</u>.
 
--   A University as the verifiable credential <u>issuer</u>.
+-   Alice University as the verifiable credential <u>issuer</u>.
 
 -   Example Insurance as the verifiable credential <u>verifier</u>.
 
