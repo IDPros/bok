@@ -15,12 +15,11 @@ lifecycle.<a href="#fn1" id="fnref1" class="footnote-ref"><sup>1</sup></a>
 
 Depending on the type of identity (human such as Workforce or Customer,
 and non-human types such as System or Device), the lifecycle phases will
-differ. Enterprise IAM has typically been a well-established set of
-processes that provide the processes and governance capabilities to
-ensure only the correct people (via their accounts) have access to only
-the required applications (resources). Customer IAM has an entirely
+differ. Enterprise IAM is a relatively mature practice area which provides the processes and governance to
+ensure the correct people (via their accounts) have access to
+the required applications and data (resources). Customer IAM has an entirely
 different set of requirements that represent value to a business due to
-the nature of its defining interactions with a customer. Poor or
+the nature of the business's interactions with customers. Poor or
 inefficient interactions with customers can have severe negative effects
 on a business. For these reasons, the different identity types will
 require separate systems and processes supporting them:
