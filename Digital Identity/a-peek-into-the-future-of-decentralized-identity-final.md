@@ -258,40 +258,40 @@ decentralized identity flow.
 
 Suppose Sam wants to purchase vehicle insurance from Example Insurance,
 but to get a good rate, Example Insurance requires proof that Sam is a
-graduate of A University. In our decentralized identity scenario, the
+graduate of ABC University. In our decentralized identity scenario, the
 actors are as follows:
 
 -   Sam as the verifiable credential <u>subject</u> and <u>holder</u>.
 
--   A University as the verifiable credential <u>issuer</u>.
+-   ABC University as the verifiable credential <u>issuer</u>.
 
 -   Example Insurance as the verifiable credential <u>verifier</u>.
 
 The following sequence of steps represents a flow where the end-goal is
-for Sam to receive a digital diploma from A University and then present
-it for verification to Example Insurance in order to claim the
+for Sam to receive a digital diploma from ABC University and then
+present it for verification to Example Insurance in order to claim the
 automobile insurance discount:
 
-1.  Sam receives an email from A University congratulating Sam on
+1.  Sam receives an email from ABC University congratulating Sam on
     graduating while also providing a QR code Sam can use to scan with
     Sam’s mobile phone. Sam has an app on Sam’s phone that is registered
     to handle such a request. This app represents Sam's *digital wallet*
     that will hold all the *digital cards* that were collected over
     time. Sam scans the QR code, the digital wallet app launches, and
     Sam is informed that in order to receive Sam’s digital diploma Sam
-    needs to sign-in to the A University website.
+    needs to sign-in to the ABC University website.
 
 2.  In our case, Sam presses on the link and enters Sam’s existing
     credentials to authenticate on the University's website or if Sam
     didn't have such a credential, Sam may be asked to come in person to
     the registrar's office to do ID proofing and receive their
     credentials. Once Sam provides their existing credentials, Sam is
-    informed that Sam can go ahead and *accept* this digital card from A
-    University. Once Sam accepts the card, Sam is asked to secure this
-    operation with a biometric, such as a fingerprint, face, or even a
-    PIN. After Sam performs this action, the card is now securely stored
-    in Sam's digital wallet. Sam can inspect the card, view the data
-    that the card has about Sam (which was attested to by the
+    informed that Sam can go ahead and *accept* this digital card from
+    ABC University. Once Sam accepts the card, Sam is asked to secure
+    this operation with a biometric, such as a fingerprint, face, or
+    even a PIN. After Sam performs this action, the card is now securely
+    stored in Sam's digital wallet. Sam can inspect the card, view the
+    data that the card has about Sam (which was attested to by the
     university), such as Sam’s full name, major, graduation date, and
     issue date. Also, Sam can view the activity that this card was
     involved in, such as when it was issued, to whom it was presented,
@@ -307,19 +307,19 @@ automobile insurance discount:
     website on Sam’s mobile phone and notices the *Verify Credentials*
     button. This is a deep link and when Sam presses it, the digital
     wallet app opens with a permission request. The permission request
-    indicates that Example Insurance needs to receive a A University
+    indicates that Example Insurance needs to receive a ABC University
     alumni digital card for Sam to get Sam’s discount. Note that Sam
     doesn't have to authenticate to Example Insurance with a username
     and password nor use a federated IdP. Sam can simply present the
     digital diploma Sam already possesses in Sam’s digital wallet. In
-    our scenario, Sam only presents Sam’s A University alumni digital
+    our scenario, Sam only presents Sam’s ABC University alumni digital
     card to Example Insurance, but Sam could also present other digital
     cards Sam has in Sam’s digital wallet such as a digital card that
     proves Sam is a resident of a specific territory or to prove Sam’s
     current address. Once Sam authorizes the permission request with
     Sam’s biometric such as a fingerprint scan, Example Insurance now
     receives the digital card and is able to verify that it was indeed
-    issued to Sam by A University, and it is indeed Sam who is
+    issued to Sam by ABC University, and it is indeed Sam who is
     presenting this digital card to Example. Once Example Insurance
     completes the verification, it can now offer a discount to Sam! Sam
     can now view that Sam’s digital wallet app has a receipt for this
@@ -337,20 +337,20 @@ automobile insurance discount:
 4.  Sam can collect many such digital cards in Sam’s digital wallet and
     at some point may even need to present multiple cards, such as in
     the case if Sam wants to attend an advanced enterprise architecture
-    training academy, both proving Sam is a A University alumni as well
-    as a certified enterprise architect. The academy can then instantly
-    verify both credentials presented and enable Sam to access Sam’s
-    advanced training material.
+    training academy, both proving Sam is a ABC University alumni as
+    well as a certified enterprise architect. The academy can then
+    instantly verify both credentials presented and enable Sam to access
+    Sam’s advanced training material.
 
 It is important to clarify that Sam sends a *verifiable presentation* to
 Example Insurance. The verifiable presentation contains a nested
-artifact which is the *verifiable credential* Sam has received from A
+artifact which is the *verifiable credential* Sam has received from ABC
 University. In this manner, Example Insurance that is acting as the
 verifier, can verify the following two critical elements:
 
 -   Based on the digital signature of the *verifiable credential*,
     Example Insurance verifies that the verifiable credential is
-    authentic and was indeed issued by A University to Sam
+    authentic and was indeed issued by ABC University to Sam
 
 -   Based on the digital signature of the *verifiable presentation*,
     Example Insurance verifies that it is indeed Sam who is performing
@@ -371,25 +371,25 @@ and will not be detailed here.
 
 ### Setup
 
-1.  A University represents the issuer. A generates a decentralized
+1.  ABC University represents the issuer. A generates a decentralized
     identifier (DID) tied to a public/private key pair and registers
-    their DID on the dPKI. The private key is stored by the A University
-    IT team in a Key Vault or Hardware Security Module. The
+    their DID on the dPKI. The private key is stored by the ABC
+    University IT team in a Key Vault or Hardware Security Module. The
     corresponding public key is published to a decentralized ledger such
     as a blockchain so that anyone can find it.
 
-2.  A University IT publishes a DID document that associates its DID to
-    the registered public Domain Name System (DNS) domain, such as
-    A.edu. This represents a domain linkage verifiable credential. A
+2.  ABC University IT publishes a DID document that associates its DID
+    to the registered public Domain Name System (DNS) domain, such as
+    A.edu. This represents a domain linkage verifiable credential. ABC
     University IT can host this file on their website which both proves
     ownership of the domain and the specific DID. The verifier (such as
     Example Insurance) can use this DID document to confirm the DID
-    ownership for A University and ensure that the verifiable credential
-    it receives is indeed issued by A University and not by some other
-    issuer claiming to be A University.
+    ownership for ABC University and ensure that the verifiable
+    credential it receives is indeed issued by ABC University and not by
+    some other issuer claiming to be ABC University.
 
-3.  A University IT develop a contract that describes the requirements
-    for the issuance of the verifiable credential. For example, A
+3.  ABC University IT develop a contract that describes the requirements
+    for the issuance of the verifiable credential. For example, ABC
     University IT can specify which attestations should be self-issued
     directly by the user, and which other verifiable credentials, if
     any, the individual must first provide. In our scenario, the IT team
@@ -398,18 +398,18 @@ and will not be detailed here.
     receive a security token and extract claims from it, such as first
     name, last name, and student number. The issuer will then be able to
     map it to attributes it will issue in the verifiable credential.
-    Importantly, A University will indicate the schema(s) to which the
+    Importantly, ABC University will indicate the schema(s) to which the
     verifiable credential will conform, so that other verifiers around
     the world will be able to consume the content of the verifiable
     credential those verifiers receive.
 
-4.  Finally, A University IT administrators can setup and customize the
-    branding of the soon-to-be-issued verifiable credential cards such
-    as card color, logos, icons, images, and helpful text. The
+4.  Finally, ABC University IT administrators can setup and customize
+    the branding of the soon-to-be-issued verifiable credential cards
+    such as card color, logos, icons, images, and helpful text. The
     administrators can customize the helpful text strings via metadata
     that will appear as part of the cards based on the attestations
     issued with the card for credential data. This will help design the
-    look and feel of verifiable credential alumni cards issued by A
+    look and feel of verifiable credential alumni cards issued by ABC
     University, and ensure the issued digital cards reflect the brand of
     the university. In the future, these graphical elements should be
     standardized so that students enjoy a consistent digital card visual
@@ -425,31 +425,31 @@ and will not be detailed here.
     Sam’s user agent to retrieve the requirements for credential
     issuance as dictated by the issuer and to display the appropriate UX
     to the user via the user agent. As such, the QR code is displayed on
-    the A University website and scanning the QR code opens Sam's
+    the ABC University website and scanning the QR code opens Sam's
     digital wallet mobile app and triggers an issuance request retrieval
-    operation from the user agent to A University. Once the user agent
-    receives the issuance request from A University, it begins the flow
-    to issue the credential. The issuance request is digitally signed by
-    A University and the user agent can verify the authenticity of such
-    a request. The issuance request includes a reference to the contract
-    that describes how the user agent should render the UX and what
-    information Sam needs to provide in order to be given a verifiable
-    alumni credential.
+    operation from the user agent to ABC University. Once the user agent
+    receives the issuance request from ABC University, it begins the
+    flow to issue the credential. The issuance request is digitally
+    signed by ABC University and the user agent can verify the
+    authenticity of such a request. The issuance request includes a
+    reference to the contract that describes how the user agent should
+    render the UX and what information Sam needs to provide in order to
+    be given a verifiable alumni credential.
 
 2.  After the user agent verifies that the request is genuine, it
     renders the UX to Sam. Because of the specific requirement that A
     has for issuing digital alumni cards in our scenario, Sam needs to
-    sign in with Sam’s existing A University account, which, in turn,
+    sign in with Sam’s existing ABC University account, which, in turn,
     will issue a security token to the user agent with claims such as
     Sam's first name and last name, degree, and graduation date. (Note
     that during setup above, the issuer can be configured to accept
     security tokens from any trusted and compliant OpenID Connect
     identity provider and the user agent will use this identity provider
     during the issuance process.) Therefore, when the individual presses
-    ‘Login to A University’ on the user agent, the user agent can
+    ‘Login to ABC University’ on the user agent, the user agent can
     redirect the individual to authenticate with the IdP, and it is
     there the individual can perform standard authentication tasks such
-    as entering their username and password, performing Multi Factor
+    as entering their username and password, performing Multi-Factor
     Authentication (MFA), accepting terms of service, or even paying for
     their credential. All this activity occurs on the client side via
     the user agent (e.g., a mobile app). When the user agent finally
@@ -475,15 +475,15 @@ and will not be detailed here.
     Sam’s DID and issues the digital card to Sam who then receives the
     verifiable credential, which is a JSON Web Token (JWT) following the
     W3C standard for verifiable credentials. The JWT includes both the
-    DID of the subject, Sam, and the DID of the issuer, A University, as
-    well as the type of the credential, and any attestations such as
+    DID of the subject, Sam, and the DID of the issuer, ABC University,
+    as well as the type of the credential, and any attestations such as
     first name, last name, major, and graduation date. It also contains
     a way to find out the credential's revocation status in case the
-    credential is later revoked by the issuer - A University. This
+    credential is later revoked by the issuer - ABC University. This
     verifiable credential is digitally signed by the issuer's DID.
 
 5.  Once the user agent validates the verifiable credential received
-    from A University, it inserts this digital card into Sam's digital
+    from ABC University, it inserts this digital card into Sam's digital
     wallet as a card Sam can now present to other organizations such as
     Example Insurance.
 
@@ -494,25 +494,25 @@ and will not be detailed here.
     ‘Verify Credentials’ button on the Example website (which is a deep
     link) or simply scans a QR code generated by Example via their
     mobile phone. This generates a presentation/verification request for
-    Sam to verify Sam’s A University alumni status. The request
+    Sam to verify Sam’s ABC University alumni status. The request
     describes the type of card(s) that Sam should present to Example
-    Insurance, such as Sam’s digital alumni card from A University, and
-    this request is digitally signed by the verifier's DID, which in our
-    case, is Example Insurance. The presentation request can also
+    Insurance, such as Sam’s digital alumni card from ABC University,
+    and this request is digitally signed by the verifier's DID, which in
+    our case, is Example Insurance. The presentation request can also
     include Example's terms of service.
 
 2.  After the signature of the request is verified by the user agent,
     Sam is presented with a UI on the user agent indicating that Example
-    Insurance is requesting permission to see Sam’s A University alumni
-    card with a reason as to why Example needs to see it (such as for
-    Sam to be able to receive their discount).
+    Insurance is requesting permission to see Sam’s ABC University
+    alumni card with a reason as to why Example needs to see it (such as
+    for Sam to be able to receive their discount).
 
 3.  After Sam approves the request with a biometric gesture, such as
     with a fingerprint scan on the mobile phone, the verification
     response, which is essentially a presentation of a credential
     response (also known as a verifiable presentation), is sent to
     Example Insurance. The response is signed by Sam's private key and
-    includes the verifiable credential issued by A University to Sam
+    includes the verifiable credential issued by ABC University to Sam
     nested inside the JWT payload.
 
 4.  Example Insurance attempts to match the person performing the
@@ -522,18 +522,18 @@ and will not be detailed here.
     the DID of Sam is present in both the outer JWT payload since Sam is
     performing the presentation of the credential, as well as inside the
     nested JWT payload as the subject of the verifiable credential
-    issued by A University. Once Example Insurance confirms that the DID
-    in the presentation matches the subject of the issued credential,
-    Sam is both authenticated to the Example Insurance website and
-    authorized to claim Sam’s discount! This is much better than simply
-    possessing a username and password, since, in this mechanism,
-    Example Insurance knows that the person presenting this credential
-    is the same person to whom the card was issued. With a username and
-    password, someone else can use it to impersonate you. In this
-    architecture, however, this is significantly harder to do. Someone
-    else will need to take control of Sam's private key stored on Sam’s
-    phone's secure enclave to be able to accomplish this malevolent
-    task.
+    issued by ABC University. Once Example Insurance confirms that the
+    DID in the presentation matches the subject of the issued
+    credential, Sam is both authenticated to the Example Insurance
+    website and authorized to claim Sam’s discount! This is much better
+    than simply possessing a username and password, since, in this
+    mechanism, Example Insurance knows that the person presenting this
+    credential is the same person to whom the card was issued. With a
+    username and password, someone else can use it to impersonate you.
+    In this architecture, however, this is significantly harder to do.
+    Someone else will need to take control of Sam's private key stored
+    on Sam’s phone's secure enclave to be able to accomplish this
+    malevolent task.
 
 5.  At last, Example Insurance can extract the data it requires from the
     verifiable credential such as Sam's first name, last name, major,
@@ -551,7 +551,7 @@ and will not be detailed here.
     and will always be under Sam's possession.
 
 7.  Some implementations may further enable Sam to go ahead and decide
-    to revoke Example's access to Sam’s A University digital alumni
+    to revoke Example's access to Sam’s ABC University digital alumni
     card. Example should thus implement the necessary revocation
     measures to ensure it complies with Sam's request. The verifier
     should then cease to use the data from the card Sam presented to it.
@@ -564,7 +564,7 @@ and will not be detailed here.
 ### Scenario Summary
 
 In our simple use-case above, the issuer of a verifiable credential was
-A University, but in other contexts, the issuer can be an employer, a
+ABC University, but in other contexts, the issuer can be an employer, a
 government agency, a device, a daemon process, or even the individual.
 Likewise, a verifier can also be any of the previously mentioned actors.
 The decentralized identity ecosystem is very broad and the standards
@@ -753,10 +753,10 @@ experiences and unlock more value for everyone.
 Change Log
 ==========
 
-| Date       | Change                                                                                 |
-|------------|----------------------------------------------------------------------------------------|
-| 2020-10-30 | V1 published                                                                           |
-| 2022-02-28 | Editorial changes only (changed example business names to non-Microsoft specific ones) |
+| Date                   | Change                                                                                                                         |
+|------------------------|--------------------------------------------------------------------------------------------------------------------------------|
+| 2020-10-30             | V1 published                                                                                                                   |
+| 2022-02-28, 2023-03-31 | Editorial changes only (changed example business names to non-Microsoft specific ones; changed A University to ABC University) |
 
 Author Bio
 ==========

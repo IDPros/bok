@@ -1,28 +1,37 @@
+<div id="header">
+
+</div>
+
 By Graham Williamson, André Koot, Gloria Lee
 
-© 2022 IDPro, Graham Williamson, André Koot, Gloria Lee
+© 2023 IDPro, Graham Williamson, André Koot, Gloria Lee
 
 Introduction
 ============
 
-A non-human identity is associated with a service or device rather than
-a human user. Identity in this context is defined by the identifier(s)
-of the device. A device must be identifiable for that device to interact
-with corporate systems. For example, a building management system might
-need to periodically log into another system to write environmental data
-into a corporate monitoring system database.
+A non-human account is usually associated with a service or device
+rather than a human user. An example is a machine-to-machine service,
+such as a backup routine that runs during non-business hours to create
+an offline copy of production data. In this instance, the account
+permissions should be restricted, i.e., they should not have standard
+user access nor general Administrator privileges.
 
-In this document, ‘non-human accounts’ include computer system accounts
-that are not associated with a person, such as a backup routine that
-runs during non-business hours to create an off-line copy of production
-data. Such accounts should be restricted to the specific purpose for
-which they are created and suspended if used interactively.
+Devices such as sensors that provide data to be monitored are sometimes
+deployed with access to an account so that they can write to a database.
+Again, such an account should have limited privileges.
+
+Fortunately, the use of such accounts is diminishing as the use of APIs
+becomes more sophisticated, providing better security and eliminating
+the practice of hardcoding usernames and passwords in connection
+routines.
 
 While IAM professionals typically focus on user accounts, these
 non-human accounts represent a potential attack vector for
 organizations. These accounts should be considered when formulating
-policies for access to computer systems. A comparison between the
-characteristics of these accounts is shown below:
+policies for access to computer systems.
+
+A comparison between the characteristics of these accounts is shown
+below:
 
 <table>
 <colgroup>
@@ -32,7 +41,7 @@ characteristics of these accounts is shown below:
 </colgroup>
 <thead>
 <tr class="header">
-<th></th>
+<th><span id="_30j0zll" class="anchor"> </span></th>
 <th>Person Identity</th>
 <th>Non-human Identity</th>
 </tr>
@@ -41,12 +50,11 @@ characteristics of these accounts is shown below:
 <tr class="odd">
 <td>Usage</td>
 <td>Multi-faceted, must accommodate multiple access requirements to many applications or protected resources</td>
-<td><p>Purpose-specific,</p>
-<p>single requirement for each deployment</p></td>
+<td>Purpose-specific, with a single requirement for each deployment</td>
 </tr>
 <tr class="even">
 <td>Lifecycle</td>
-<td>Created during the ‘joiner’ process, modified when ‘moves’ occur, continually monitored for compliance, disabled, and then deleted according to the ‘leaver’ process.<a href="#fn1" id="fnref1" class="footnote-ref"><sup>1</sup></a></td>
+<td>Created during the ‘joiner’ process, modified when ‘moves’ occur, continually monitored for compliance, disabled, and then deleted according to the ‘leaver’ process. <a href="#fn1" id="fnref1" class="footnoteRef"><sup>1</sup></a></td>
 <td>Created on deployment of the device/service, deleted on termination.</td>
 </tr>
 <tr class="odd">
@@ -56,7 +64,7 @@ characteristics of these accounts is shown below:
 </tr>
 <tr class="even">
 <td>Access<br />
-end-points</td>
+endpoints</td>
 <td>Users typically access computer services from smartphones, PCs, and laptops on an interactive basis.</td>
 <td>Endpoints are typically devices or device controllers. They can also be computer applications, service routines, or Internet bots.</td>
 </tr>
@@ -68,13 +76,13 @@ end-points</td>
 There are two broad categories of non-human accounts that IAM
 practitioners should differentiate:
 
--   accounts used by devices or services to perform a specific function;
-    these accounts should be monitored and alarm on any incident that is
-    an anomaly to the expected operation;
+-   Machine-to-machine accounts used by devices or services to perform a
+    specific function; these ‘server’ accounts should be monitored and
+    alarm on any incident that is an anomaly to the expected operation.
 
--   accounts that have access to system functions but are not assigned
-    to a specific individual, including administrative accounts with
-    elevated privileges.
+-   Accounts that have access to system functions but are not assigned
+    to a specific individual; these ‘system’ accounts include
+    administrator accounts with elevated privileges.
 
 Terminology
 -----------
@@ -97,11 +105,11 @@ Terminology
 -   Non-human/person account – any account not used by a person,
     including accounts used for devices, services, and servers.
 
--   Server account – an account with privileged access rights to a
-    server’s operation typically used for configuration purposes.
-
--   Service account – an account used by a computer application to
-    access another application or service for a specific purpose.
+-   Server account – an account established with access rights to a
+    specific server operation; this includes service accounts used by a
+    computer application to access another application or service or an
+    account used for a device connection. Note: these accounts are
+    username accounts typically secure via a password.
 
 -   System account – a generic term for a privileged account that has
     extensive permissions that enable system configuration changes.
@@ -125,9 +133,13 @@ process, turning something on or off. They may be used to open or close
 a valve by pulsing a servo motor a sufficient number of times until the
 desired aperture is reached. In many cases, devices are remotely located
 and connected via a controller to the supervisory system located in a
-central location.
+central location. It is noted that IoT devices are becoming increasingly
+sophisticated with control capabilities and communication facilities
+built-in. This eliminates the need for a username/password account as
+IoT devices typically communicate to an API with encryption and digital
+signing functionality.
 
-In a typical IoT configuration there are three zones:
+In a typical IoT configuration, there are three zones:
 
 1.  IoT devices (sensors & actuators). Managing access to and from
     devices should be governed by a policy that imposes requirements for
@@ -140,10 +152,10 @@ In a typical IoT configuration there are three zones:
     rotated. The selected security requirement must match the capability
     of the devices, but technical limitations often constrain IoT
     devices. “Terminology for Constrained-Node Networks" (RFC 7228)
-    nominates three classes of
-    devices:<a href="#fn2" id="fnref2" class="footnote-ref"><sup>2</sup></a>
+    nominates three classes of devices:
+    <a href="#fn2" id="fnref2" class="footnoteRef"><sup>2</sup></a>
 
-    1.  Class 0 – no capacity to support configurable authentication
+    1.  Class 0 – no capacity to support configurable authentication.
 
     2.  Class 1 – limited capacity for key management, token support,
         etc.
@@ -160,7 +172,7 @@ In a typical IoT configuration there are three zones:
 3.  Human-Machine interface application (HMI) such as a controller app
     or a SCADA app monitoring or controlling the IoT devices. In some
     cases, sensors will write data directly to a database that is read
-    by another application such as a SCADA app or similar human-machine
+    by another application, such as a SCADA app or similar human-machine
     interface (HMI). Access to these applications will be by humans and
     should be managed via the IDM environment.
 
@@ -183,10 +195,12 @@ Access Management system.
 
 There is increasing concern regarding the provenance of IoT devices and
 tracking devices throughout the supply chain to ensure no modifications
-have been made that could potentially deploy ‘back-door’
-access.<a href="#fn3" id="fnref3" class="footnote-ref"><sup>3</sup></a>
-The IAM practitioner may wish to ensure corporate policy defines the
-certification processes to be employed for IoT devices.
+have been made that could potentially deploy ‘back-door’ access.
+<a href="#fn3" id="fnref3" class="footnoteRef"><sup>3</sup></a> The IAM
+practitioner may wish to ensure corporate policy defines the
+certification processes to be employed for IoT devices and ensure that
+compliance with software supply chain policy is in place. This is
+increasingly important in regulated industries.
 
 Just as important as securing the device itself is protecting the IoT
 device data. In many cases, databases with IoT devices are not
@@ -202,29 +216,29 @@ Vulnerability Mitigation
 
 There is no ‘correct answer’ when it comes to deciding the involvement
 of IAM practitioners in the management of IoT devices. At one end of the
-spectrum is the use-case whereby all IoT deployments and management are
+spectrum is the use case whereby all IoT deployments and management are
 the domain of OT personnel. In this case, the IAM involvement will be
 restricted to the human accounts that access the OT systems. Group
 management of entitlements to accounts that can configure IoT systems
 will heighten the level of security.
 
-At the midpoint of the spectrum, a human identity is responsible for IoT
-devices. The IAM provisioning workflow will route configuration
-requests, and potentially password rotation requests, to the responsible
-person. The IoT devices will participate in both attestation reporting
-to the responsible manager and compliance management with integration to
-the Security Operations Center (SOC) and possibly the Security
-Information and Event Management (SIEM) system.
+At the midpoint of the spectrum, components of the IoT configuration and
+operation will fall under IAM services. The IAM provisioning workflow
+will route configuration requests and potentially password rotation
+requests, to the responsible person. The IoT devices will participate in
+both attestation reporting to the responsible manager and compliance
+management with integration to the Security Operations Center (SOC) and
+possibly the Security Information and Event Management (SIEM) system.
 
 At the other end of the spectrum, the provisioning of devices is
 included in the identity management infrastructure. IoT devices are
 treated the same way as individuals, applying a ‘digital identity’ to
 devices. Their entitlements can be set via the normal account
 provisioning workflows, and their access control can use the same
-protocols. Most modern API systems, including gateways, use OAuth for
-machine-to-machine communications, while Open ID Connect can be
-appropriate for IoT device controller
-authentication.<a href="#fn4" id="fnref4" class="footnote-ref"><sup>4</sup></a>
+protocols. Most modern API systems, including gateways, use OAuth 2.0
+for machine-to-machine communications, while Open ID Connect can be
+appropriate for IoT device controller authentication.
+<a href="#fn4" id="fnref4" class="footnoteRef"><sup>4</sup></a>
 
 Service Accounts
 ----------------
@@ -234,7 +248,7 @@ processes that are periodically run on an automated basis, e.g., via a
 UNIX cron job or Windows Task Scheduler. Auditors often overlook the
 accounts used by these processes because they are not accessed by users
 interactively. Since users do not log into them, they are typically
-quite basic, single-purpose accounts with restricted privileges.
+basic, single-purpose accounts with restricted privileges.
 
 Examples include:
 
@@ -254,42 +268,31 @@ Vulnerability Mitigation
 
 Service accounts are a significant source of concern for many
 organizations because they are often established with a static password
-that, if not encrypted, can be read by any system administrator. These
-accounts can then be used interactively by a malicious actor and
-possibly used for lateral movement to other servers in the organization.
-Including service accounts in the corporate data loss protection tools,
-such as authentication monitoring for anomalies, can guard against such
-vulnerabilities. A better practice is to migrate static service accounts
-to APIs that typically impose a strict security and monitoring regime.
+that, if not encrypted, can be read by any system administrator. If
+their access rights are not tightly scoped, these accounts can then be
+used interactively by a malicious actor and possibly used for lateral
+movement to other servers in the organization’s network. If corporate
+data loss protection extends to service accounts, tools such as
+authentication monitoring for anomalies can guard against such
+vulnerabilities. User behavior analysis tools baseline the normal
+activity on an account; any deviation from this will generate an alert
+to the event monitoring system. Alternatively, static service accounts
+can be migrated to APIs that typically impose a strict security and
+monitoring regime.
 
-Note: the term ‘service account’ (a non-human account) is sometimes
-misused to describe an account accessed periodically by a service
-person, e.g., an HVAC technician. Such accounts are user accounts and
-are not addressed in this document. Note that because these personnel
-are often external to a company and therefore not in the IAM data store,
-a ‘generic account’ is sometimes established for any person in the
-service company to use. This convenient approach is an issue for the IAM
-environment. There is no place for generic accounts in the modern
-organization and they should not be used.
-
-Options include:
-
--   Federated authentication with the service company
-
--   Self-service password management with approval workflow
-
--   MFA device issuance to the service company
-
--   Deployment of an API to manage and monitor service company access.
+Note: the term ‘service account’ is sometimes used to describe an
+account accessed periodically by a service person, e.g., an HVAC
+technician. Such accounts are user accounts and should be addressed in a
+company’s IAM strategy. They are not addressed in this document.
 
 Bots
 ----
 
 The term ‘bot’ has come from the Robotic Process Automation (RPA) sector
 that had its genesis in plant automation, where software routines are
-deployed for repetitive
-processes.<a href="#fn5" id="fnref5" class="footnote-ref"><sup>5</sup></a>
-Bots are now used for everything from website crawlers to retrieve usage
+deployed for repetitive processes.
+<a href="#fn5" id="fnref5" class="footnoteRef"><sup>5</sup></a> Bots are
+now used for everything from website crawlers to retrieve usage
 information to denial-of-service malware. Increasingly they are being
 used by organizations to automate repetitive tasks such as retrieval of
 building information management data or consolidating customer
@@ -304,7 +307,7 @@ protection. A common form of malicious activity is ‘credential
 stuffing,’ whereby a hacker alters login credentials to take control of
 a session.
 
-Organizations need to prepare for external use of bots. Bots will
+Organizations need to prepare for the external use of bots. Bots will
 exhibit different characteristics compared to ‘normal’ non-human access
 to a process or service. For the IAM practitioner, user behavior
 analysis can be used to identify access anomalies.
@@ -333,11 +336,11 @@ Client Devices
 Traditionally identities are people; they have identifiers stored in an
 identity datastore and then used to authenticate users to protected
 resources. It is increasingly necessary to also track the endpoint
-devices that users employ to access corporate resources such as laptops,
-tablets, or smartphones. To track those devices, an object is created in
-the organization’s directory or other data stores that record the detail
-for each device. This data allows us to grant access to a resource based
-on the device being used to access it.
+devices that users employ to access corporate resources, such as
+laptops, tablets, or smartphones. To track those devices, an object is
+created in the organization’s directory or other data stores that record
+the detail for each device. This data allows us to grant access to a
+resource based on the device being used to access it.
 
 There are several benefits to registering client devices:
 
@@ -372,8 +375,8 @@ biometric check for an ‘inherence’ factor.
 Some organizations use a Mobile Device Management (MDM) tool to manage
 client devices. MDM facilitates the tracking and management of devices
 and will typically include a self-service module to allow users to
-register and deregister their devices as new devices are acquired, or
-old devices are lost or retired.
+register and deregister their devices as new devices are acquired or old
+devices are lost or retired.
 
 Selecting and deploying the appropriate solution for managing client
 device ‘identities’ is a core capability in enabling non-human access
@@ -454,8 +457,8 @@ devices that have connections to the Internet. Recent incidents include:
     (DDoS) attacks.
 
 Most jurisdictions are now requiring products to adhere to an
-appropriate set of standards that typically
-include:<a href="#fn6" id="fnref6" class="footnote-ref"><sup>6</sup></a>
+appropriate set of standards that typically include:
+<a href="#fn6" id="fnref6" class="footnoteRef"><sup>6</sup></a>
 
 -   Ending the use of default passwords. All devices are shipped with a
     unique password that is not resettable to a common default setting.
@@ -509,22 +512,22 @@ Vulnerability Mitigation
 
 IAM practitioners should assist in the protection of access to all
 system accounts. In a UNIX environment, this might be via the removal of
-the
-‘[etc/passwd](https://www.google.com/search?sxsrf=ALeKk00EXgVcYJud1c2wvEi6kTkygI3HFQ:1588810082250&q=unix+root+access+sudo+etc+passwd&spell=1&sa=X&ved=2ahUKEwjKo8XkuqDpAhXPXisKHVrJBoIQBSgAegQIDRAn)’
-file and the use of SUDO for privilege escalation. In a Microsoft
+the ‘
+[etc/passwd](https://www.google.com/search?sxsrf=ALeKk00EXgVcYJud1c2wvEi6kTkygI3HFQ:1588810082250&q=unix+root+access+sudo+etc+passwd&spell=1&sa=X&ved=2ahUKEwjKo8XkuqDpAhXPXisKHVrJBoIQBSgAegQIDRAn)
+’ file and the use of SUDO for privilege escalation. In a Microsoft
 Windows environment, a privileged access management (PAM) system is a
 common solution. In this case, system passwords are made specifically
 complex and rotated as appropriate. Access to such an account is via a
 PAM system, which restricts access to specific individuals with the
 appropriate entitlements and logs all access events.
 
-If a PAM is not used, Windows supports time-limited elevation of account
-privileges, with notification to management. Manual intervention that
-ensures appropriate use and management of system and server accounts is
-also good practice, as is including server accounts in corporate audits.
-This level of management will require corporate policy to be established
-for server accounts which will heighten visibility of account management
-practices.
+If a PAM is not used, Windows supports the time-limited elevation of
+account privileges, with notification to management. Manual intervention
+that ensures appropriate use and management of system and server
+accounts is also good practice, as is including server accounts in
+corporate audits. This level of management will require corporate policy
+to be established for server accounts which will heighten the visibility
+of account management practices.
 
 Increasingly, applications are being deployed on cloud services
 requiring an access control environment that suits each deployment. This
@@ -559,15 +562,15 @@ that communicate identity data.
 
 The use of bots will also continue to accelerate; deployment of
 behavioral analytics and gateway technology should be considered. The US
-Department of Homeland
-Security<a href="#fn7" id="fnref7" class="footnote-ref"><sup>7</sup></a>
-advises the following:
+Department of Homeland Security
+<a href="#fn7" id="fnref7" class="footnoteRef"><sup>7</sup></a> advises
+the following:
 
 -   Nefarious bot developers will target new IoT devices for
     vulnerabilities as they are released to the market and will compete
     with each other to deploy malware.
 
--   Bot code-size will get smaller and more sophisticated to avoid
+-   Bot code size will get smaller and more sophisticated to avoid
     detection and frustrate defenses.
 
 -   Botnets will be extended and better monetized, likely through
@@ -594,16 +597,14 @@ frustrates the governance task. At the very least, the IAM practitioner
 should ask the appropriate questions as to how IoT devices are being
 secured, how server accounts are being managed, and what defenses are in
 place to thwart malicious bots. It is preferable that the IAM and
-InfoSec teams within an organization work together to ensure consistent
-application of cybersecurity controls that are aligned with corporate
-policy.
-
- 
+InfoSec teams within an organization work together to ensure the
+consistent application of cybersecurity controls that are aligned with
+corporate policy.
 
 Author Bios
 -----------
 
-![Author photo](gwilliamson.jpg)Graham Williamson
+![Author photo](gwilliamson.jpg) Graham Williamson
 
 Graham Williamson is an IAM consultant working with commercial and
 government organizations for over 20 years with expertise in identity
@@ -622,22 +623,22 @@ Toronto and a Master of Business Administration from Bond University. As
 a member of the IDPro Body of Knowledge Committee, he looks forward to
 helping create the definitive body of knowledge for the IAM sector.
 
-![Author photo](akoot.jpg)André Koot
+![Author photo](akoot.jpg) André Koot
 
 André Koot is IAM Strategist and Chief Customer Success Officer at Sonic
 Bee. His IAM experience comes from a financial accounting and auditing
-background. This background of anti-fraud detection and prevention
+background. This background in anti-fraud detection and prevention
 business processes led to research in the area of authorization
 principles.
 
-![Author photo](glee.jpg)Gloria Lee
+![Author photo](glee.jpg) Gloria Lee
 
 Gloria Lee is a Senior Program Manager in the Azure AD Engineering team
 at Microsoft. As part of the customer experience team for Identity and
-Network Access, her role is driving customer success in Azure Identity
-division. Gloria is focused on helping customers increase security
-posture with deployment of Azure Active Directory, Azure hybrid
-cloud-based solutions to provide identity management.
+Network Access, her role is driving customer success in the Azure
+Identity division. Gloria is focused on helping customers increase
+security posture with the deployment of Azure Active Directory, Azure
+hybrid cloud-based solutions to provide identity management.
 
 Prior to joining Microsoft, Gloria was a seasoned engineer/architect
 with 18+ years of experience in the areas of Identity, security,
@@ -647,18 +648,17 @@ Microsoft Identity Driven Airlift Conference for partners, GrayHat 2020,
 and Texas Security Summit. Outside of technology, she enjoys spending
 time with her kids/family and travel bargain hunting.
 
- 
-
 Change Log
 ==========
 
-| Date       | Change                                                           |
-|------------|------------------------------------------------------------------|
-| 2022-02-28 | Added a section on client devices; added Gloria Lee as an author |
-| 2021-04-19 | Author affiliation change                                        |
-| 2020-10-30 | V1 published                                                     |
+| Date       | Change                                                                                                       |
+|------------|--------------------------------------------------------------------------------------------------------------|
+| 2020-10-30 | V1 published                                                                                                 |
+| 2021-04-19 | Author affiliation change                                                                                    |
+| 2022-02-28 | Added a section on client devices; added Gloria Lee as an author                                             |
+| 2023-03-31 | Various changes to improve the clarity of the article such as the addition of device vs. service information |
 
-<div class="section footnotes" role="doc-endnotes">
+<div class="footnotes">
 
 ------------------------------------------------------------------------
 
@@ -666,7 +666,7 @@ Change Log
 
     Cameron, Andrew and Olaf Grewe, “An Overview of the Digital Identity
     Lifecycle,” IDPro Body of Knowledge, 30 October 2020,
-    <https://bok.idpro.org/article/id/31/>.<a href="#fnref1" class="footnote-back">↩︎</a>
+    <https://bok.idpro.org/article/id/31/> . [↩](#fnref1)
 
     </div>
 
@@ -674,8 +674,8 @@ Change Log
 
     Bormann, C., Ersue, M., and A. Keranen, "Terminology for
     Constrained-Node Networks", RFC 7228, DOI 10.17487/RFC7228, May
-    2014,
-    &lt;<https://www.rfc-editor.org/info/rfc7228>&gt;.<a href="#fnref2" class="footnote-back">↩︎</a>
+    2014, &lt; <https://www.rfc-editor.org/info/rfc7228> &gt;.
+    [↩](#fnref2)
 
     </div>
 
@@ -684,8 +684,8 @@ Change Log
     Hashemi, Soheil, and Mani Zarei. “Internet of Things Backdoors:
     Resource Management Issues, Security Challenges, and Detection
     Methods.” Transactions on Emerging Telecommunications Technologies.
-    Wiley, October 12, 2020.
-    <https://doi.org/10.1002/ett.4142>.<a href="#fnref3" class="footnote-back">↩︎</a>
+    Wiley, October 12, 2020. <https://doi.org/10.1002/ett.4142> .
+    [↩](#fnref3)
 
     </div>
 
@@ -694,15 +694,15 @@ Change Log
     See section ‘Mobile & API Innovation Gave Us OAuth & Delegated
     Authorization Frameworks’ in Dingle, Pamela, “Introduction to
     Identity - Part 2: Access Management,” IDPro Body of Knowledge, 17
-    June 2020,
-    <https://bok.idpro.org/article/id/45/>.<a href="#fnref4" class="footnote-back">↩︎</a>
+    June 2020, <https://bok.idpro.org/article/id/45/> . [↩](#fnref4)
 
     </div>
 
 5.  <div id="fn5">
 
     “What is a bot in RPA?,” n.d.,
-    <https://www.nice.com/guide/rpa/what-is-a-bot-in-rpa/>.<a href="#fnref5" class="footnote-back">↩︎</a>
+    <https://www.nice.com/guide/rpa/what-is-a-bot-in-rpa/> .
+    [↩](#fnref5)
 
     </div>
 
@@ -710,7 +710,8 @@ Change Log
 
     For example, see Fernandez, Angel, "New IoT security regulations:
     what you need to know,” Allot blog, 30 January 2020,
-    [https://www.allot.com/blog/new-iot-security-regulations-what-you-need-to-know/\#](https://www.allot.com/blog/new-iot-security-regulations-what-you-need-to-know/).<a href="#fnref6" class="footnote-back">↩︎</a>
+    [https://www.allot.com/blog/new-iot-security-regulations-what-you-need-to-know/\#](https://www.allot.com/blog/new-iot-security-regulations-what-you-need-to-know/)
+    . [↩](#fnref6)
 
     </div>
 
@@ -718,7 +719,8 @@ Change Log
 
     Botnet Roadmap Status Update, Department of Commerce and Homeland
     Security, July 2020,
-    <https://www.commerce.gov/sites/default/files/2020-07/Botnet%20Road%20Map%20Status%20Update.pdf>.<a href="#fnref7" class="footnote-back">↩︎</a>
+    <https://www.commerce.gov/sites/default/files/2020-07/Botnet%20Road%20Map%20Status%20Update.pdf>
+    . [↩](#fnref7)
 
     </div>
 
