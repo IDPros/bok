@@ -233,6 +233,18 @@ their users into making good decisions. This can include:
     changes (e.g., exceptional growth in usage of a cloud service),
     security checkups, or other dashboards to drive user actions.
 
+  - Use synced passkeys.  Synced passkeys enable the process of
+    credential recovery in addition to the existing account recovery
+    mechanisms.  Credential recovery for synced passkeys, e.g.
+    those synchronized to a platform such as Apple or Google, or a
+    third party passkey provider, such as 1Password or Dashlane, is
+    facilitated by the user's passkey provider Functionally,
+    credential recovery operates by enabling the user to
+    bootstrap a new device into the provider's ecosystem afer losing all
+    prior access. Mechanisms are non-standard and likely to vary between
+    providers, therefore, the security of these mechanisms must be
+    assessed on a provider by provider basis. 
+
 Identity providers should also guide their users to avoid single points
 of failure on the user side. For example, if the user places their
 credentials in a password safe and recovery codes are stored in the same
