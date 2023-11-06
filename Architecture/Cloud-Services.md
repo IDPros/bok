@@ -202,7 +202,7 @@ Step 3 may be replaced with an HTTP redirect. This formulation is an
 allowed composition of the POST binding and the Redirect binding.
 <a href="#fn9" id="fnref9" class="footnoteRef"><sup>9</sup></a>
 
-There are also alternatives to the post method in step 5.
+There are also alternatives to the POST method in step 3.
 <a href="#fn10" id="fnref10" class="footnoteRef"><sup>10</sup></a>
 
 In SAML terms, this is the service provider-initiated variant. There is
