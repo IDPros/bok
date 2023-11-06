@@ -32,7 +32,7 @@ OAuth2 can be considered a three-step protocol:
 
 3.  Validate the access token
 
-<img src="media/image1.png" style="width:4.30729in;height:3.2778in" alt="A diagram of a software process Description automatically generated" />
+<img src="oauth-image1.png" style="width:4.30729in;height:3.2778in" alt="A diagram of a software process Description automatically generated" />
 
 Figure 1: High-level diagram of OAuth2 flows
 
@@ -64,7 +64,7 @@ Terminology
 OAuth2 is defined through a series of IETF RFC documents that each
 describe a specific aspect, use case, or profile of use of the protocol.
 
-<img src="media/image2.png" style="width:6.5in;height:3.65278in" />
+<img src="oauth-image2.png" style="width:6.5in;height:3.65278in" />
 
 Figure 2: An artistic rendering of OAuth and related standards, courtesy
 of Aaron Parecki
