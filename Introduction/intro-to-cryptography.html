@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="pandoc" name="generator"/>
+  <meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
+  <title>
+   An Introduction to Cryptography
+  </title>
+ </head>
+ <body>
+  <header id="title-block-header">
+   <h1 class="title">
+    An Introduction to Cryptography
+   </h1>
+  </header>
+  <p>
+   By Mark Drummond (Empire Life)
+  </p>
+  <p>
+   © 2024 IDPro, Mark Drummond
+  </p>
+  <p>
+   <em>
+    To comment on this article, please visit our
+    <a href="https://github.com/IDPros/bok">
+     <span class="underline">
+      GitHub repository
+     </span>
+    </a>
+    and
+    <a href="https://docs.github.com/en/github/managing-your-work-on-github/opening-an-issue-from-code">
+     <span class="underline">
+      submit an issue
+     </span>
+    </a>
+    .
+   </em>
+  </p>
+  <h1 id="introduction">
+   Introduction
+  </h1>
+  <blockquote>
+   <p>
+    Cryptography is the science and art of secret writing—keeping information secret. (Garfinkel 1996)
+   </p>
+  </blockquote>
+  <p>
+   For almost as long as we have been writing, we have tried to write in secret. The use of ciphers to make writing unintelligible to all but an intended recipient is at least as old as ancient Mesopotamia.
+  </p>
+  <p>
+   In the year 1567,
+   <a href="https://en.wikipedia.org/wiki/Mary,_Queen_of_Scots">
+    <span class="underline">
+     Mary, Queen of Scots
+    </span>
+   </a>
+   , was executed for her involvement in a
+   <a href="https://en.wikipedia.org/wiki/Babington_Plot">
+    <span class="underline">
+     plot
+    </span>
+   </a>
+   to assassinate the then Queen of England, Elizabeth I. A cabal of conspirators planned to overthrow Elizabeth to install Mary on the Throne of England. Mary’s hand in the affair was proven using letters between Mary and the cabal. These letters were written in cipher, rendered unintelligible to the casual observer.
+  </p>
+  <p>
+   Queen Elizabeth’s spymaster,
+   <a href="https://en.wikipedia.org/wiki/Francis_Walsingham">
+    <span class="underline">
+     Sir Francis Walsingham,
+    </span>
+   </a>
+   had been intercepting and making copies of Mary’s letters. He enlisted the help of
+   <a href="https://en.wikipedia.org/wiki/Thomas_Phelippes">
+    <span class="underline">
+     Thomas Phelippes
+    </span>
+   </a>
+   , a linguist and expert in ciphers, to decipher Mary’s letters. Phelippes was successful, and the content of the letters was revealed, making clear Mary’s involvement, thus giving Elizabeth the evidence she needed to have Mary put to death.
+  </p>
+  <p>
+   In the 21st century, secret communications are as important as ever, but there are additional protections we want to apply to our messages. The study of techniques for protecting communications is referred to as Cryptography.
+  </p>
+  <blockquote>
+   <p>
+    Security practitioners use cryptographic systems to meet four fundamental goals: confidentiality, integrity, authentication, and non-repudiation. (Chapple 2021)
+   </p>
+  </blockquote>
+  <p>
+   Cryptography has four main goals:
+  </p>
+  <ul>
+   <li>
+    <p>
+     Confidentiality (privacy, secrecy): keeping data secret from all but those authorized to see the data.
+    </p>
+   </li>
+   <li>
+    <p>
+     Integrity: preventing and detecting the unauthorized—intentional or otherwise—modification of data.
+    </p>
+   </li>
+   <li>
+    <p>
+     Authentication: positively identifying the parties to a communication and the source of data.
+    </p>
+   </li>
+   <li>
+    <p>
+     Non-repudiation: methods preventing someone from denying an action they took or a decision they made.
+    </p>
+   </li>
+  </ul>
+  <h2 id="terminology">
+   Terminology
+  </h2>
+  <p>
+   I will follow the model of Singh’s
+   <em>
+    The Code Book
+   </em>
+   (Singh 2000) in using more approachable but arguably less accurate or consistent terminology and definitions. Terms such as encrypt and encipher are treated as synonyms. Readers should bear in mind that the technical literature on cryptography may use slightly different definitions.
+  </p>
+
+  <table>
+   <thead>
+    <tr class="header">
+     <th>
+      <strong>
+       Term
+      </strong>
+     </th>
+     <th>
+      <strong>
+       Synonyms
+      </strong>
+     </th>
+     <th>
+      <strong>
+       Definition
+      </strong>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr class="odd">
+     <td>
+      Asymmetric Key Cryptography
+     </td>
+     <td>
+      Public Key Cryptography
+     </td>
+     <td>
+      A cryptosystem in which a pair of keys is used to encrypt and decrypt data. The pair of keys has the unusual property that data encrypted with one can be decrypted only with the other.
+     </td>
+    </tr>
+    <tr class="even">
+     <td>
+      Cipher
+     </td>
+     <td>
+      Encryption Algorithm
+     </td>
+     <td>
+      A method for transforming plaintext into ciphertext.
+     </td>
+    </tr>
+    <tr class="odd">
+     <td>
+      Ciphertext
+     </td>
+     <td>
+      —
+     </td>
+     <td>
+      Data that has been encrypted.
+     </td>
+    </tr>
+    <tr class="even">
+     <td>
+      Cryptanalysis
+     </td>
+     <td>
+      —
+     </td>
+     <td>
+      The study of deciphering secret writing. Code breaking.
+     </td>
+    </tr>
+    <tr class="odd">
+     <td>
+      Cryptography
+     </td>
+     <td>
+      —
+     </td>
+     <td>
+      The study of secret writing. Code making.
+     </td>
+    </tr>
+    <tr class="even">
+     <td>
+      Cryptology
+     </td>
+     <td>
+      —
+     </td>
+     <td>
+      The field of research encompassing both cryptography and cryptanalysis.
+     </td>
+    </tr>
+    <tr class="odd">
+     <td>
+      Cryptosystem
+     </td>
+     <td>
+      —
+     </td>
+     <td>
+      The collection of technologies providing cryptographic functions such as encrypting and decrypting data.
+     </td>
+    </tr>
+    <tr class="even">
+     <td>
+      Decrypt
+     </td>
+     <td>
+      Decipher
+     </td>
+     <td>
+      To transform ciphertext into plaintext, rendering the data intelligible.
+     </td>
+    </tr>
+    <tr class="odd">
+     <td>
+      Encrypt
+     </td>
+     <td>
+      Encipher
+     </td>
+     <td>
+      To transform plaintext into ciphertext, rendering the data unintelligible.
+     </td>
+    </tr>
+    <tr class="even">
+     <td>
+      Key
+     </td>
+     <td>
+      Secret, secret key, encryption key
+     </td>
+     <td>
+      Unique input to a cryptosystem that adds randomness to the encryption process. The security of a cryptosystem is predicated on the secrecy of the key.
+     </td>
+    </tr>
+    <tr class="odd">
+     <td>
+      Session Key
+     </td>
+     <td>
+      —
+     </td>
+     <td>
+      A temporary key used to encrypt data communications during a relatively short-lived session. At the end of the session, further communication requires the use of a new session key.
+     </td>
+    </tr>
+    <tr class="even">
+     <td>
+      Plaintext
+     </td>
+     <td>
+      Cleartext
+     </td>
+     <td>
+      Data that has not been encrypted.
+     </td>
+    </tr>
+    <tr class="odd">
+     <td>
+      Symmetric Key Cryptography
+     </td>
+     <td>
+      Private Key Cryptography
+     </td>
+     <td>
+      A cryptosystem in which a single key is used to both encrypt and decrypt data.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+  <h1 id="ciphers-and-keys">
+   Ciphers and Keys
+  </h1>
+  <blockquote>
+   <p>
+    … the secrecy of messages must depend upon a changeable key added to a sound basic cipher—Gaines (Gaines 2014)
+    <a class="footnote-ref" href="#fn1" id="fnref1">
+     <sup>
+      1
+     </sup>
+    </a>
+   </p>
+  </blockquote>
+  <p>
+   All
+   <a href="https://en.wikipedia.org/wiki/Transposition_cipher">
+    <span class="underline">
+     modern cryptosystems
+    </span>
+   </a>
+   rely on a “key”, analogous to a password
+   <a class="footnote-ref" href="#fn2" id="fnref2">
+    <sup>
+     2
+    </sup>
+   </a>
+   . The key adds randomness to the encryption process, such that knowing the cipher alone is insufficient to decrypt the message. You can use new or additional keys as needed: a new key for every person you need to communicate with or a new key if you suspect an existing key has been compromised. Using a key-based system means your cipher can be made public, allowing experts to analyze it for flaws. It also means anyone can benefit from using your cipher to protect their data.
+  </p>
+  <h1 id="symmetric-key-cryptography">
+   Symmetric Key Cryptography
+  </h1>
+  <blockquote>
+   <p>
+    Encryption is the process by which a message (called plaintext) is transformed into another message (called ciphertext) using a mathematical function and a special encryption password, called the key. (Garfinkel)
+   </p>
+  </blockquote>
+  <p>
+   Symmetric key cryptography uses a single key to encrypt and decrypt messages:
+  </p>
+  <p>
+   <img alt="MarcT0K (icons by JGraph), CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" src="image1.png" title="Symmetric Key Cryptography"/>
+  </p>
+  <p>
+   Figure 1: Symmetric Key Cryptography 
+  </p>
+  <p>
+   MarcT0K (icons by JGraph),
+   <a href="https://creativecommons.org/licenses/by-sa/4.0">
+    CC BY-SA 4.0
+   </a>
+   , via Wikimedia Commons
+  </p>
+  <p>
+   Consider the following use case:
+  </p>
+  <ol type="1">
+   <li>
+    <p>
+     Alice
+     <a class="footnote-ref" href="#fn3" id="fnref3">
+      <sup>
+       3
+      </sup>
+     </a>
+     wants to send a secret message to Bob. She chooses a strong key and a proven symmetric cipher, encrypts her message, and sends the ciphertext to Bob.
+    </p>
+   </li>
+   <li>
+    <p>
+     Eve may intercept the message, but she must perform cryptanalysis to reveal its contents.
+    </p>
+   </li>
+  </ol>
+  <p>
+   Symmetric cryptosystems are relatively simple and usually very fast for both encryption and decryption, but there is a significant challenge when using symmetric cryptography on a large scale: key distribution. Because Alice used a symmetric key algorithm to encrypt her message, she needs to also pass the key to Bob. She must not do this in a way that allows Eve to intercept the key, or all is lost. Alice and Bob could meet in person, but this becomes impractical if they are geographically remote from one another.
+  </p>
+  <p>
+   Alice could hire a trusted courier, but this is slow and doesn’t scale. If there are N people who must communicate securely, and you never share a single key with more than two people, the number of secret keys needed is:
+  </p>
+  <p>
+   <embed src="image2.jpg"/>
+  </p>
+  <p>
+   Figure 2: For N = 1,000 people, you need to distribute, manage, and secure 499,500 keys
+  </p>
+  <p>
+   Despite the key distribution problem, we use symmetric ciphers extensively. They are computationally efficient and, in an order of magnitude, more efficient than the asymmetric ciphers we discuss below. You can encrypt large amounts of data in comparatively little time. The symmetric cipher’s advantage is speed.
+  </p>
+  <h1 id="asymmetric-key-cryptography">
+   Asymmetric Key Cryptography
+  </h1>
+  <p>
+   Asymmetric Key Cryptosystems take a radically different approach to encryption and decryption, which greatly simplifies the problem of key distribution.
+  </p>
+  <h2 id="a-weak-analogy">
+   A Weak Analogy
+  </h2>
+  <p>
+   Imagine Alice and Bob have a lockbox with the following properties:
+  </p>
+  <ol type="1">
+   <li>
+    <p>
+     The box has two distinct keys, one in Alice’s possession, the other in Bob’s possession,
+    </p>
+   </li>
+   <li>
+    <p>
+     When the box is locked with one of the keys, it can be unlocked only with the other, and vice versa.
+    </p>
+   </li>
+  </ol>
+  <p>
+   As long as Alice and Bob keep their keys secure, this box has some useful properties:
+  </p>
+  <ol type="1">
+   <li>
+    <p>
+     Authentication: If Alice receives the box and it is locked, she knows it was Bob who locked the box,
+    </p>
+   </li>
+   <li>
+    <p>
+     Non-repudiation: Bob cannot deny having locked the box since it must have been locked with his key.
+    </p>
+   </li>
+  </ol>
+  <p>
+   In this way, Alice and Bob can securely and confidently exchange physical objects without having to share a single lockbox key. Because Alice and Bob have their own personal keys that are not shared, they can have many different boxes that use the same key, and the counterparties can securely exchange objects without needing to create additional keys to exchange with additional parties.
+  </p>
+  <h2 id="new-directions-in-cryptography">
+   New Directions in Cryptography
+  </h2>
+  <p>
+   In 1976,
+   <a href="https://en.wikipedia.org/wiki/Whitfield_Diffie">
+    <span class="underline">
+     Whitfield Diffie
+    </span>
+   </a>
+   and
+   <a href="https://en.wikipedia.org/wiki/Martin_Hellman">
+    <span class="underline">
+     Martin Helman
+    </span>
+   </a>
+   released a paper, “New Directions in Cryptography” (Diffie 1976), based in part on previous work by
+   <a href="https://en.wikipedia.org/wiki/Ralph_Merkle">
+    <span class="underline">
+     Ralph Merkle
+    </span>
+   </a>
+   . In the paper, Diffie and Helman describe techniques for securely exchanging secret keys and a technique for encrypting data using a
+   <em>
+    pair
+   </em>
+   of encryption keys. In 1977,
+   <a href="https://en.wikipedia.org/wiki/RSA_(cryptosystem)">
+    <span class="underline">
+     Ron Rivest, Adi Shamir, and Leonard Adleman
+    </span>
+   </a>
+   would go on to develop the first commercially viable asymmetric cryptosystem, RSA, based on the work of Diffie &amp; Helman.
+   <a class="footnote-ref" href="#fn4" id="fnref4">
+    <sup>
+     4
+    </sup>
+   </a>
+  </p>
+  <p>
+   Asymmetric key cryptosystems are the foundation of cryptography on the Internet today. Every time you visit a secure HTTPS website, asymmetric key cryptography secures the connection.
+  </p>
+  <p>
+   The pair of keys in an asymmetric key cryptosystem are mathematically bound in a way that provides some very useful features. Analogous to the lockbox keys above, a message encrypted with one of the keys in the pair can only be decrypted with the other key. One of the keys is made public. The other is kept secret.
+  </p>
+  <p>
+   If Alice gives Bob her public key, Bob can use it to encrypt a message, and only the private key, kept secret by Alice, can decrypt the message. Likewise, if Bob has his own key pair and shares his public key with Alice, the two can now communicate securely without needing to pass a secret key back and forth. This solves the key distribution problem: For N people, you need only N key pairs.
+  </p>
+  <p>
+   <img alt="Davidgothberg, Public domain, via Wikimedia Commons" src="image3.png" title="Asymmetric Key Cryptography"/>
+  </p>
+  <p>
+   Figure 3: Asymmetric Key Cryptography
+  </p>
+  <p>
+   (Davidgothberg, Public domain, via Wikimedia Commons)
+  </p>
+  <p>
+   Another useful operation made possible with asymmetric key cryptography is message signing. Alice can use her private key to apply a digital signature to a message, and that signature can be verified with her public key. If Alice signs a message and sends it to Bob, Bob can confirm that the message did, in fact, come from Alice. This confirmation, if successful, also tells Bob the message was not tampered with after it was signed. Consider the following workflow:
+  </p>
+  <ol type="1">
+   <li>
+    <p>
+     Alice writes a message to Bob and signs it with her private key.
+    </p>
+   </li>
+   <li>
+    <p>
+     Alice encrypts the message with Bob’s public key and sends the message to Bob.
+    </p>
+   </li>
+   <li>
+    <p>
+     Bob decrypts the message with his private key.
+    </p>
+   </li>
+   <li>
+    <p>
+     Bob verifies the signature with Alice’s public key.
+    </p>
+   </li>
+  </ol>
+  <p>
+   As a result, Alice has communicated securely with Bob, and Bob knows he can trust the message.
+  </p>
+  <p>
+   If this all seems too good to be true, fear not, there’s a downside! Public key encryption and signing are computationally much more expensive than symmetric key encryption, so much so that you would not want to regularly encrypt large amounts of data with asymmetric key encryption.
+  </p>
+  <h2 id="the-best-of-both-worlds">
+   The Best of Both Worlds
+  </h2>
+  <p>
+   Modern cryptosystems combine both asymmetric and symmetric key cryptography to leverage the benefits of each. Asymmetric key cryptography is used to securely share a secret key, which is then used for the duration of the current transaction or session.
+  </p>
+  <h1 id="conclusion">
+   Conclusion
+  </h1>
+  <p>
+   Understanding cryptography is fundamental to understanding information security, and central to information security is digital identity. While it is not necessary for most identity practitioners to understand the mathematics behind specific cryptographic techniques, understanding how cryptography works in general and how we use it is essential.
+  </p>
+  <h2 id="acknowledgments">
+   Acknowledgments
+  </h2>
+  <p>
+   The author thanks:
+  </p>
+  <ul>
+   <li>
+    <p>
+     Robert Sherwood and Matt Topper for their constructive feedback and contributions, and
+    </p>
+   </li>
+   <li>
+    <p>
+     IDPro Principal Editor Heather Flanagan for all her assistance with the publishing process.
+    </p>
+   </li>
+  </ul>
+  <h2 id="going-further">
+   Going Further
+  </h2>
+  <p>
+   There are many excellent resources for learning about cryptography and cryptanalysis. Some recommendations follow. See also the bibliography below.
+  </p>
+  <h2 id="non-technical-resources">
+   Non-Technical Resources
+  </h2>
+  <ul>
+   <li>
+    <p>
+     For an introduction to the history of cryptography, read Simon Singh’s “The Code Book” (Singh 2000).
+    </p>
+   </li>
+   <li>
+    <p>
+     For a more comprehensive history of cryptography, read David Kahn’s “The Codebreakers” (Kahn 1996).
+    </p>
+   </li>
+  </ul>
+  <h2 id="technical-resources">
+   Technical Resources
+  </h2>
+  <ul>
+   <li>
+    <p>
+     For a comprehensive technical dive into cryptography, consider Bruce Schneier’s “Applied Cryptography” (Schneier 2015).
+    </p>
+   </li>
+   <li>
+    <p>
+     For an introduction to practical cryptanalysis, read Helen F. Gaines’ “Cryptanalysis: A Study of Ciphers and Their Solution” (Gaines 2014).
+    </p>
+   </li>
+   <li>
+    <p>
+     If you have a penchant for coding, you’ll find extensive resources at Professor Bill Buchanan’s
+     <a href="https://asecuritysite.com/">
+      <span class="underline">
+       https://asecuritysite.com/
+      </span>
+     </a>
+     (Buchanan).
+    </p>
+   </li>
+  </ul>
+  <h1 id="section">
+  </h1>
+  <h1 id="author-bio">
+   Author Bio
+  </h1>
+  <p>
+   Mark Drummond
+  </p>
+  <p>
+   <img src="image5.jpg"/>
+  </p>
+  <p>
+   Mark Drummond is Director of Digital Trust and Identity at The Empire Life Insurance Company in Kingston, Ontario, Canada.
+  </p>
+  <h1 id="bibliography">
+   Bibliography
+  </h1>
+  <p>
+   Buchanan, Bill. “Asecuritysite.Com.” Security and So Many Things. Accessed January 31, 2024. https://asecuritysite.com/.
+  </p>
+  <p>
+   Chapple, Mike, James Michael Stewart, and Darril Gibson.
+   <em>
+    (ISC)2 CISSP Certified Information Systems Security Professional Official Study Guide. Ninth edition
+   </em>
+   . Hoboken, NJ: John Wiley &amp; Sons, Inc., 2021.
+  </p>
+  <p>
+   Diffie, W., and M. Hellman. “New Directions in Cryptography.”
+   <em>
+    IEEE Transactions on Information Theory
+   </em>
+   22, no. 6 (1976): 644–654.
+  </p>
+  <p>
+   Gaines, Helen F.
+   <em>
+    Cryptanalysis: A Study of Ciphers and Their Solution
+   </em>
+   . Courier Corporation, 2014.
+  </p>
+  <p>
+   Garfinkel, Simson, and Gene Spafford.
+   <em>
+    Practical UNIX and Internet security
+   </em>
+   . O’Reilly Media, Inc., 1996.
+  </p>
+  <p>
+   Harris, Shon, and Fernando Maymí.
+   <em>
+    CISSP All-in-One Exam Guide. Eighth edition
+   </em>
+   . New York: McGraw-Hill, 2018.
+  </p>
+  <p>
+   Kahn, David.
+   <em>
+    The Codebreakers: The Comprehensive History of Secret Communication from Ancient Times to the Internet
+   </em>
+   . Simon and Schuster, 1996.
+  </p>
+  <p>
+   Kerckhoffs, Auguste. “La Cryptographie Militaire.”
+   <em>
+    Journal des Sciences militaires
+   </em>
+   , 9th series, IX (January 1883), 5-38 ; (February 1883), 161-191.
+  </p>
+  <p>
+   Menezes, Alfred J., Paul C. Van Oorschot, and Scott A. Vanstone.
+   <em>
+    Handbook of Applied Cryptography
+   </em>
+   . CRC Press, 2018.
+  </p>
+  <p>
+   Schneier, Bruce.
+   <em>
+    Applied Cryptography : Protocols, Algorithms, and Source Code in C
+   </em>
+   . 20th anniversary edition. Indianapolis, Indiana: Wiley, 2015.
+  </p>
+  <p>
+   Singh, Simon.
+   <em>
+    The Code Book: The Science of Secrecy from Ancient Egypt to Quantum Cryptography
+   </em>
+   . Anchor, 2000.
+  </p>
+  <section class="footnotes">
+   <hr/>
+   <ol>
+    <li id="fn1">
+     <p>
+      A restatement of Kerckhoffs’ Principle, one of several principles for cryptographic systems in his “La Cryptographie Militaire” (Kerckhoffs 1883), which we can summarize as “even if Eve has your ciphertext and knows your cipher, the ciphertext should remain secure as long as the key has been kept secret”.
+      <a class="footnote-back" href="#fnref1">
+       ↩
+      </a>
+     </p>
+    </li>
+    <li id="fn2">
+     <p>
+      Please note, this is not actually a password. It is not being used to authenticate someone.
+      <a class="footnote-back" href="#fnref2">
+       ↩
+      </a>
+     </p>
+    </li>
+    <li id="fn3">
+     <p>
+      It is traditional to use the characters Alice, Bob, Eve, and others when describing cryptographic systems. Alice and Bob want to communicate in secret. Eve wants to eavesdrop on Alice and Bob’s conversation.
+      <a class="footnote-back" href="#fnref3">
+       ↩
+      </a>
+     </p>
+    </li>
+    <li id="fn4">
+     <p>
+      In fact, Diffie, Helman, Merkle, Rivest, Shamir, and Adleman were scooped by James Ellis, Clifford Cocks, and Malcolm Williamson, all of GCHQ. Ellis proposed what was essentially public-key cryptography in 1970; based on Ellis’ work, Cocks independently developed RSA in 1973 and Williamson invented Diffie-Helman key exchange in 1974. Their work was kept secret until 1997.
+      <a class="footnote-back" href="#fnref4">
+       ↩
+      </a>
+     </p>
+    </li>
+   </ol>
+  </section>
+ </body>
+</html>
