@@ -5,7 +5,7 @@
   <meta content="pandoc" name="generator"/>
   <meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
   <title>
-   762b28a6-aa4c-4afb-87f7-d44548b04d03
+   15b1f282-acf6-4e22-a8bf-09e5f5082c6d
   </title>
  </head>
  <body>
@@ -38,22 +38,20 @@
   <p>
    Privileged Access Management (PAM) plays a crucial role in modern cybersecurity. All organizations (at least those with technical infrastructure) maintain accounts with some form of super-user permissions, e.g., the Administrator account on a laptop. Organizations enhance their security posture and protect valuable assets from inside and outside threats by addressing the issues and risks associated with privileged accounts. This requires a combination of robust policies, technologies, and best practices that help organizations manage the risks while ensuring the confidentiality, integrity, and availability (the “CIA Triad”) of systems and data.
   </p>
-  <h2 id="terminology">
+  <h1 id="terminology">
    Terminology
-  </h2>
+  </h1>
   <table>
-   <thead>
-    <tr class="header">
-     <th>
-      Access
-     </th>
-     <th>
-      The permissions, privileges, and abilities granted to users, account types, system processes, applications, or any other entities within a computing environment.
-     </th>
-    </tr>
-   </thead>
    <tbody>
     <tr class="odd">
+     <td>
+      Access
+     </td>
+     <td>
+      The permissions, privileges, and abilities granted to users, account types, system processes, applications, or any other entities within a computing environment.
+     </td>
+    </tr>
+    <tr class="even">
      <td>
       Privileged Access
      </td>
@@ -61,7 +59,7 @@
       Users or accounts with high-risk permissions, such as those that grant them access to (critical) systems, sensitive data, and configuration settings
      </td>
     </tr>
-    <tr class="even">
+    <tr class="odd">
      <td>
       Privileged Access Management
      </td>
@@ -74,7 +72,7 @@
       </a>
      </td>
     </tr>
-    <tr class="odd">
+    <tr class="even">
      <td>
       Privileged Account Management
      </td>
@@ -87,7 +85,7 @@
       </a>
      </td>
     </tr>
-    <tr class="even">
+    <tr class="odd">
      <td>
       Role Based Access Control (RBAC)
      </td>
@@ -95,7 +93,7 @@
       The use of roles at runtime: a way to govern who gets access to what through the use of business roles and application roles
      </td>
     </tr>
-    <tr class="odd">
+    <tr class="even">
      <td>
       Joiner/Mover/Leaver
      </td>
@@ -103,7 +101,7 @@
       The joiner/mover/leaver lifecycle of an employee identity considers three stages in the life cycle: joining the organization, moving within the organization, and leaving the organization.
      </td>
     </tr>
-    <tr class="even">
+    <tr class="odd">
      <td>
       Least Privilege
      </td>
@@ -116,7 +114,7 @@
       </a>
      </td>
     </tr>
-    <tr class="odd">
+    <tr class="even">
      <td>
       Identity Governance and Administration
      </td>
@@ -131,22 +129,22 @@
     </tr>
    </tbody>
   </table>
+  <h2 id="section">
+  </h2>
   <h2 id="acronyms-in-use">
    Acronyms in Use
   </h2>
   <table>
-   <thead>
-    <tr class="header">
-     <th>
-      CIA: Confidentiality, Integrity, and Availability
-     </th>
-     <th>
-      The “triad” that forms the basis of information security.
-     </th>
-    </tr>
-   </thead>
    <tbody>
     <tr class="odd">
+     <td>
+      CIA: Confidentiality, Integrity, and Availability
+     </td>
+     <td>
+      The “triad” that forms the basis of information security.
+     </td>
+    </tr>
+    <tr class="even">
      <td>
       RPA: Robotic Process Automation
      </td>
@@ -154,7 +152,7 @@
       Autonomous IT solution to automate manual tasks. This autonomy is in contrast to a user-initiated macro.
      </td>
     </tr>
-    <tr class="even">
+    <tr class="odd">
      <td>
       ICS: Industrial Control Systems
      </td>
@@ -162,7 +160,7 @@
       Implemented to separate IT environments from Operational Technology environments (e.g., in industrial process industries)
      </td>
     </tr>
-    <tr class="odd">
+    <tr class="even">
      <td>
       SCADA: Supervisory Control and Data Acquisition
      </td>
@@ -172,6 +170,8 @@
     </tr>
    </tbody>
   </table>
+  <h2 id="section-1">
+  </h2>
   <h2 id="privileged-accounts">
    Privileged Accounts
   </h2>
@@ -215,19 +215,17 @@
    Regulation is not the only reason to start a PAM program. Even if an organization isn’t subject to these compliance controls, managing access to privileged accounts is in its best interests. Figure 1 demonstrates what can happen when unauthorized users gain access to admin accounts.
   </p>
   <p>
-   <img alt="Screen shots of two twitter posts, nominally from Joe Biden and Barack Obama but posted as a result of hacked Twitter admin accounts." src="PAM-image1.jpg"/>
+   <img alt="Screen shots of two twitter posts, nominally from Joe Biden and Barack Obama but posted as a result of hacked Twitter admin accounts." src="PAM-image1.png"/>
   </p>
   <p>
-   <em>
-    Figure 1: In 2020, the admin accounts of Twitter Operations Management software were leaked to a Slack channel and accessed by an unauthorized person, leading to fraudulent activity.
-   </em>
+   Figure 1: In 2020, the admin accounts of Twitter Operations Management software were leaked to a Slack channel and accessed by an unauthorized person, leading to fraudulent activity.
    <a class="footnote-ref" href="#fn7" id="fnref7">
     <sup>
      7
     </sup>
    </a>
   </p>
-  <h2 id="section">
+  <h2 id="section-2">
   </h2>
   <h2 id="threats-of-privileged-access">
    Threats of Privileged Access
@@ -279,7 +277,7 @@
    Human Privileged Accounts
   </h2>
   <p>
-   Human-privileged accounts are governed by the human resource practices in an organization. The CEO, for example, often has more privileges in systems than interns. Because the CEO’s user accounts have more power – and because the CEO is often easily identifiable – their privileged accounts are at a greater risk of attack. Fortunately, executives seldom have root access to Linux servers and are rarely assigned as admins to Windows Server management. However, their access and associated risks should be managed thoughtfully. Role-Based and Policy-Based Access Control can help control the amount of access that such users have.
+   Generally, human-privileged accounts are governed by the human resource practices in an organization. The CEO, for example, often has more privileges in systems than interns. Because the CEO’s user accounts have more power – and because the CEO is often easily identifiable – their privileged accounts are at a greater risk of attack. Fortunately, executives seldom have root access to Linux servers and are rarely assigned as admins to Windows Server management. However, their access and associated risks should be managed thoughtfully. Role-Based and Policy-Based Access Control can help control the amount of access that such users have.
   </p>
   <p>
    Another type of access would be individual/nominative accounts – those with root access, global admin rights, or other highly privileged group membership. Managers should consider these accounts high-risk. The usage of these authorizations may not be anonymous, but they should never be assigned for an indefinite amount of time. Just-in-Time (JIT) provisioning or dynamic access controls offer further controls to prevent long-standing high-risk authorizations.
@@ -307,7 +305,7 @@
    </li>
   </ol>
   <p>
-   Of course, these risks often work hand-in-hand since bad actors that gain access to the highly privileged accounts of legitimate users can inflict greater damage.
+   Of course, these risks often work hand-in-hand since bad actors that gain access to the highly-privileged accounts of legitimate users can inflict greater damage.
   </p>
   <p>
    Best practices for managing this type of account include:
@@ -318,7 +316,7 @@
      <strong>
       Role-Based and Policy-Based Access Control (RBAC)
      </strong>
-     : Authorizations are granted to business roles.
+     : Authorizations are granted to personnel via business roles.
     </p>
    </li>
    <li>
@@ -332,16 +330,17 @@
    <li>
     <p>
      <strong>
-      Least Privilege: Accounts are provisioned with the minimum number of authorizations required to do the job.
+      Least Privilege:
      </strong>
+     Accounts are provisioned with the minimum number of authorizations required to do the job.
     </p>
    </li>
    <li>
     <p>
      <strong>
-      Just-in-Time Provisioning:
+      Just-in-Time Provisioning
      </strong>
-     Accounts are authorized only as and when a task needs to be performed.
+     : Accounts are authorized only as and when a task needs to be performed. Once a task is finished, the authorizations should be deprovisioned.
     </p>
    </li>
    <li>
@@ -363,7 +362,7 @@
      8
     </sup>
    </a>
-   These solutions can, however, not manage
+   These solutions can, however, not ideal for the management of
    <span class="underline">
     non-human
    </span>
@@ -373,15 +372,13 @@
    Non-Human Privileged Accounts
   </h2>
   <p>
-   Non-Human Accounts require different management processes and risk mitigation strategies because they are not human (as suggested by the name). These non-human accounts are not managed via a joiner-mover-leaver processes. Instead, events in their lifecycle result from a change management process.
+   Non-Human Accounts require different management processes and risk mitigation strategies because they are not human (as suggested by the name). These non-human accounts are not managed via a joiner-mover-leaver processes. Instead, events in their lifecycle - which resemble those of human accounts - are triggered by a change management process.
   </p>
   <p>
    <img alt="A diagram of a digital identity lifecycle for non-human accounts. The boxes include Create then Provision then Authenticate then Manage / Maintain then Deprovision Access." src="PAM-image2.png"/>
   </p>
   <p>
-   <em>
-    Figure 2: Lifecycle of Non-Human Accounts
-   </em>
+   Figure 2: Lifecycle of Non-Human Accounts
   </p>
   <p>
    Figure 2 articulates the following lifecycle for non-human accounts:
@@ -392,7 +389,7 @@
      <strong>
       Create:
      </strong>
-     A non-human account is created as the result of a change request, either in a development process or brought in through a procurement process. It could be a server, a network component, or an RPA.
+     A non-human account is created as the result of a change request, either in a development process or brought in through a procurement process (rather than an HR process that triggers a human account). The account can belong to a server, a network component, or an RPA.
     </p>
    </li>
    <li>
@@ -400,7 +397,7 @@
      <strong>
       Provision:
      </strong>
-     The component is activated, gets an identity, and is given the least privileged authorizations required to perform the configured tasks. A secret is configured to make it possible to authenticate the component at runtime.
+     The component is activated, gets an identity and an account, and is given the least privileged authorizations required to perform the configured tasks. A secret is configured to make it possible to identify and authenticate the component at runtime.
     </p>
    </li>
    <li>
@@ -408,7 +405,7 @@
      <strong>
       Authenticate:
      </strong>
-     Once activated, the account needs to be identified by a governing body (like the network) and authenticated, whether by a configured password, a certificate, or a token.
+     Once activated, the component needs to be identified by a governing body (like the network) and authenticated, whether by a configured password, a certificate, or a token.
     </p>
    </li>
    <li>
@@ -416,7 +413,7 @@
      <strong>
       Manage/Maintain:
      </strong>
-     During the lifecycle, the component's functionality can change, which will always be managed through the change management process.
+     During the lifecycle, the component's functionality can change, and any changes to required authorizations will be managed through the change management process.
     </p>
    </li>
    <li>
@@ -459,14 +456,15 @@
      <strong>
       Change Management Governance:
      </strong>
-     These accounts don’t follow regular IGA processes like JML, and authorizations are not role-based but specific. Ensure an accountable party oversees the requirements and a robust process managing the change.
+     These accounts don’t follow regular IGA processes like JML, and authorizations are not role-based but specific. Ensure an accountable party oversees the requirements and a robust process managing any change to the functionality and authorizations of the component.
     </p>
    </li>
    <li>
     <p>
      <strong>
-      Least Privilege: Accounts are provisioned with the minimum number of authorizations required to do the task.
+      Least Privilege:
      </strong>
+     Accounts are provisioned with the minimum number of authorizations required to do the task.
     </p>
    </li>
    <li>
@@ -474,7 +472,7 @@
      <strong>
       No Login:
      </strong>
-     Make sure that these accounts cannot be logged into.
+     Make sure that these accounts cannot be logged into in the underlying infrastructure, like the operating system.
     </p>
    </li>
   </ul>
@@ -646,11 +644,7 @@
      <strong>
       Approval Workflows:
      </strong>
-     When a privileged account is configured with an approval workflow, a user must go through several approval phases to obtain privileged access. Depending on the type and sensitivity of the access request, this may entail approvals from managers at higher levels, security teams, or technical specialists. The PAM system maintains the record of all the requests and approvals.
-     <strong>
-      These steps
-     </strong>
-     ensure that access to privileged accounts or resources is granted only when required and only under secure conditions. In turn, this minimizes the risk of unauthorized use of privileged access.
+     When a privileged account is configured with an approval workflow, a user must go through several approval phases to obtain privileged access. Depending on the type and sensitivity of the access request, this may entail approvals from managers at higher levels, security teams, or technical specialists. The PAM system maintains the record of all the requests and approvals. These steps ensure that access to privileged accounts or resources is granted only when required and only under secure conditions. In turn, this minimizes the risk of unauthorized use of privileged access.
     </p>
    </li>
    <li>
@@ -803,7 +797,9 @@
   <p>
    The following section explores a variety of architectures incorporating PAM.
   </p>
-  <h3 id="section-1">
+  <h3 id="section-3">
+  </h3>
+  <h3 id="section-4">
    <br/>
   </h3>
   <h3 id="pam-as-a-stepping-stone">
@@ -813,7 +809,7 @@
    <img alt="A diagram showing a PAM system at the center of an architecture that includes ITSM, Directory, SOC/SIEM, Recording, and Target System. " src="PAM-image3.png"/>
   </p>
   <p>
-   Figure 4: PAM as a Stepping Stone Architecture
+   Figure 3: PAM as a Stepping Stone Architecture
   </p>
   <p>
    Traditionally, PAM systems are installed in a data center, close to the components they manage. PAM systems can also be implemented as a SaaS solution (see the cloud discussion section at the end of this section).
@@ -828,10 +824,8 @@
    <img alt="A diagram showing a PAM-to-PAM architecture in an IT/OT environment. It starts with a Directory and LDAP account, then goes through the IT PAM system to the Admin account, to the OT PAM system and finally the target system." src="PAM-image4.png"/>
   </p>
   <p>
-   Figure 5: PAM-PAM Architecture in an IT/OT Environment
+   Figure 4: PAM-PAM Architecture in an IT/OT Environment
   </p>
-  <h3 id="section-2">
-  </h3>
   <h3 id="external-service-provider">
    External Service Provider
   </h3>
@@ -842,8 +836,10 @@
    <img alt="A PAM system in a third-party access model with the internal pam system being fed by the third party PAM system. " src="PAM-image5.png"/>
   </p>
   <p>
-   Figure 6: PAM in 3rd-Party Access
+   Figure 5: PAM in 3rd-Party Access
   </p>
+  <h3 id="section-5">
+  </h3>
   <h3 id="remote-access">
    Remote access
   </h3>
@@ -854,7 +850,7 @@
    <img alt="A diagram for PAM in a remote access scenario where the PAM account touches a PAM web portal, which is the front half to the PAM System, then goes on to the target system. " src="PAM-image6.png"/>
   </p>
   <p>
-   Figure 7: PAM for Remote Access
+   Figure 6: PAM for Remote Access
   </p>
   <h1 id="implementing-pam">
    Implementing PAM
@@ -1015,7 +1011,7 @@
    Author Bio
   </h1>
   <p>
-   André Koot has over 25 years of experience in the field of IAM, and he is a principal consultant and co-founder of SonicBee, a Dutch IAM consultancy company (IDPro partner). André is focused on business consultancy and gives IAM training courses aligned with the BoK. He is also a member of the IDPro BoK committee and (co-)authored several articles in the BoK.
+   André Koot has over 25 years of experience in the field of IAM, and he is a principal consultant and co-founder of SonicBee, a Dutch IAM consultancy company (IDPro partner). André is focused on business consultancy and gives IAM training courses aligned with the BoK. He is also a member of the IDPro BoK committee and (co-) authored several articles in the BoK.
   </p>
   <h1 id="acknowledgments">
    Acknowledgments
@@ -1023,9 +1019,9 @@
   <p>
    The author wishes to thank BoK editor Elizabeth Garber for reviewing and helping with this article. He also wishes to thank other contributors and reviewers:
   </p>
-  <h2 id="contributors">
+  <p>
    Contributors
-  </h2>
+  </p>
   <ul>
    <li>
     <p>
@@ -1048,9 +1044,9 @@
     </p>
    </li>
   </ul>
-  <h2 id="reviewers">
+  <p>
    Reviewers
-  </h2>
+  </p>
   <ul>
    <li>
     <p>
@@ -1077,7 +1073,10 @@
       <em>
        IDPro Body of Knowledge
       </em>
-      1(9). doi: https://doi.org/10.55621/idpro.88
+      1(9). doi:
+      <span class="underline">
+       https://doi.org/10.55621/idpro.88
+      </span>
       <a class="footnote-back" href="#fnref1">
        ↩
       </a>
@@ -1091,7 +1090,9 @@
       </em>
       1(5). doi:
       <a href="https://doi.org/10.55621/idpro.27">
-       https://doi.org/10.55621/idpro.27
+       <span class="underline">
+        https://doi.org/10.55621/idpro.27
+       </span>
       </a>
       <a class="footnote-back" href="#fnref2">
        ↩
@@ -1104,7 +1105,10 @@
       <em>
        IDPro Body of Knowledge
       </em>
-      1(9). doi: https://doi.org/10.55621/idpro.88
+      1(9). doi:
+      <span class="underline">
+       https://doi.org/10.55621/idpro.88
+      </span>
       <a class="footnote-back" href="#fnref3">
        ↩
       </a>
@@ -1118,7 +1122,9 @@
       </em>
       1(5). doi:
       <a href="https://doi.org/10.55621/idpro.27">
-       https://doi.org/10.55621/idpro.27
+       <span class="underline">
+        https://doi.org/10.55621/idpro.27
+       </span>
       </a>
       <a class="footnote-back" href="#fnref4">
        ↩
@@ -1127,7 +1133,10 @@
     </li>
     <li id="fn5">
      <p>
-      OWASP (2021) “OWASP Top 10: 2021,” https://owasp.org/Top10/A01_2021-Broken_Access_Control/
+      OWASP (2021) “OWASP Top 10: 2021,”
+      <span class="underline">
+       https://owasp.org/Top10/A01_2021-Broken_Access_Control/
+      </span>
       <a class="footnote-back" href="#fnref5">
        ↩
       </a>
@@ -1135,7 +1144,10 @@
     </li>
     <li id="fn6">
      <p>
-      European Parliament and the Council of the European (2022) “DIRECTIVE (EU) 2022/2555 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 14 December 2022 on measures for a high common level of cybersecurity across the Union, amending Regulation (EU) No 910/2014 and Directive (EU) 2018/1972,” clause 49, https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2555
+      European Parliament and the Council of the European (2022) “DIRECTIVE (EU) 2022/2555 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 14 December 2022on measures for a high common level of cybersecurity across the Union, amending Regulation (EU) No 910/2014 and Directive (EU) 2018/1972,” clause 49,
+      <span class="underline">
+       https://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32022L2555
+      </span>
       <a class="footnote-back" href="#fnref6">
        ↩
       </a>
@@ -1143,7 +1155,10 @@
     </li>
     <li id="fn7">
      <p>
-      BBC (2020), “Major US Twitter accounts hacked in Bitcoin scam,“ https://www.bbc.com/news/technology-53425822
+      BBC (2020), “Major US Twitter accounts hacked in Bitcoin scam “
+      <span class="underline">
+       https://www.bbc.com/news/technology-53425822
+      </span>
       <a class="footnote-back" href="#fnref7">
        ↩
       </a>
@@ -1157,7 +1172,9 @@
       </em>
       1(7). doi:
       <a href="https://doi.org/10.55621/idpro.31">
-       https://doi.org/10.55621/idpro.31
+       <span class="underline">
+        https://doi.org/10.55621/idpro.31
+       </span>
       </a>
       <a class="footnote-back" href="#fnref8">
        ↩
@@ -1172,7 +1189,9 @@
       </em>
       1(11). doi:
       <a href="https://doi.org/10.55621/idpro.52">
-       https://doi.org/10.55621/idpro.52
+       <span class="underline">
+        https://doi.org/10.55621/idpro.52
+       </span>
       </a>
       <a class="footnote-back" href="#fnref9">
        ↩
@@ -1187,7 +1206,9 @@
       </em>
       1(12). doi:
       <a href="https://doi.org/10.55621/idpro.97">
-       https://doi.org/10.55621/idpro.97
+       <span class="underline">
+        https://doi.org/10.55621/idpro.97
+       </span>
       </a>
       <a class="footnote-back" href="#fnref10">
        ↩
