@@ -150,12 +150,6 @@ Both Access Tokens and ID Tokens have expiration times to ensure
 security. RPs should validate the expiration (exp) claim in tokens
 before processing them.
 
-Multiple Hops Omitted
----------------------
-
-This explanation omits intermediate browser redirects for brevity,
-focusing instead on the core interactions between the RP and the
-Authorization Server.
 
 UserInfo Endpoint
 =================
@@ -223,39 +217,17 @@ identity information between RPs and OPs In some cases, the OP may
 delegate authentication to an external IDP. The typical sequence of the
 OIDC flow includes the following steps:
 
-1.  RP Initiates Authentication: The RP redirects the user to the OP's
-    Authorization Server, initiating the authentication process.
-
-2.  Authentication via Federated IDP (Optional): If the OP integrates
-    with a federated IDP, it forwards the authentication request to the
-    IDP. The IDP authenticates the user and may bypass the login screen
-    if the user is already authenticated.
-
-3.  Authorization Code Issuance: Once the user is authenticated, the
-    Authorization Server issues an Authorization Code to the RP via the
-    user's browser.
-
-<!-- -->
-
-1.  Token Exchange: The RP exchanges the Authorization Code for tokens
-    in a secure back-channel request to the Authorization Server. These
-    tokens include:
-
-    -   ID Token: Contains identity claims about the authenticated user.
-
-    -   Access Token: Used to access protected resources.
-
-    -   Refresh Token (optional): Enables the RP to obtain new Access
-        Tokens without reauthenticating the user.
-
-2.  Optional UserInfo Query: The RP may query the UserInfo endpoint
-    using the Access Token to retrieve additional claims that were not
-    included in the ID Token. These claims can offer more detailed
-    information about the user’s profile or authentication.
-
-3.  Access Protected Resources: The RP uses the Access Token to interact
-    with the Resource Server and access the requested protected
-    resources.
+1.  1.	The Relying Party (RP) initiates the OpenID Connect (OIDC) flow with the Authorization Server to obtain user claims.
+2.	The Authorization Server initiates a new OIDC flow with the federated IDP, providing user authentication, and claims. The login screen is not rendered on the federated IdP if the user has already been authenticated.
+3.	After the user is successfully authenticated, the Identity Provider (IDP) issues an authorization code to the Authorization Server.
+4.	The Authorization Server exchanges the authorization code to retrieve the tokens.
+5.	The Authorization Server can optionally call the UserInfo endpoint of the federated IdP to retrieve extra user claims.
+6.	The Authorization Server returns an authorization code to the Relying Party.
+7.	The Relying Party (RP) exchanges the authorization code to retrieve the tokens from the Authorization Server.
+8.	The RP can optionally call the UserInfo endpoint on the Authorization Server to retrieve additional user claims.
+9.	The RP presents the access token to the Authorization Server.
+10.	The Authorization Server authenticates the RP using an access token to retrieve the protected resource.
+11.	The Authorization Server provides the protected resource to the RP.
 
 Additional Notes
 
