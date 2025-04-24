@@ -1,4 +1,4 @@
-# Optimizing Access Certifications: Enhancing Security, Compliance, and Efficiency in Identity Governance
+# Optimizing Access Recertifications: Enhancing Security, Compliance, and Efficiency in Identity Governance
 
 © 2025 IDPro, Vatsal Gupta
 
