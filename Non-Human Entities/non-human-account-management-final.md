@@ -498,7 +498,7 @@ IAM environment is still required. Good practices include:
 -   Assign an account owner to be accountable for the use of the
     account, typically the owner of the system/service that it belongs
     to. If no system owner has been defined, a responsible person in the
-    IT department should be the accountable party.
+    IT department should be the accountable party. Associating a person as a responsible party for a service account establishes accountability and helps to maintain security.
 
 -   Interactive accounts should only be used for infrastructural changes
     or calamities. Admin privileges should be granted via a user’s
