@@ -1,4 +1,4 @@
-Heather Flanagan, editor - ©2024 IDPro
+Heather Flanagan, editor - ©2025 IDPro
 
 ***Editor’s Note:** This is a consolidated list of the terminology
 highlighted in each of the articles published in the Body of Knowledge
@@ -472,578 +472,588 @@ via the IDPro GitHub repository: <https://github.com/IDPros/bok>.*
 <td><h3 id="token-lifetimes-and-security-in-oauth-2.0-best-practices-and-emerging-trends-2"><a href="https://doi.org/10.55621/idpro.108">Token Lifetimes and Security in OAuth 2.0: Best Practices and Emerging Trends</a></h3></td>
 </tr>
 <tr class="odd">
+<td>Credential Leak</td>
+<td>Credential leakage refers to the unintended exposure of valuable digital access data such as usernames, passwords, API keys, or cryptographic keys. It is a significant security vulnerability that can lead to unauthorized access to digital resources, data theft, and more extensive damage, especially in the domain of cloud infrastructure. Credential leakage might result from a variety of factors, including weak password practices, inadequate access control, poor data security protocols, human error, or sophisticated cyber-attack strategies.</td>
+<td><a href="https://doi.org/10.55621/idpro.128">What Happens After the Breach? Inside a Solid Incident Response Framework</a></td>
+</tr>
+<tr class="even">
 <td>Credential Management</td>
 <td>How to issue, manage, and revoke authenticators bound to identities. Credential Management roughly corresponds to the IDPro term for Credential Services; we use the term Credential Management here to correlate to the Federal Identity, Credential, and Access Management (FICAM) initiative’s terms.</td>
 <td><a href="https://bok.idpro.org/article/id/85/">Identity and Access Management Workforce Planning</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Credential Service Provider</td>
 <td>Following the guidance included in NIST 800-63-3, we include both the enrollment function and credential services together under the name Credential Services Provider.</td>
 <td><a href="https://bok.idpro.org/article/id/76/">IAM Reference Architecture</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Credential Service Provider</td>
 <td>A trusted entity that issues or registers subscriber authenticators and issues electronic credentials to subscribers. A CSP may be an independent third party or may issue credentials for its own use.</td>
 <td><a href="https://bok.idpro.org/article/id/94/">Defining the Problem – Identity Proofing Challenges</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Credential Services</td>
 <td>Credential Services issue or register the subscriber authenticators, deliver the credential for use, and subsequently manage the credentials. We include PKI information for IAM architectures that must include system components that need certificates and private keys. This roughly corresponds to the FICAM component called Credential Management Systems.</td>
 <td><a href="https://bok.idpro.org/article/id/76/">IAM Reference Architecture</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Credential Stuffing</td>
 <td>An attack in which an adversary tests lists of username and password pairs against a given CIAM system.</td>
 <td><a href="https://bok.idpro.org/article/id/98/">Introduction to Customer Identity and Access Management</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Credentials</td>
 <td>Any attribute or shared secret that can be used to authenticate a user.</td>
 <td><a href="https://bok.idpro.org/article/id/64/">Account Recovery (v2)</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Credentials</td>
 <td>In the context of CIAM, credentials are how individuals authenticate themselves to an organization’s CIAM system</td>
 <td><a href="https://bok.idpro.org/article/id/98/">Introduction to Customer Identity and Access Management</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Cryptanalysis</td>
 <td>The study of deciphering secret writing. Code breaking.</td>
 <td><a href="https://bok.idpro.org/article/id/102/">An Introduction to Cryptography</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Cryptographic Hash Function</td>
 <td>A cryptographic hash function is a function that takes a given input of an unspecified length and returns an output of a fixed length. Given an input, the hash function should always output the same hash.<br />
 <br />
 Provided an adequately constructed hash function, the resultant hash should be difficult to reverse (Commonly called preimage resistance), and it should be difficult to find another input that produces the same hash (Collision resistance).</td>
 <td><a href="https://doi.org/10.55621/idpro.123">PKCE: Proof Key for Code Exchange</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Cryptographic Module</td>
 <td>A hardware or software component that securely performs cryptographic operations within a logical boundary. Cryptographic Modules store private keys within this boundary and use them for cryptographic functions at the request of an authorized user or process.</td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Cryptographic Module Validation Program (CMVP)</td>
 <td>A program allowing cryptographic module developers to test their modules against the requirements defined in FIPS-140. The computer security resource center under the United States National Institute of Standards and Technology (NIST) maintains a publicly available list of validated modules.</td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Cryptography</td>
 <td>The study of secret writing. Code making.</td>
 <td><a href="https://bok.idpro.org/article/id/102/">An Introduction to Cryptography</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Cryptology</td>
 <td>The field of research encompassing both cryptography and cryptanalysis.</td>
 <td><a href="https://bok.idpro.org/article/id/102/">An Introduction to Cryptography</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Cryptosystem</td>
 <td>The collection of technologies providing cryptographic functions such as encrypting and decrypting data.</td>
 <td><a href="https://bok.idpro.org/article/id/102/">An Introduction to Cryptography</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Data Controller</td>
 <td>Defined in Article 4(7) of the GDPR: “‘controller’ means the natural or legal person, public authority, agency or other body which, alone or jointly with others, determines the purposes and means of the processing of personal data;”. This article uses the term “organisation” as a synonym for “data controller”, since organisations involved in IAM will normally be data controllers.</td>
 <td><a href="https://bok.idpro.org/article/id/11/">An Introduction to the GDPR</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Data Mapping</td>
 <td>“a system of cataloguing what data you collect, how it’s used, where it’s stored, and how it travels throughout your organization and beyond.”</td>
 <td><a href="https://bok.idpro.org/article/id/24/">Impact of GDPR on Identity and Access Management</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Data Processor</td>
 <td>Defined in Article 4(8) of the GDPR for situations where an organisation processes personal data solely on the instructions of others. A Data Processor must not determine the purposes of processing, for example by processing in its own interests, or, beyond limited technical choices, the means of doing so. Data Processors are regulated by Article 28: in particular they must have a contract with the Data Controller that covers all the subjects listed in Article 28(3). Data Processors are excluded from some, but not all, of the liabilities and duties of Data Controllers.</td>
 <td><a href="https://bok.idpro.org/article/id/11/">An Introduction to the GDPR</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Data Protection by Design</td>
 <td>Data protection through technology design. See GDPR Article 25 for more detail</td>
 <td><a href="https://bok.idpro.org/article/id/24/">Impact of GDPR on Identity and Access Management</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Data Protection Officer</td>
 <td>An individual who must be appointed in any organization that processes any data defined by the GDPR as sensitive. The DPO is responsible for “Working towards the compliance with all relevant data protection laws, monitoring specific processes, such as data protection impact assessments, increasing employee awareness for data protection and training them accordingly, as well as collaborating with the supervisory authorities.”(See GDPR Articles 35, 37, 38, and 39 for more detail)</td>
 <td><a href="https://bok.idpro.org/article/id/24/">Impact of GDPR on Identity and Access Management</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Data Subject</td>
 <td>Defined in Article 4(1) of the GDPR (see “Personal Data” above) as the formal term for the human to whom personal data relates. This article uses the term “individual” as a synonym for “data subject”.</td>
 <td><a href="https://bok.idpro.org/article/id/11/">An Introduction to the GDPR</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Decentralized Identifier (DID)</td>
 <td>An identifier that is created and anchored in a decentralized system such as a blockchain or ledger and can represent any entity in the ecosystem – an issuer, a holder, a verifier, and even an identity hub.</td>
 <td><a href="https://bok.idpro.org/article/id/51/">A Peek into the Future of Decentralized Identity</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Decentralized Identity (DID)</td>
 <td>Decentralized identity is a system allowing users to manage their personal information without relying on a central authority.</td>
 <td><a href="https://doi.org/10.55621/idpro.120">HIPAA Security Rule Updates &amp; IAM Compliance Recommendations</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Decrypt (aka, Decipher)</td>
 <td>To transform ciphertext into plaintext, rendering the data intelligible.</td>
 <td><a href="https://bok.idpro.org/article/id/102/">An Introduction to Cryptography</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Delegated Authorization Framework</td>
 <td>An access control framework that decouples authentication from authorization, allowing the password to stay local and protected</td>
 <td><a href="https://bok.idpro.org/article/id/45/">Introduction to Identity – Part 2: Access Management</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Department of Health and Human Services (HHS</td>
 <td>Department of Health and Human Services</td>
 <td><a href="https://doi.org/10.55621/idpro.120">HIPAA Security Rule Updates &amp; IAM Compliance Recommendations</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Digital Cards</td>
 <td>Represent verifiable credentials that users collect over time and are stored as part of the user agent or the identity hub of the user. It’s somewhat simpler to refer to them as digital cards rather than verifiable credentials when speaking about them.</td>
 <td><a href="https://bok.idpro.org/article/id/51/">A Peek into the Future of Decentralized Identity</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Digital Identity</td>
 <td>the combination of a unique identifier together with relevant attributes that uniquely identifies an entity..</td>
 <td><a href="https://bok.idpro.org/article/id/31/">An Overview of the Digital Identity Lifecycle</a> (v2)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Digital Wallet</td>
 <td>represents a digital metaphor for a physical wallet and is generally represented by the combination of the user agent and the underlying capabilities of the computing device, such as secure storage and secure enclaves on a mobile phone. The digital wallet contains digital cards.</td>
 <td><a href="https://bok.idpro.org/article/id/51/">A Peek into the Future of Decentralized Identity</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Directory</td>
 <td>A directory is a central repository for user identities and the attributes that make up those identities. A user identity might be John Smith with firstName attribute as John, lastName attribute as Smith, title attribute as Director, and Department attribute as Marketing. The attributes in the directory can be used to make authorization decisions about what this user should have access to in applications.</td>
 <td><a href="https://bok.idpro.org/article/id/78/">Authentication and Authorization</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Discretionary Access Control</td>
 <td>a pattern of access control system involving static, manual definitions of permissions assigned directly to users.</td>
 <td><a href="https://bok.idpro.org/article/id/61/">Introduction to Policy-Based Access Controls (v2)</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>dPKI</td>
 <td>A decentralized public key infrastructure and is usually implemented via an immutable blockchain or ledger – a place where DIDs can be registered and looked up alongside the associated public keys of the DID and its metadata. dPKI can be described more generally as the <em>verifiable data registry</em>, as the dPKI is just one of many possible implementations for a verifiable data registry. While this paper refers to dPKI, the reader should be aware that a verifiable data registry need not necessarily be “decentralized”.</td>
 <td><a href="https://bok.idpro.org/article/id/51/">A Peek into the Future of Decentralized Identity</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Electronic Identification, Authentication, and Trust Services (eIDAS)</td>
 <td>European legislation gives legal standing to electronic signatures under eIDAS. This legislation also documents providing legally binding digital signatures with X.509 certificates to comply with Qualified Signature requirements.</td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Electronic Identification, Authentication and Trust Services (eIDAS)</td>
 <td>European legislation that gives legal standing to electronic signatures. This legislation also documents how to provide legally binding digital signatures with X.509 certificates to comply with Qualified Signature.</td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Electronic Protected Health Information (ePHI)</td>
 <td>Electronic Protected Health Information</td>
 <td><a href="https://doi.org/10.55621/idpro.120">HIPAA Security Rule Updates &amp; IAM Compliance Recommendations</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Elliptic Curve Cryptography (ECC)</td>
 <td>An asymmetric cryptosystem based on calculating points along elliptic curves.</td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Encrypt (aka, Encipher)</td>
 <td>To transform plaintext into ciphertext, rendering the data unintelligible.</td>
 <td><a href="https://bok.idpro.org/article/id/102/">An Introduction to Cryptography</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Encryption</td>
 <td>Processing data using a cryptographic algorithm to provide confidentiality assurance.</td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Enforcement</td>
 <td>The mechanism that ensures an individual cannot perform an action or access a system when prohibited by policy.</td>
 <td><a href="https://bok.idpro.org/article/id/76/">IAM Reference Architecture</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Enrollment</td>
 <td>Also known as Registration. Enrollment is concerned with the proofing and lifecycle aspects of the principal (or subject). The entity that performs enrollment has sometimes been known as a Registration Authority, but we (following NIST SP.800-63-3) will use the term Credential Service Provider.</td>
 <td><p><a href="https://bok.idpro.org/article/id/76/">IAM Reference Architecture</a>,</p>
 <p><a href="https://bok.idpro.org/article/id/94/">Defining the Problem – Identity Proofing Challenges</a></p></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Enterprise Architecture</td>
 <td>An architecture covering all components of the information technology (IT) environment</td>
 <td><a href="https://bok.idpro.org/article/id/38/">Introduction to IAM Architecture</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Entitlement</td>
 <td>The artifact that allows access to a resource by a principal. This artifact is also known as a privilege, access right, permission, or an authorization. An entitlement can be implemented in a variety of ways.</td>
 <td><a href="https://bok.idpro.org/article/id/76/">IAM Reference Architecture</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Entitlement</td>
 <td>An entitlement is a specific set of permissions or privileges that define what a user, system, or application can access within an IT environment. It governs actions like read, write, execute, or administer resources in accordance with security policies.</td>
 <td><a href="https://doi.org/10.55621/idpro.119">Optimizing Access Recertifications</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Entitlement Catalog</td>
 <td>A database of entitlements and their related metadata. The catalog includes an index of entitlement data pulled from business systems, applications, and platforms, as well as technical and business descriptions of the entitlements or their use</td>
 <td><a href="https://bok.idpro.org/article/id/84/">User Provisioning in the Enterprise</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Entitlement Management</td>
 <td>Cataloging and managing all the accesses an account may have. This is the business process to provision access.</td>
 <td><a href="https://bok.idpro.org/article/id/27/">Introduction to Identity - Part 1: Admin-time (v2)</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Entitlement Owner</td>
 <td>An Entitlement Owner manages and oversees specific access rights within an IAM system. They approve, review, and govern entitlements to ensure security, compliance, and least privilege access. Their role helps prevent excessive permissions and enforce access control policies.</td>
 <td><a href="https://doi.org/10.55621/idpro.119">Optimizing Access Recertifications</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>External identifier</td>
 <td>The means by which a person in control of a digital identity refers to that identity when interacting with a system</td>
 <td><a href="https://bok.idpro.org/article/id/16/">Identifiers and Usernames</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Federal Agency Smart Credential Number (FASC-N)</td>
 <td>A unique identifier associated with a smart card. FASC-N is used in the US Federal Government PIV standard to support Physical Access.</td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Federal Information Processing Standard <strong>(“</strong>FIPS”) 140</td>
 <td>A NIST standard defining “Security Requirements for Cryptographic Modules.</td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Federated Access Controls</td>
 <td>an access control architecture that accommodates separation of user/subject authority and resource/object authority.</td>
 <td><a href="https://bok.idpro.org/article/id/61/">Introduction to Policy-Based Access Controls (v2)</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Federated Identity</td>
 <td>The means of linking a person’s electronic identity and attributes, stored across multiple distinct identity management systems</td>
 <td><a href="https://bok.idpro.org/article/id/45/">Introduction to Identity – Part 2: Access Management</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>FIDO2 Security Keys</td>
 <td>FIDO2 Security Keys are hardware devices used for passwordless authentication</td>
 <td><a href="https://doi.org/10.55621/idpro.113">Authentication Methods</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Fractured Identity</td>
 <td>A case where a single end-user has multiple disparate digital identities.</td>
 <td><a href="https://bok.idpro.org/article/id/65/">Managing Identity in Customer Service Operations</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Fraud Law</td>
 <td>Laws that protect against the intentional misrepresentation of information made by one person to another, with knowledge of its falsity and for the purpose of inducing the other person to act, and upon which the other person relies with resulting injury or damage.</td>
 <td><a href="https://bok.idpro.org/article/id/8/">Laws Governing Identity Systems</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Gantt Chart</td>
 <td>A popular schedule format that displays both activity and timeframes in a single chart</td>
 <td><a href="https://bok.idpro.org/article/id/25/">Introduction to Project Management for IAM Projects</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>General Data Protection Act (GDPR)</td>
 <td>Formally, Regulation 2016/679 of the European Union, in force May 25, 2018. Available at <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679"><u>https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32016R0679</u></a></td>
 <td><a href="https://bok.idpro.org/article/id/11/">An Introduction to the GDPR</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Governance</td>
 <td>Making sure that accountable owners are demonstrably in control.</td>
 <td><a href="https://bok.idpro.org/article/id/90">Strategic Alignment and Access Governance</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Groups</td>
 <td>A set of identities with defined permissions. In this specific context, a group contains many individuals, but the group identity is opaque, and no information is available regarding which group member took an individual action.</td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Hardware Security Module (HSM)</td>
 <td>A hardware device that generates and protects cryptographic keys.</td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Hash (Cryptographic hash)</td>
 <td>A hash is the output of a cryptographic hash function for a given input.</td>
 <td><a href="https://doi.org/10.55621/idpro.123">PKCE: Proof Key for Code Exchange</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Health Insurance Portability and Accountability Act (HIPAA)</td>
 <td>Health Insurance Portability and Accountability Act</td>
 <td><a href="https://doi.org/10.55621/idpro.120">HIPAA Security Rule Updates &amp; IAM Compliance Recommendations</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Healthcare Clearinghouse</td>
 <td>A healthcare clearinghouse under HIPAA is defined as a public or private entity, including a billing service, repricing company, community health management information system or community health information system, and “value added” networks and switches, that performs either of the following functions: (1) Processes or facilitates the processing of health information received from another entity in a nonstandard format or containing nonstandard data content into standard data HIPAA elements, or (2) Receives a standard transaction from another entity and processes or facilitates the processing of health information into nonstandard format or nonstandard data content for the receiving entity.</td>
 <td><a href="https://doi.org/10.55621/idpro.120">HIPAA Security Rule Updates &amp; IAM Compliance Recommendations</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Holder</td>
 <td>The entity that holds verifiable credentials. Holders are typically users but can also be organizations or devices.</td>
 <td><a href="https://bok.idpro.org/article/id/51/">A Peek into the Future of Decentralized Identity</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Identification</td>
 <td>Uniquely establish a user of a system or application.</td>
 <td><a href="https://bok.idpro.org/article/id/42/">Introduction to Access Control</a>, <a href="https://bok.idpro.org/article/id/98/">Introduction to Customer Identity and Access Management</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Identifier</td>
 <td>The way a system refers to a digital identity. PKI Certificates support both internal and external identifiers. See <a href="https://bok.idpro.org/article/id/16/"><u>Ian Glazer’s article, “Identifiers and Usernames,”</u></a> for a generic overview of identifiers.</td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Identifier</td>
 <td>An identifier is a means by which a system refers to a record (at the most abstract levels.) In this case, it could mean the string that a person provides that “names” their use account.</td>
 <td><a href="https://bok.idpro.org/article/id/98/">Introduction to Customer Identity and Access Management</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Identity</td>
 <td>Defining attributes for a human user that may vary across domains, e.g., a user’s digital identity will have a different definition in a work environment as opposed to the user’s bank. A device identifier is sometimes referred to as its identity.</td>
 <td><a href="https://bok.idpro.org/article/id/52/">Non-Human Account Management</a> (v2)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Identity</td>
 <td>An attribute or set of attributes that uniquely describes a subject within a given context.</td>
 <td><a href="https://bok.idpro.org/article/id/94/">Defining the Problem – Identity Proofing Challenges</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Identity Analytics and Intelligence (IdA)</td>
 <td>Identity analytics and intelligence mean looking at entitlement data, looking at the assignment of that, and trying to figure out and define what risk looks like. IdA provides a risk-based approach for managing system identities and access, with the intention of centralizing governance, visibility, and reporting for access-based risk.</td>
 <td><a href="https://bok.idpro.org/article/id/27/">Introduction to Identity - Part 1: Admin-time (v2)</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Identity and Access Management (IAM)</td>
 <td>Identity and Access Management (IAM) is the discipline used to ensure the correct access is defined for the correct users to the correct resources for the correct reasons.</td>
 <td><a href="https://bok.idpro.org/article/id/78/">Authentication and Authorization</a>; <a href="https://doi.org/10.55621/idpro.120">HIPAA Security Rule Updates &amp; IAM Compliance Recommendations</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Identity and Access Management (IAM)</td>
 <td>The discipline that enables the right individuals to access the right resources at the right times for the right reasons.</td>
 <td><a href="https://bok.idpro.org/article/id/85/">Identity and Access Management Workforce Planning</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Identity and Access Management Workforce Planning</td>
 <td>Activities involved in ensuring an enterprise identity and access management team are staffed with the right talent to execute business and technical objectives.</td>
 <td><a href="https://bok.idpro.org/article/id/85/">Identity and Access Management Workforce Planning</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Identity, Credential, and Access Management (ICAM)</td>
 <td>Programs, processes, technologies, and personnel used to create trusted digital identity representations of individuals and non-person entities, bind those identities to credentials that may serve as a proxy in access transactions, and leverage the credentials to provide authorized access to an organization’s resources.</td>
 <td><a href="https://bok.idpro.org/article/id/85/">Identity and Access Management Workforce Plannin</a>g</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Identity Evidence</td>
 <td>Information or documentation the applicant provides to support the claimed identity. Identity evidence may be physical (e.g., a driver’s license) or digital (e.g., an assertion generated and issued by a CSP based on the applicant successfully authenticating to the CSP).</td>
 <td><a href="https://bok.idpro.org/article/id/94/">Defining the Problem – Identity Proofing Challenges</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Identity Federation</td>
 <td><p>An identity federation is a group of computing or network providers that agree to operate using standard protocols and trust agreements. In a Single Sign-On (SSO) scenario, identity federation occurs when an Identity Provider (IdP) and Service Provider (SP) agree to communicate via a specific, standard protocol. The enterprise user will log into the application using their credentials from the enterprise rather than creating new, specific credentials within the application. By using one set of credentials, users need to manage only one credential, credential issues (such as password resets) can be managed in one location, and applications can rely on the appropriate enterprise systems (such as the HR system) to be the source of truth for a user’s status and affiliation.</p>
 <p>Identity federations can take several forms. In academia, multilateral federations, where a trusted third party manages the metadata of multiple IdPs and SPs, are fairly common. <a href="https://bok.idpro.org/article/id/62/#fn1"><sup>1</sup></a> This article focuses, however, on the enterprise use case where <strong>bilateral federation</strong> arrangements, where the agreements are one-to-one between an IdP and an SP, are the most common form of identity federation in use today.</p></td>
 <td><a href="https://bok.idpro.org/article/id/62/">Federation Simplified (v2)</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Identity Governance and Administration (IGA)</td>
 <td>A discipline that focuses on identity life cycle management and access control from an administrative perspective.</td>
 <td><a href="https://bok.idpro.org/article/id/27/">Introduction to Identity - Part 1: Admin-time (v2)</a>, <a href="https://bok.idpro.org/article/id/97/">The Business Case for IAM</a>, <a href="https://bok.idpro.org/article/id/101/">Introduction to Privileged Access Management</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Identity Governance and Administration (IGA)</td>
 <td>Includes the collection and use of identity information as well as the governance processes that ensure the right person has the right access to the right systems at the right time.</td>
 <td><a href="https://bok.idpro.org/article/id/38/">Introduction to IAM Architecture</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Identity Governance and Administration (IGA)</td>
 <td>A solution for automating user management and authorizations in target systems, building on the organization’s customer and human resource processes.</td>
 <td><a href="https://bok.idpro.org/article/id/90">Strategic Alignment and Access Governance</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Identity Governance and Administration (IGA)</td>
 <td>Identity Governance and Administration (IGA) is a framework that manages and governs user identities, access rights, and security policies across an organization. It ensures that the right individuals have the right access to the right resources at the right time while maintaining security and compliance.</td>
 <td><a href="https://doi.org/10.55621/idpro.119">Optimizing Access Recertifications</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Identity Hub or Repository</td>
 <td>The place where users can store their encrypted identity-related information. An identity hub can be anywhere – on the edge, on the cloud, or on your own server. Its purpose is to store personal data. Some implementations may allow other entities to access the identity hub of the user if the user specifically grants such access. You can think of an identity hub as the individual’s personal data store.</td>
 <td><a href="https://bok.idpro.org/article/id/51/">A Peek into the Future of Decentralized Identity</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Identity Information Authority (IIA)</td>
 <td>This represents one or more data sources used by the IDM as the basis for the master set of principal/subject identity records. Each IIA may supply a subset of records and a subset of attributes. Sometimes the IIA is distinguished from the Identity Information Provider or IIP. We use IIA to include the service that actually provides the information as well as the root authority. This corresponds to Identity Information Source in ISO/IEC 24760-2 and Identity Sources in Internet2.</td>
 <td><a href="https://bok.idpro.org/article/id/76/">IAM Reference Architecture</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Identity Lifecycle Management</td>
 <td>A process that detects changes in authoritative systems of record and updates identity records based on policies.</td>
 <td><a href="https://bok.idpro.org/article/id/84/">User Provisioning in the Enterprise</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Identity Management (IDM)</td>
 <td>A set of policies, procedures, technology, and other resources for maintaining identity information. The IDM contains information about principals/subjects, including credentials. It also includes other data such as metadata to enable interoperability with other components. The IDM is shown with a dotted line to indicate that it is a conceptual grouping of components, not a full-fledged system in itself.</td>
 <td><a href="https://bok.idpro.org/article/id/76/">IAM Reference Architecture</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Identity Proofing</td>
 <td>accruing evidence to support “who this is.” Identity proofing is the last, but not the least, important part of this admin-time section. This is the process of collecting and verifying information about a person for the purpose of providing an account or a corresponding credential. This is typically performed before an account is created or the credential is issued, or a special privilege is granted.</td>
 <td><a href="https://bok.idpro.org/article/id/27/">Introduction to Identity - Part 1: Admin-time (v2)</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Identity Proofing</td>
 <td>The process by which a CSP collects, validates, and verifies information about a person.</td>
 <td><a href="https://bok.idpro.org/article/id/94/">Defining the Problem – Identity Proofing Challenges</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Identity Provider (IdP)</td>
 <td>An Identity Provider (IdP) performs a service that sends information about a user to an application. This information is typically held in a user store, so an identity provider will often take that information and transform it to be able to be passed to the service providers, AKA apps. The OASIS organization, which is responsible for the SAML specifications, defines an IdP as “A kind of SP that creates, maintains, and manages identity information for principals and provides principal authentication to other SPs within a federation, such as with web browser profiles.”</td>
 <td><a href="https://bok.idpro.org/article/id/62/">Federation Simplified (v2)</a>, <a href="https://bok.idpro.org/article/id/78/">Authentication and Authorization</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Identity Provider (IDP)</td>
 <td>Identity Provider or IDP is a common term. We treat this as a subset of Identity Management. It consists of the service interfaces: AuthN/Assertion, Service Provisioning Agent, Session Management, Discovery Services, and Metadata Management.</td>
 <td><a href="https://bok.idpro.org/article/id/76/">IAM Reference Architecture</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Identity Provider (IdP)</td>
 <td>The party that manages the subscriber’s primary authentication credentials and issues assertions derived from those credentials. This is commonly the CSP as discussed within this article.</td>
 <td><a href="https://bok.idpro.org/article/id/94/">Defining the Problem – Identity Proofing Challenges</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Identity Register</td>
 <td>This is the datastore that contains the enrolled entities and their attributes, including credentials. See the IDM section for elaboration. The terms Directory, Identity Repository, and Attribute Store are sometimes used as synonyms.</td>
 <td><a href="https://bok.idpro.org/article/id/76/">IAM Reference Architecture</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Identity Repository</td>
 <td>The identity repository is a directory or a database that can be referenced by external systems and services (such as authentication or authorization services).</td>
 <td><a href="https://bok.idpro.org/article/id/84/">User Provisioning in the Enterprise</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Identity Theft Law</td>
 <td>Laws governing crimes in which the perpetrator gains access to sensitive personal information belonging to the victim (such as birth dates, passwords, email addresses, driver's license numbers, social security numbers, financial records, etc.), and then uses this information to impersonate the victim for personal gain, such as to commit fraud, establish credit in the victim’s name, or access the victim’s accounts.</td>
 <td><a href="https://bok.idpro.org/article/id/8/">Laws Governing Identity Systems</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Impersonation</td>
 <td>A scenario where a user is able to perform actions as though they are a known user other than themself.</td>
 <td><a href="https://bok.idpro.org/article/id/65/">Managing Identity in Customer Service Operations</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Infrastructure-as-code</td>
 <td>the process of managing and provisioning computer data centers through machine-readable definition files rather than physical hardware configuration or interactive configuration tools.</td>
 <td><a href="https://bok.idpro.org/article/id/88/">Techniques To Approach Least Privilege</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Internet Key Exchange (IKE)</td>
 <td>A subordinate standard under IPsec specifying how to use X.509 certificates to establish symmetric keys for an IPsec tunnel.certificates to establish symmetric keys for an IPsec tunnel.</td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Internet Protocol Security (IPsec)</td>
 <td>A standard for communication between two machines providing confidentiality and integrity over the Internet Protocol.</td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Intra-organizational (Single Sign-On):</td>
 <td>A central digital identity, such as an account in a directory, is linked by downstream systems as authoritative for authentication.</td>
 <td><a href="https://bok.idpro.org/article/id/31/">An Overview of the Digital Identity Lifecycle</a> (v2)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Inter-organizational (Federation)</td>
 <td>An organization relies on another organization’s digital identity and lifecycle management processes.</td>
 <td><a href="https://bok.idpro.org/article/id/31/">An Overview of the Digital Identity Lifecycle</a> (v2)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Internal identifier</td>
 <td>The way an identity management system refers to a digital identity</td>
 <td><a href="https://bok.idpro.org/article/id/16/">Identifiers and Usernames</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Issuer</td>
 <td>The entity that issues verifiable credentials about subjects to holders. Issuers are typically a government entity or corporation, but an issuer can also be a person or device.</td>
 <td><a href="https://bok.idpro.org/article/id/51/">A Peek into the Future of Decentralized Identity</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Joiner/Mover/Leaver</td>
 <td>The joiner/mover/leaver lifecycle of an employee identity considers three stages in the life cycle: joining the organization, moving within the organization, and leaving the organization.</td>
 <td><a href="https://bok.idpro.org/article/id/27/">Introduction to Identity - Part 1: Admin-time (v2)</a>, <a href="https://bok.idpro.org/article/id/97/">The Business Case for IAM</a>, <a href="https://bok.idpro.org/article/id/101/">Introduction to Privileged Access Management</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Journey-based Creation</td>
 <td>The process that guides a customer through a series of interactions prior to establishing a digital identity. For example, capturing the minimum basic information needed from a customer to enable creation of an identity.</td>
 <td><a href="https://bok.idpro.org/article/id/31/">An Overview of the Digital Identity Lifecycle</a> (v2)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Just-in-time (JIT) Access</td>
 <td>a technique where a credential or a permission is granted to a principal for a temporary timeframe when they need the permission to perform an activity. Access is revoked once the activity is complete, limiting its usage.</td>
 <td><a href="https://bok.idpro.org/article/id/88/">Techniques To Approach Least Privilege</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Key</td>
 <td>In a cryptosystem, a Key is a piece of information used to encrypt or decrypt data in a cryptographic algorithm.</td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Key (aka, Secret, secret key, encryption key</td>
 <td>Unique input to a cryptosystem that adds randomness to the encryption process. The security of a cryptosystem is predicated on the secrecy of the key.</td>
 <td><a href="https://bok.idpro.org/article/id/102/">An Introduction to Cryptography</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Knowledge-Based Authentication (KBA)</td>
 <td>A method of authentication that uses information known by both the end-user and the authentication service but is not necessarily a secret.</td>
 <td><a href="https://bok.idpro.org/article/id/64/">Account Recovery (v2)</a>, <a href="https://bok.idpro.org/article/id/65/">Managing Identity in Customer Service Operations</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Knowledge-Based Authentication (KBA)</td>
 <td>Identity-verification method based on knowledge of private information associated with the claimed identity. This is often referred to as knowledge-based verification (KBV) or knowledge-based proofing (KBP).</td>
 <td><a href="https://bok.idpro.org/article/id/94/">Defining the Problem – Identity Proofing Challenges</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Least Privilege</td>
 <td>Also known as the Principle of Least Privilege; a resource, such as a user, must only be able to access the resources (e.g., applications, data) that are necessary for it to function.</td>
 <td><a href="https://bok.idpro.org/article/id/45/">Introduction to Identity – Part 2: Access Management</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Least Privilege</td>
 <td>The principle that a security architecture should be designed so that each entity is granted the minimum system resources and authorizations that the entity needs to perform its function. (NIST Information Technology Laboratory)</td>
 <td><a href="https://bok.idpro.org/article/id/88/">Techniques To Approach Least Privilege</a>, <a href="https://bok.idpro.org/article/id/101/">Introduction to Privileged Access Management</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Lifecycle</td>
 <td>In the context of CIAM, lifecycle refers to the stages that an individual or entity might experience over the course of their relationship with an organization, beginning with the formation of a relationship (such as being hired into an organization or signing up for service) and ending with the severance of that relationship (such as termination or closing an account)</td>
 <td><a href="https://bok.idpro.org/article/id/98/">Introduction to Customer Identity and Access Management</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Local Authorization</td>
 <td>Local authorization is handled by the RP.</td>
 <td><a href="https://bok.idpro.org/article/id/76/">IAM Reference Architecture</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Metadata Management</td>
 <td>The processes and techniques that allow the collection, use, and eventual deletion of control data used by the IDM to recognize and trust the Relying Party. This corresponds to Relying Party data in the Internet2 model.</td>
 <td><a href="https://bok.idpro.org/article/id/76/">IAM Reference Architecture</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>MFA Prompt Bombing</td>
 <td>Also known as MFA fatigue, MFA prompt bombing is a cyber-attack technique that describes when an attacker bombards a user with mobile-based push notifications, which sometimes leads to the user to approve the request out of annoyance which might lead to an account takeover.</td>
 <td><a href="https://bok.idpro.org/article/id/92/">Multi-factor Authentication</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Multi-Factor Authentication (MFA)</td>
 <td>An approach whereby a user’s identity is validated to the trust level required according to a security policy for a resource being accessed using more than one factor (something you know (e.g., password), something you have (e.g., smartphone), something you are (e.g., fingerprint).</td>
-<td><a href="https://bok.idpro.org/article/id/64/">Account Recovery (v2)</a>, <a href="https://bok.idpro.org/article/id/42/">Introduction to Access Control</a>, <a href="https://doi.org/10.55621/idpro.120">HIPAA Security Rule Updates &amp; IAM Compliance Recommendations</a>, <a href="https://doi.org/10.55621/idpro.113">Authentication Methods</a></td>
+<td><a href="https://bok.idpro.org/article/id/64/">Account Recovery (v2)</a>, <a href="https://bok.idpro.org/article/id/42/">Introduction to Access Control</a>, <a href="https://doi.org/10.55621/idpro.120">HIPAA Security Rule Updates &amp; IAM Compliance Recommendations</a>, <a href="https://doi.org/10.55621/idpro.113">Authentication Methods</a>, <a href="https://doi.org/10.55621/idpro.128">What Happens After the Breach? Inside a Solid Incident Response Framework</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Multilateral Federation</td>
 <td>A federation that consists of multiple entities that have agreed to a specific trust framework. There are several forms of multilateral federations, including hub-and-spoke and mesh. Multilateral federations are the most common model for academic identity federations.</td>
 <td><a href="https://bok.idpro.org/article/id/62/">Federation Simplified (v2)</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>National Institute of Standards and Technology (NIST)</td>
 <td>A US Government agency that defines and publishes various standards. One department within NIST, the Computer Security Resource Center (CSRC), publishes the Federal Information Processing Standards (FIPS) series. While these standards are only mandatory for US Government Agencies, many countries recognize them as de-facto global standards.</td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
+</tr>
+<tr class="even">
+<td>Network Segmentation</td>
+<td>Segmentation divides a computer network into smaller parts. The purpose is to improve network performance and security. Other terms that often mean the same thing are network segregation, network partitioning, and network isolation.</td>
+<td><a href="https://doi.org/10.55621/idpro.128">What Happens After the Breach? Inside a Solid Incident Response Framework</a></td>
 </tr>
 <tr class="odd">
 <td>NIST Cybersecurity Framework</td>
@@ -1111,34 +1121,44 @@ Provided an adequately constructed hash function, the resultant hash should be d
 <td><a href="https://bok.idpro.org/article/id/98/">Introduction to Customer Identity and Access Management</a>, <a href="https://doi.org/10.55621/idpro.113">Authentication Methods</a></td>
 </tr>
 <tr class="even">
+<td>Passwordless authentication</td>
+<td>Any means of authenticating a user account that does not require a static stored shared secret. Techniques include one-time passwords and passkeys.</td>
+<td><a href="https://doi.org/10.55621/idpro.128">What Happens After the Breach? Inside a Solid Incident Response Framework</a></td>
+</tr>
+<tr class="odd">
 <td>Path Discovery and Validation (PDVal)</td>
 <td>The process to determine whether a certificate is valid and trusted by the validator.</td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Permission</td>
 <td>a statement of authorization for one or more subjects to perform one or more actions on one or more objects.</td>
 <td><a href="https://bok.idpro.org/article/id/61/">Introduction to Policy-Based Access Controls (v2)</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Personal Data</td>
 <td>Defined in Article 4(1) of the GDPR: “‘personal data’ means any information relating to an identified or identifiable natural person (‘data subject’); an identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, an online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person;”. Note: “natural person” (human) is used to distinguish from companies and other corporate entities that are “legal persons”.</td>
 <td><a href="https://bok.idpro.org/article/id/11/">An Introduction to the GDPR</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Personal Data</td>
 <td>Personal data are any information which are related to an identified or identifiable natural person.</td>
 <td><a href="https://bok.idpro.org/article/id/64/">Account Recovery (v2)</a>, <a href="https://bok.idpro.org/article/id/24/">Impact of GDPR on Identity and Access Management</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Personal Identification Number (PIN)</td>
 <td>A numeric secret commonly used to unlock a private key container in software or hardware.</td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Personal Identity Verification (PIV)</td>
 <td>A US Government program designed to enable strong authentication for all government employees and contractors, based on Public Key Infrastructure.</td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
+</tr>
+<tr class="odd">
+<td>Phishing</td>
+<td>Phishing is a cybercrime in which a target or targets are contacted by email, telephone or text message by someone posing as a legitimate institution to lure individuals into providing sensitive data such as personally identifiable information, banking and credit card details, and passwords.</td>
+<td><a href="https://doi.org/10.55621/idpro.128">What Happens After the Breach? Inside a Solid Incident Response Framework</a></td>
 </tr>
 <tr class="even">
 <td>Plaintext (aka, Cleartext)</td>
@@ -1276,416 +1296,431 @@ Provided an adequately constructed hash function, the resultant hash should be d
 <td><a href="https://bok.idpro.org/article/id/99/">An Introduction to OAuth2.0</a></td>
 </tr>
 <tr class="odd">
-<td>Public Key</td>
-<td>A key that an entity publicly distributes. It corresponds to a private key that the entity exclusively and privately controls.</td>
-<td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
-</tr>
-<tr class="even">
-<td>Public Key Certificate</td>
-<td>A certificate containing a public key, one or more identifiers for the private key holder, an identifier for the Certificate Authority, and additional metadata to support security requirements.</td>
-<td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
-</tr>
-<tr class="odd">
-<td>Public Key Infrastructure</td>
-<td>A set of tools, standards, and related policies designed to manage trust based on public/private key pairs and certificates.</td>
-<td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
-</tr>
-<tr class="even">
 <td>Protected Resource</td>
 <td>A system, a process, a service, an information object, or even a physical location that is subject to access control as defined by the owner of the resource and by other stakeholders, such as a business process owner or Risk manager.</td>
 <td><a href="https://bok.idpro.org/article/id/42/">Introduction to Access Control</a></td>
 </tr>
+<tr class="even">
+<td>Public Key</td>
+<td>A key that an entity publicly distributes. It corresponds to a private key that the entity exclusively and privately controls.</td>
+<td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
+</tr>
 <tr class="odd">
+<td>Public Key Certificate</td>
+<td>A certificate containing a public key, one or more identifiers for the private key holder, an identifier for the Certificate Authority, and additional metadata to support security requirements.</td>
+<td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
+</tr>
+<tr class="even">
+<td>Public Key Infrastructure</td>
+<td>A set of tools, standards, and related policies designed to manage trust based on public/private key pairs and certificates.</td>
+<td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
+</tr>
+<tr class="odd">
+<td>Public paste site</td>
+<td>A public paste site is a website where anyone can quickly publish and share blocks of text, code, or notes, usually without needing an account. These sites are commonly used by developers, security researchers, or communities to share snippets of code, logs, or configurations.</td>
+<td><a href="https://doi.org/10.55621/idpro.128">What Happens After the Breach? Inside a Solid Incident Response Framework</a></td>
+</tr>
+<tr class="even">
 <td>Reconciliation</td>
 <td>The process of identifying and processing changes to users and user access made directly on target systems.</td>
 <td><a href="https://bok.idpro.org/article/id/84/">User Provisioning in the Enterprise</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Refresh Token</td>
 <td>The OAuth2 token that allows a client to renew an access token when it is expired without the user’s presence</td>
 <td><a href="https://bok.idpro.org/article/id/99/">An Introduction to OAuth2.0</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Refresh Token</td>
 <td>According to RFC 6749, “The OAuth 2.0 Authorization Framework,” a refresh token is a credential used to obtain access tokens without requiring the resource owner to reauthenticate.</td>
 <td><h3 id="token-lifetimes-and-security-in-oauth-2.0-best-practices-and-emerging-trends-3"><a href="https://doi.org/10.55621/idpro.108">Token Lifetimes and Security in OAuth 2.0: Best Practices and Emerging Trends</a></h3></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Registration</td>
 <td>See Enrollment</td>
 <td><a href="https://bok.idpro.org/article/id/94/">Defining the Problem – Identity Proofing Challenges</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Registration</td>
 <td>The creation of a relationship between an individual and an online system that is initiated by the individual and results in the creation of a user account or Profile.</td>
 <td><a href="https://bok.idpro.org/article/id/98/">Introduction to Customer Identity and Access Management</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Registration Authority (RA)</td>
 <td>An individual, system, or business function which provides registration and identity proofing for entities receiving certificates and manages the certificate issuance and renewal process. The most important responsibilities of an RA include identity proofing and binding the private key to the identity.</td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Relying Party (RP)</td>
 <td>A component, system, or application that uses the IDP to identify its users. The RP has its own resources and logic. Note that the term ‘relying service’ is used in the ISO/IEC standards to encompass all types of components that use identity services, including systems, sub-systems, and applications, independent of the domain or operator. We will use the more common Relying Party (or RP). An RP roughly corresponds to the Agency Endpoint in the FICAM model or to Identity Consumers in the Internet2 model.</td>
 <td><a href="https://bok.idpro.org/article/id/76/">IAM Reference Architecture</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Remote</td>
 <td><em>In the context of remote authentication or remote transaction</em>, an information exchange between network-connected devices where the information cannot be reliably protected end to end by a single organization’s security controls.</td>
 <td><a href="https://bok.idpro.org/article/id/94/">Defining the Problem – Identity Proofing Challenges</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Resource or Object</td>
 <td>an asset protected by access controls, such as an application, system, or door.</td>
 <td><a href="https://bok.idpro.org/article/id/27/">Introduction to Identity - Part 1: Admin-time (v2)</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Return on Investment (ROI)</td>
 <td>Return on Investment is the economic measure of value of an investment, using costs, revenues, interest rates, and lifecycle as parameters.</td>
 <td><a href="https://bok.idpro.org/article/id/97/">The Business Case for IAM</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Revoke</td>
 <td>Revocation is the announcement that clients should no longer trust an individual certificate. </td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Revised Payment Systems Directive (PSD2)</td>
 <td>PSD2 (the Revised Payment Services Directive, Directive (EU) 2015/2366) is an EU Directive, administered by the European Commission (Directorate General Internal Market) to regulate payment services and payment service providers throughout the European Union (EU) and European Economic Area (EEA). It contains many requirements specifically related to Strong Client Authentication.</td>
 <td><a href="https://bok.idpro.org/article/id/49/">Designing MFA for Humans</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Risk Context (RCTX)</td>
 <td>Risk Context consists of additional facts that can be brought to bear to improve the overall security of the ecosystem. Internal or external events and facts can be applied to enable, limit, or terminate access. This is similar to the section Monitors and Sensors under FICAM’s Governance Systems and to many of the inputs of the Policy Decision Point in the NIST Special Publication 800-207, a paper on Zero Trust.</td>
 <td><a href="https://bok.idpro.org/article/id/76/">IAM Reference Architecture</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Role Management</td>
 <td>A way to group access rules to make them more manageable</td>
 <td><a href="https://bok.idpro.org/article/id/27/">Introduction to Identity - Part 1: Admin-time (v2)</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Role-Based Access Control (RBAC)</td>
 <td>The use of roles at run-time; a way to govern who gets access to what through the use of roles.</td>
 <td><a href="https://bok.idpro.org/article/id/27/">Introduction to Identity - Part 1: Admin-time (v2)</a>, <a href="https://bok.idpro.org/article/id/101/">Introduction to Privileged Access Management</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Role-Based Access Control (RBAC)</td>
 <td>A pattern of access control system involving sets of static, manual definitions of permissions assigned to “roles”, which can be consistently and repeatably associated with users with common access needs. Role-based access control is a control scheme in which roles are granted to identities, and those roles determine what access to resources those identities should have. Basic roles might be “admin” and “read-only user” – an admin would be able to make changes to a system and a read-only user would only be able to view resources.</td>
 <td><a href="https://bok.idpro.org/article/id/61/">Introduction to Policy-Based Access Controls (v2)</a>, <a href="https://bok.idpro.org/article/id/78/">Authentication and Authorization</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Role-Based Access Control (RBAC)</td>
 <td>Role-Based Access Control is a security method restricting access to systems and resources based on a user’s role within an organization.</td>
 <td><a href="https://doi.org/10.55621/idpro.120">HIPAA Security Rule Updates &amp; IAM Compliance Recommendations</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Role-Based Access Control (RBAC)</td>
 <td>RBAC is a security model that assigns permissions to users based on their roles within an organization. Instead of granting access to individuals directly, RBAC groups users into roles, each with predefined permissions, ensuring consistent and scalable access management.</td>
 <td><a href="https://doi.org/10.55621/idpro.119">Optimizing Access Recertifications</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Roles</td>
 <td>A set of permissions. A role must be associated with an individual user, and the user gains the associated authorization when they are associated with the role.</td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>RSA</td>
 <td>An asymmetric cryptosystem based on large prime numbers. The acronym RSA stands for the three principal inventors, Ron Rivest, Adi Shamir, and Len Adleman.</td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>S/MIME</td>
 <td>A standard for constructing and sending digitally signed or encrypted messages using asymmetric cryptography</td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Schedule</td>
 <td>A document that defines the activity and resources required to achieve the planned deliverable(s) and outcome(s)</td>
 <td><a href="https://bok.idpro.org/article/id/25/">Introduction to Project Management for IAM Projects</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Scope</td>
 <td>A string designating a (part) of a protected resource that a client is authorized to access.</td>
 <td><a href="https://bok.idpro.org/article/id/99/">An Introduction to OAuth2.0</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Secure Socket Layer (SSL)</td>
 <td>A deprecated standard for encrypting data in transit; TLS has superseded it.</td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Security Assertion Markup Language (SAML)</td>
 <td>SAML is an XML-based communication protocol between SPs and IdPs. Usually, the enterprise hosts the IdP, whereas applications (including cloud services) are the SPs.</td>
 <td><a href="https://bok.idpro.org/article/id/62/">Federation Simplified (v2)</a></td>
 </tr>
+<tr class="odd">
+<td>Security Information and Event Management (SIEM) systems</td>
+<td>SIEM solutions provide a comprehensive view of an organization's security posture, empowering security operation centers (SOC) to detect, investigate, and respond to security incidents swiftly and effectively.</td>
+<td><a href="https://doi.org/10.55621/idpro.128">What Happens After the Breach? Inside a Solid Incident Response Framework</a></td>
+</tr>
 <tr class="even">
+<td>Security operation centers (SOC) </td>
+<td>SecOps is a holistic approach to security that helps security and IT operations teams work together to protect an organization effectively. In the traditional security operations center (SOC), there was often a gap between security and operations teams. Each had different priorities, procedures, and tools, making their security efforts less efficient.</td>
+<td><a href="https://doi.org/10.55621/idpro.128">What Happens After the Breach? Inside a Solid Incident Response Framework</a></td>
+</tr>
+<tr class="odd">
 <td>Segment</td>
 <td>a grouping of subjects that may be useful for authorizations, such as full-time employees, undergraduate students, IT administrators, or clinicians.</td>
 <td><a href="https://bok.idpro.org/article/id/61/">Introduction to Policy-Based Access Controls (v2)</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Segregation of Duties (SOD)</td>
 <td>Segregation of Duties is a principle preventing any one person from being solely responsible for an entire process – it involves assigning different tasks to multiple people, which reduces the risk of fraud or error.</td>
 <td><a href="https://doi.org/10.55621/idpro.120">HIPAA Security Rule Updates &amp; IAM Compliance Recommendations</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Self-sovereign Identity</td>
 <td>A term that describes a digital movement that is founded on the principle that an individual should own and control their identity without the intervening administrative authorities.</td>
 <td><a href="https://bok.idpro.org/article/id/51/">A Peek into the Future of Decentralized Identity</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Sender Constrained Token</td>
 <td>A token whose possession is not sufficient to enable access to a protected resource (additional proof of identity by the client application is required)</td>
 <td><a href="https://bok.idpro.org/article/id/99/">An Introduction to OAuth2.0</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Sender-Constrained Token</td>
 <td>Tokens that require the sender to prove that they are the authorized holder of the token when making a request.</td>
 <td><h3 id="token-lifetimes-and-security-in-oauth-2.0-best-practices-and-emerging-trends-4"><a href="https://doi.org/10.55621/idpro.108">Token Lifetimes and Security in OAuth 2.0: Best Practices and Emerging Trends</a></h3></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Server Account</td>
 <td>An account with privileged access rights to a server’s operation typically used for configuration purposes.</td>
 <td><a href="https://bok.idpro.org/article/id/52/">Non-Human Account Management</a> (v2)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Server-based Certificate Validation Protocol (SCVP)</td>
 <td>A protocol that allows a client to query a server to determine whether a certificate is valid and trusted. The server does not need to be associated with the issuing CA. SCVP does two things; (1) it determines the path between the end entity and the trusted root, whereby the client doesn't need to trust any intermediate CAs. (2) it also performs delegated path validation according to policy.</td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Service Account</td>
 <td>An account used by a computer application to access other applications or services for a specific purpose.</td>
 <td><a href="https://bok.idpro.org/article/id/52/">Non-Human Account Management</a> (v2)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Service Provider (SP)</td>
 <td>Defined by the OASIS organization, which is responsible for the SAML specification, as “A role donned by a system entity where the system entity provides services to principals or other system entities.” This usually takes the form of an application that offers services requiring authentication and authorization to a user.</td>
 <td><a href="https://bok.idpro.org/article/id/62/">Federation Simplified (v2)</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Session</td>
 <td>A period of time after an authentication event when an RP grants access to resources for the principal/subject. The duration of the session and the mechanism for enforcement vary by implementation.</td>
 <td><a href="https://bok.idpro.org/article/id/76/">IAM Reference Architecture</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Session Key</td>
 <td>A temporary key used to encrypt data communications during a relatively short-lived session. At the end of the session, further communication requires the use of a new session key.</td>
 <td><a href="https://bok.idpro.org/article/id/102/">An Introduction to Cryptography</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Session Management</td>
 <td>A coordinating function provided by an IDP to control sessions of subscribing RPs.</td>
 <td><a href="https://bok.idpro.org/article/id/76/">IAM Reference Architecture</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Shared Authorization</td>
 <td>Shared authorization is provided by a facility outside of the RP. It is shown here as part of the access management grouping.</td>
 <td><a href="https://bok.idpro.org/article/id/76/">IAM Reference Architecture</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Signature</td>
 <td>Processing data using a cryptographic algorithm to provide integrity assurance.</td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Single Sign-On</td>
 <td>Single Sign-On is a service that enables SPs to verify the identities of End Users by facilitating communication with IdPs. SSO acts as a bridge to decouple SPs and IdPs. This can happen via numerous protocols such as agent-based integrations, direct LDAP integration, SAML, and OpenID Connect, to name a few.</td>
 <td><a href="https://bok.idpro.org/article/id/62/">Federation Simplified (v2)</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Social Engineering</td>
 <td>Social engineering is a method of manipulating people so they give up confidential information, such as passwords or bank information, or grant access to their computer to secretly install malicious software.</td>
 <td><a href="https://bok.idpro.org/article/id/64/">Account Recovery (v2)</a>, <a href="https://bok.idpro.org/article/id/49/">Designing MFA for Humans</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Sources of “Truth”</td>
 <td>where authoritative data about individuals live.</td>
 <td><a href="https://bok.idpro.org/article/id/27/">Introduction to Identity - Part 1: Admin-time (v2)</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Special Category Data (SCD)</td>
 <td>Categories of data that are regarded as particularly sensitive, so subject to additional regulation. Defined in Article 9(1) of the GDPR as “personal data revealing racial or ethnic origin, political opinions, religious or philosophical beliefs, or trade union membership, and the processing of genetic data, biometric data for the purpose of uniquely identifying a natural person, data concerning health or data concerning a natural person’s sex life or sexual orientation”; Article 10’s “personal data relating to criminal convictions and offences” requires similar treatment, so is normally considered as another category of SCD.</td>
 <td><a href="https://bok.idpro.org/article/id/11/">An Introduction to the GDPR</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Step-Up Authentication</td>
 <td>A method to increase the level of assurance (or confidence) the system has regarding a user’s authentication by issuing one or more additional authentication challenges, usually using factors different from the one(s) used to establish the initial authenticated session. The need for increasing the level of assurance is typically driven by the risk associated with the sensitive resource the user is attempting to access.</td>
 <td><a href="https://bok.idpro.org/article/id/49/">Designing MFA for Humans</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Subject Alternative Name</td>
 <td>One or more identifiers for a certificate subject that certificate issuers can use to carry application-specific identifiers such as email address or User Principal Name (UPN).</td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Subject Distinguished Name (Subject DN)</td>
 <td>A unique identifier for the subject within the scope of the Certificate Authority. Issuers structure the subject DN like an LDAP entry name.</td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Subscriber</td>
 <td>A party enrolled in the CSP identity service.</td>
 <td><a href="https://bok.idpro.org/article/id/94/">Defining the Problem – Identity Proofing Challenges</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Sunk cost</td>
 <td>Expenses that have already been made in the past and that are unrecoverable.</td>
 <td><a href="https://bok.idpro.org/article/id/97/">The Business Case for IAM</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>System Account</td>
 <td>A generic term for a privileged account that has extensive permissions that enable system configuration changes.</td>
 <td><a href="https://bok.idpro.org/article/id/52/">Non-Human Account Management</a> (v2)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Symmetric Key Cryptography (aka, Private Key Cryptography)</td>
 <td>A cryptosystem in which a single key is used to both encrypt and decrypt data.</td>
 <td><a href="https://bok.idpro.org/article/id/102/">An Introduction to Cryptography</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Task</td>
 <td>Lowest level of defined activity; multiple tasks will typically be grouped into stages of project phases</td>
 <td><a href="https://bok.idpro.org/article/id/25/">Introduction to Project Management for IAM Projects</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Threat Modeling</td>
 <td>Threat modeling is an analysis technique used to help identify threats, attacks, vulnerabilities, and countermeasures that could impact an application or process.</td>
 <td><a href="https://bok.idpro.org/article/id/64/">Account Recovery (v2)</a>, <a href="https://bok.idpro.org/article/id/49/">Designing MFA for Humans</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Token</td>
 <td>A digital object that can represent a set of claims or attributes about an entity, such as a user, device, or process, typically used in authorization protocols.</td>
 <td><h3 id="token-lifetimes-and-security-in-oauth-2.0-best-practices-and-emerging-trends-5"><a href="https://doi.org/10.55621/idpro.108">Token Lifetimes and Security in OAuth 2.0: Best Practices and Emerging Trends</a></h3></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Token Replay Attack</td>
 <td>A cybersecurity attack that occurs when an attacker intercepts valid tokens—such as tokens or session IDs—during transmission and reuses them to impersonate the legitimate user or system.</td>
 <td><h3 id="token-lifetimes-and-security-in-oauth-2.0-best-practices-and-emerging-trends-6"><a href="https://doi.org/10.55621/idpro.108">Token Lifetimes and Security in OAuth 2.0: Best Practices and Emerging Trends</a></h3></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Tort Law</td>
 <td>The body of law that covers situations where one person’s behavior causes injury, suffering, unfair loss, or harm to another person, giving the injured person (or the person suffering damages) a right to bring a civil lawsuit for compensation from the person who caused the injury. Examples include battery, fraud, defamation, negligence, and strict liability.</td>
 <td><a href="https://bok.idpro.org/article/id/8/">Laws Governing Identity Systems</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Transaction Code Sets</td>
 <td>Transaction code sets refer to a standardized collection of codes used to represent specific actions or events within a system, allowing for the electronic exchange of information between different entities in a consistent format. In healthcare, it ensures accurate data transmission through standardized codes for diagnoses and procedures.</td>
 <td><a href="https://doi.org/10.55621/idpro.120">HIPAA Security Rule Updates &amp; IAM Compliance Recommendations</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Transport Layer Security (“TLS” )</td>
 <td>A cryptographic protocol designed to provide confidentiality and integrity of communications between two endpoints.</td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a>; <a href="https://doi.org/10.55621/idpro.123">PKCE: Proof Key for Code Exchange</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Trust Federation</td>
 <td>a trust framework between multiple entities with the purpose of leveraging identity and access management information in a controlled fashion</td>
 <td><a href="https://bok.idpro.org/article/id/45/">Introduction to Identity – Part 2: Access Management</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Trust Framework</td>
 <td>This component represents the legal, organizational, and technical apparatus that enables trust between the IDM and the RPs.</td>
 <td><a href="https://bok.idpro.org/article/id/76/">IAM Reference Architecture</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Trust Root</td>
 <td>A technical structure that provides the IDP and RP the ability to recognize each other with a high degree of certainty. This is similar to the concept of Trust Anchor (NIST SP.800-63-3), but we allow for a structure that relies on a mutually agreed-upon third party. A trust root derives from the operation of a Trust Framework.</td>
 <td><a href="https://bok.idpro.org/article/id/76/">IAM Reference Architecture</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Two-Factor Authentication (2FA)</td>
 <td>A specific case of Multi-Factor Authentication (see: <a href="https://bok.idpro.org/article/id/41/"><u>IDPro’s Consolidated Terminology</u></a>) where two factors must be checked to validate a user’s identity.</td>
 <td><a href="https://bok.idpro.org/article/id/49/">Designing MFA for Humans</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Universal Resolver</td>
 <td>An identifier resolver that works with any decentralized identifier system through DID drivers. The purpose of a universal resolver is to return a DID document containing DID metadata when given a specific DID value. This capability is very useful because DIDs can be anchored on any number of disparate dPKI implementations.</td>
 <td><a href="https://bok.idpro.org/article/id/51/">A Peek into the Future of Decentralized Identity</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>User or Subject</td>
 <td>a person or entity who may receive access within an access control system.</td>
 <td><a href="https://bok.idpro.org/article/id/61/">Introduction to Policy-Based Access Controls (v2)</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>User Agent</td>
 <td>A user agent is any software that retrieves, renders, and facilitates end-user interaction with Web content.</td>
 <td><a href="https://bok.idpro.org/article/id/79/">Cloud Service Authenticates Via Delegation – SAML</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>User Provisioning</td>
 <td>The means by which user accounts are created, maintained, and deactivated/deleted in a system according to defined policies.</td>
 <td><a href="https://bok.idpro.org/article/id/84/">User Provisioning in the Enterprise</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>User Provisioning and Lifecycle Management</td>
 <td>how user records get where they need to be but only as long as they are needed</td>
 <td><a href="https://bok.idpro.org/article/id/27/">Introduction to Identity - Part 1: Admin-time (v2)</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Username</td>
 <td>a common term used for an external identifier</td>
 <td><a href="https://bok.idpro.org/article/id/16/">Identifiers and Usernames</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Username</td>
 <td>An identifier unique to the authentication service used in conjunction with a shared secret to authenticate a user.</td>
 <td><a href="https://bok.idpro.org/article/id/64/">Account Recovery (v2)</a>, <a href="https://bok.idpro.org/article/id/65/">Managing Identity in Customer Service Operations</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Validator</td>
 <td>An entity that verifies a certificate and confirms that the other party controls the private key in the transaction.</td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Verifiable Credentials</td>
 <td>Attestations that an issuer makes about a subject. Verifiable credentials are digitally signed by the issuer.</td>
 <td><a href="https://bok.idpro.org/article/id/51/">A Peek into the Future of Decentralized Identity</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Verifiable Presentations</td>
 <td>The packaging of verifiable credentials, self-issued attestations, or other such artifacts that are then presented to verifiers for verification. Verifiable presentations are digitally signed by the holder and can encapsulate all the information that a verifier is requesting in a single package. This is also the place where holders can describe the specific terms of use under which the presentation is performed.</td>
 <td><a href="https://bok.idpro.org/article/id/51/">A Peek into the Future of Decentralized Identity</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Verifier</td>
 <td>The entity that verifies verifiable credentials so that it can provide services to a holder.</td>
 <td><a href="https://bok.idpro.org/article/id/51/">A Peek into the Future of Decentralized Identity</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Workforce Framework</td>
 <td>An outline of the job categories, work roles, and competency models needed to execute workforce planning.</td>
 <td><a href="https://bok.idpro.org/article/id/85/">Identity and Access Management Workforce Planning</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Workforce IAM</td>
 <td>The application of IAM sub-disciplines such as access governance, authentication, and Authorization for employees as opposed to the applications of such disciplines for customers.</td>
 <td><a href="https://bok.idpro.org/article/id/98/">Introduction to Customer Identity and Access Management</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Workforce Planning</td>
 <td>Activities that ensure an organization has the right talent to execute business and technical objectives.</td>
 <td><a href="https://bok.idpro.org/article/id/85/">Identity and Access Management Workforce Planning</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>X.509</td>
 <td>An ISO standard from the X.500 series that defines the basic rules for encoding public key certificates.</td>
 <td><a href="https://bok.idpro.org/article/id/80/">Practical Implications of Public Key Infrastructure for Identity Professionals</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Zero Standing Privilege (ZSP)</td>
 <td>a state where JIT access is used for all permissions and no long-standing permissions are assigned to principals.</td>
 <td><a href="https://bok.idpro.org/article/id/88/">Techniques To Approach Least Privilege</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Zero Trust</td>
 <td>From NIST Draft Special Publication 800-207, “Zero trust assumes there is no implicit trust granted to assets or user accounts based solely on their physical or network location (i.e., local area networks versus the internet)”</td>
 <td><a href="https://bok.idpro.org/article/id/45/">Introduction to Identity – Part 2: Access Management</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Zero Trust Architecture (ZTA)</td>
 <td>Zero Trust Architecture is a cybersecurity plan that utilizes zero trust concepts and encompasses component relationships, workflow planning, and access policies. Therefore, a zero-trust enterprise is the network infrastructure (physical and virtual) and operational policies that are in place for an enterprise as a product of a zero-trust architecture plan.</td>
 <td><a href="https://doi.org/10.55621/idpro.120">HIPAA Security Rule Updates &amp; IAM Compliance Recommendations</a></td>
