@@ -238,7 +238,7 @@ solution as well as how you will handle exception cases that will arise.
 Lastly, we also need to make sure we are following the concept of least
 privilege when it comes to authorization. Least privilege is part of a
 robust strategy to ensure that users and service accounts only have the
-minimum permissions necessary to perform their. It is easy to grant more
+minimum permissions necessary to perform their task. It is easy to grant more
 permissions such that things will work in an effort to make the
 authorization process simpler, but we’ll pay the price later for those
 decisions, often in catastrophic ways. It’s also often much more
